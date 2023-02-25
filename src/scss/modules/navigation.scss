@@ -1,0 +1,38 @@
+.breadcrumbs {
+    padding: em(15) em(0) em(0) em(0);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: math.div(16, 12);
+    color: #b0b8bf;
+    // .breadcrumbs__item
+    &__item {
+        display: flex;
+        align-items: center;
+        &:not(:last-child) {
+            margin: em(0) em(5) em(0) em(0);
+            &::before {
+                margin: em(0) em(0) em(0) em(10);
+                order: 1;
+                @extend %ic, .icon-right;
+                font-size: 10px;
+            }
+        }
+    }
+    // .breadcrumbs__link
+    &__link {
+        &_active {
+            color: #64707b;
+        }
+        transition: color 0.3s ease 0s;
+        &:not(.breadcrumbs__link_active) {
+            @media (any-hover: hover) {
+                &:hover {
+                    color: $hover;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,407 @@
+.career {
+    // .career__slider
+    &__slider {
+    }
+    // .career__container
+    &__container {
+    }
+    // .career__breadcrumbs
+    &__breadcrumbs {
+        position: absolute;
+        z-index: 2;
+    }
+}
+
+.career-slider {
+    // .career-slider__wrapper
+    &__wrapper {
+    }
+    // .career-slider__slide
+    &__slide {
+    }
+    &__pagination {
+        text-align: left;
+        // left: calc((100vw - 1128px) / 2);
+        &.swiper-pagination {
+            left: auto;
+            bottom: 48.5px;
+        }
+        & .swiper-pagination-bullet {
+            font-size: 12px;
+            font-weight: 600;
+            line-height: math.div(16, 12);
+            color: rgba($color: #fff, $alpha: 0.4);
+            position: relative;
+            width: 50px;
+            @media (min-width: $md5) {
+                width: 60px;
+            }
+            height: auto;
+            border-radius: 0;
+            opacity: 1;
+            background-color: transparent;
+            transition: width 0.3s ease 0s;
+            &::before {
+                content: "";
+                position: absolute;
+                top: 100%;
+                left: 0;
+                z-index: 1;
+                width: 100%;
+                height: 1.5px;
+                border-radius: 100px;
+                background-color: rgba($color: #fff, $alpha: 0.4);
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                top: 100%;
+                left: 0;
+                z-index: 2;
+                width: 0%;
+                height: 1.5px;
+                border-radius: 100px;
+                background-color: #319cff;
+            }
+
+            &.swiper-pagination-bullet-active {
+                background-color: transparent;
+                width: 100px;
+                @media (min-width: $md5) {
+                    width: 168px;
+                }
+                color: #319cff;
+                &::after {
+                    animation-name: countingBar;
+                    animation-duration: 5s;
+                    animation-timing-function: ease-in;
+                    animation-iteration-count: 1;
+                    animation-direction: alternate;
+                    animation-fill-mode: forwards;
+                }
+            }
+        }
+    }
+}
+
+.career-slide {
+    position: relative;
+    color: #fff;
+    background: #001426;
+    z-index: 1;
+    padding: em(153) em(0) em(185) em(0);
+    height: auto;
+    // .career-slide__image
+    &__image {
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+    }
+    // .career-slide__container
+    &__container {
+    }
+    // .career-slide__title
+    &__title {
+    }
+    // .career-slide__subtitle
+    &__subtitle {
+        margin: em(20) em(0) em(0) em(0);
+        max-width: 450px;
+    }
+    // .career-slide__btn
+    &__btn {
+        margin: em(38) em(0) em(0) em(0);
+    }
+}
+
+@keyframes countingBar {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+.profession {
+    padding: em(48) em(0);
+    @media (min-width: $md4) {
+        padding: em(96) em(0) em(114) em(0);
+    }
+    background: radial-gradient(at -40% -15%, #062643 15%, transparent),
+        radial-gradient(at 130% 115%, #072947 15%, transparent) #031a2f;
+    color: #fff;
+    // .profession__container
+    &__container {
+        @media (min-width: $md4) {
+            display: flex;
+        }
+    }
+    // .profession__main
+    &__main {
+        margin: em(0) em(0) em(20) rem(0);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        @media (min-width: $md4) {
+            margin: em(0) em(20) em(0) em(0);
+        }
+        @media (min-width: $md3) {
+            margin: em(0) em(120) em(0) em(0);
+        }
+    }
+    // .profession__title
+    &__title {
+        br {
+            display: none;
+            @media (min-width: $md4) {
+                display: block;
+            }
+        }
+    }
+    // .profession__btn
+    &__btn {
+        margin: em(32) em(0);
+    }
+    // .profession__contacts
+    &__contacts {
+        margin: auto em(0) em(0) em(0);
+        display: flex;
+        align-items: center;
+    }
+    // .profession__contacts-title
+    &__contacts-title {
+        font-size: 12px;
+        font-weight: 600;
+        line-height: math.div(16, 12);
+        color: rgba($color: #fff, $alpha: 0.8);
+        max-width: 138px;
+        margin: em(0) em(16, 12) em(0) em(0);
+    }
+    // .profession__contacts-mail
+    &__contacts-mail {
+        font-weight: 600;
+        line-height: math.div(22, 16);
+        transition: color 0.3s ease 0s;
+        @media (any-hover: hover) {
+            &:hover {
+                color: $hover;
+            }
+        }
+    }
+    // .profession__items
+    &__items {
+        flex: 0 1 66.666%;
+    }
+    // .profession__item
+    &__item {
+        position: relative;
+        border: 1px solid rgba($color: #fff, $alpha: 0.2);
+        border-radius: 6px;
+        &:not(:last-child) {
+            margin: em(0) em(0) em(16) rem(0);
+        }
+        @media (min-width: $md5) {
+            display: flex;
+            &:not(:last-child) {
+                margin: em(0) em(0) em(24) rem(0);
+            }
+        }
+    }
+    // .profession__item-image
+    &__item-image {
+        flex: 0 0 192px;
+        & img {
+            border-radius: 6px 0 0 6px;
+        }
+    }
+    // .profession__item-body
+    &__item-body {
+        padding: em(18);
+    }
+    // .profession__item-header
+    &__item-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    // .profession__item-title
+    &__item-title {
+        @media (min-width: $md4) {
+            font-size: 18px;
+        }
+        font-weight: 600;
+        line-height: math.div(24, 18);
+        color: #fff;
+    }
+    // .profession__item-salary
+    &__item-salary {
+        font-size: 12px;
+        @media (min-width: $md4) {
+            font-size: 14px;
+        }
+        line-height: math.div(20, 14);
+        color: #319cff;
+    }
+    // .profession__item-desc
+    &__item-desc {
+        margin: em(12, 14) em(0) em(0) em(0);
+        font-size: 12px;
+        @media (min-width: $md4) {
+            font-size: 14px;
+        }
+        line-height: math.div(20, 14);
+        color: rgba($color: #fff, $alpha: 0.8);
+        br {
+            display: none;
+            @media (min-width: $md4) {
+                display: block;
+            }
+        }
+    }
+    &__item-more {
+        color: rgba($color: #319cff, $alpha: 0.8);
+        transition: color 0.3s ease 0s;
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: $hover;
+            }
+        }
+    }
+    // .profession__item-link
+    &__item-link {
+        position: absolute;
+        bottom: 21px;
+        right: 21px;
+        color: #319cff;
+        transition: color 0.3s ease 0s;
+        font-size: 10px;
+        @media (min-width: $md4) {
+            font-size: 16px;
+        }
+        @media (any-hover: hover) {
+            &:hover {
+                color: darken($color: #319cff, $amount: 10);
+            }
+        }
+    }
+}
+
+.live {
+    padding: em(48) em(0);
+    @media (min-width: $md4) {
+        padding: em(96) em(0);
+    }
+    // .live__container
+    &__container {
+    }
+    // .live__title
+    &__title {
+    }
+    // .live__items
+    &__items {
+        margin: em(24) em(0) em(0) em(0);
+        display: grid;
+        gap: 16px;
+        @media (min-width: $md5) {
+            margin: em(32) em(0) em(0) em(0);
+            gap: 24px;
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media (min-width: $md4) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+    // .live__item
+    &__item {
+        padding: em(20);
+        border: 0.8px solid #e6eaee;
+        border-radius: 6px;
+    }
+    // .live__item-caption
+    &__item-caption {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: math.div(24, 18);
+    }
+    // .live__item-desc
+    &__item-desc {
+        margin: em(12, 12) em(0) em(0) em(0);
+        font-size: 12px;
+        line-height: math.div(16, 12);
+    }
+    // .live__photos
+    &__photos {
+        margin: em(16) em(0) em(0) em(0);
+        display: grid;
+        gap: 16px;
+        @media (min-width: $md5) {
+            margin: em(24) em(0) em(0) em(0);
+            gap: 24px;
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media (min-width: $md4) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+    // .live__photo
+    &__photo {
+        display: flex;
+        flex-direction: column;
+        @media (any-hover: hover) {
+            &:hover {
+                .live__photo-image {
+                    & img {
+                        transform: scale(1.05);
+                    }
+                }
+                .live__photo-title {
+                    color: $hover;
+                }
+            }
+        }
+    }
+    // .live__photo-image
+    &__photo-image {
+        position: relative;
+        overflow: hidden;
+        border-radius: 6px;
+        & img {
+            border-radius: 6px;
+            transition: transform 0.3s ease 0s;
+        }
+    }
+    // .live__photo-quantity
+    &__photo-quantity {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        color: #fff;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: math.div(16, 12);
+        display: flex;
+        align-items: center;
+        padding: em(8);
+        &::before {
+            font-size: 14px;
+            margin: em(0) rem(2) em(0) em(0);
+        }
+    }
+    // .live__photo-title
+    &__photo-title {
+        margin: em(12, 18) em(0) em(0) em(0);
+        font-size: 18px;
+        font-weight: 600;
+        line-height: math.div(24, 18);
+        transition: color 0.3s ease 0s;
+    }
+    // .live__more
+    &__more {
+        margin: em(24) em(0) em(0) em(0);
+    }
+    // .live__more-btn
+    &__more-btn {
+    }
+}
