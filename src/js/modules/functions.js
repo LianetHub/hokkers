@@ -4,3 +4,5 @@ export { spollers } from "./spoller.js";
 export { tooltip } from "./tooltip.js";
 export { tabs } from "./tabs.js";
 export { map } from "./map.js";
+export { drag } from "./drag.js";
+export { select } from "./select.js";

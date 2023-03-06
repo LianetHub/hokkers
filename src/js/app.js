@@ -11,6 +11,8 @@ document.addEventListener("DOMContentLoaded", () => {
     devFunctions.tooltip();
     devFunctions.tabs();
     devFunctions.map();
+    devFunctions.drag();
+    devFunctions.select();
 
     document.addEventListener("click", (e) => {
         const target = e.target;
@@ -40,6 +42,17 @@ document.addEventListener("DOMContentLoaded", () => {
         ) {
             popupClose(target.closest(".popup"));
             e.preventDefault();
+        }
+
+        if (target.classList.contains("form__file-remove")) {
+            e.preventDefault();
+
+            const formFile = target.closest(".form__file");
+            const formContent = formFile.querySelector(".form__file-content");
+            formContent.classList.remove("hidden");
+
+            const thumb = target.closest(".form__file-thumb");
+            thumb.remove();
         }
     });
 
@@ -204,9 +217,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 slideChange: function () {
                     let isChecked = false;
 
-                    const currentSlideItems = this.slides[
-                        this.activeIndex
-                    ].querySelectorAll(".calc-section__item-input");
+                    const currentSlideItems =
+                        this.slides[this.activeIndex].querySelectorAll(
+                            "[data-required]"
+                        );
 
                     currentSlideItems.forEach((currentSlideItem) => {
                         if (currentSlideItem.checked) {
@@ -242,13 +256,21 @@ document.addEventListener("DOMContentLoaded", () => {
             btn.classList.remove("swiper-button-disabled");
         }
 
-        const calcItems = document.querySelectorAll(
-            ".calc-section__item-input"
-        );
+        const calcItems = document.querySelectorAll("[data-required]");
         calcItems.forEach((calcItem) => {
             calcItem.addEventListener("click", () => {
                 removeAttrBtn(next);
             });
+        });
+
+        const previewSlider = new Swiper(".preview-slider", {
+            speed: 800,
+            slidesPerView: 1,
+
+            navigation: {
+                nextEl: ".preview-slider__next",
+                prevEl: ".preview-slider__prev",
+            },
         });
     }
 
@@ -372,6 +394,110 @@ document.addEventListener("DOMContentLoaded", () => {
                         rows: 3,
                         fill: "row",
                     },
+                },
+            },
+        });
+    }
+
+    if (document.querySelectorAll(".logo-slider")) {
+        document.querySelectorAll(".logo-slider").forEach((slider) => {
+            const prev = slider.querySelector(".logo-slider__prev");
+            const next = slider.querySelector(".logo-slider__next");
+
+            const logoSlider = new Swiper(slider, {
+                speed: 800,
+                spaceBetween: 24,
+                grabCursor: true,
+                loop: true,
+                watchSlidesProgress: true,
+                navigation: {
+                    nextEl: next,
+                    prevEl: prev,
+                },
+                breakpoints: {
+                    576.98: {
+                        slidesPerView: 2,
+                    },
+                    991.98: {
+                        slidesPerView: 3,
+                    },
+                },
+            });
+        });
+    }
+
+    if (document.querySelector(".care-slider")) {
+        const careSlider = new Swiper(".care-slider", {
+            speed: 800,
+            spaceBetween: 24,
+            grabCursor: true,
+            simulateTouch: true,
+            watchSlidesProgress: true,
+            navigation: {
+                nextEl: ".product-care__next",
+                prevEl: ".product-care__prev",
+            },
+            breakpoints: {
+                576.98: {
+                    slidesPerView: 2,
+                },
+                991.98: {
+                    slidesPerView: 3,
+                },
+                1199.98: {
+                    slidesPerView: 4,
+                },
+            },
+        });
+    }
+
+    if (document.querySelector(".recommendations-slider")) {
+        const recommendationsSlider = new Swiper(".recommendations-slider", {
+            speed: 800,
+            spaceBetween: 24,
+            grabCursor: true,
+            simulateTouch: true,
+            watchSlidesProgress: true,
+            navigation: {
+                nextEl: ".recommendations__next",
+                prevEl: ".recommendations__prev",
+            },
+            breakpoints: {
+                576.98: {
+                    slidesPerView: 2,
+                },
+                991.98: {
+                    slidesPerView: 3,
+                },
+                1199.98: {
+                    slidesPerView: 4,
+                },
+            },
+        });
+    }
+
+    if (document.querySelector(".details-slider")) {
+        const detailsSlider = new Swiper(".details-slider", {
+            speed: 800,
+            spaceBetween: 24,
+            grabCursor: true,
+
+            watchSlidesProgress: true,
+            navigation: {
+                nextEl: ".details-slider__next",
+                prevEl: ".details-slider__prev",
+            },
+            pagination: {
+                el: ".details-slider__pagination",
+                type: "fraction",
+                renderFraction: function (currentClass, totalClass) {
+                    return ` <span class="${currentClass}"></span> / <span class="${totalClass}"></span>
+                        `;
+                },
+            },
+            breakpoints: {
+                576.98: {
+                    slidesPerView: 1.5,
                 },
             },
         });

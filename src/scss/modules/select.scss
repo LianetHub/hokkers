@@ -1,0 +1,73 @@
+.dropdown {
+	position: relative;
+	font-size: 12px;
+	font-weight: 600;
+	line-height: math.div(16, 12);
+	&__button {
+		position: relative;
+		cursor: pointer;
+		transition: all 0.3s ease 0s;
+		color: #89939e;
+		width: 100%;
+		background: rgba(255, 255, 255, 0.2);
+		color: #fff;
+		border-radius: 6px;
+
+		padding: em(12, 12);
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		z-index: 1;
+		&.selected {
+			color: #fff;
+		}
+		&::before {
+			transition: transform 0.3s ease 0s;
+			@extend %ic, .icon-right;
+			transform: rotate(90deg);
+			order: 1;
+			color: #fff;
+		}
+		&.active {
+			border-radius: 4px 4px 0 0;
+			&::before {
+				transform: rotate(-90deg);
+			}
+		}
+	}
+	&__list {
+		position: absolute;
+		left: 0;
+		top: 100%;
+		width: 100%;
+		z-index: 4;
+		background: #5daef9;
+		border-top: 0;
+		transition: 200ms ease;
+		opacity: 0;
+		visibility: hidden;
+		border-radius: 0 0 4px 4px;
+		overflow: hidden;
+		&.visible {
+			opacity: 1;
+			visibility: visible;
+		}
+		&-item {
+			padding: em(5, 10);
+			cursor: pointer;
+			transition: background-color 0.15s ease 0s;
+			@media (any-hover: hover) {
+				&:hover {
+					background: $hover;
+					color: #fff;
+				}
+			}
+			&.active {
+				background: $hover;
+				color: #fff;
+			}
+		}
+	}
+	&__input {
+	}
+}

@@ -18,8 +18,17 @@
   }
 }
 
+.icon-paperclip:before {
+  content: "\e926";
+}
+.icon-delivery:before {
+  content: "\e924";
+}
 .icon-minus:before {
   content: "\e923";
+}
+.icon-delete:before {
+  content: "\e925";
 }
 .icon-cart:before {
   content: "\e91e";

@@ -373,6 +373,11 @@
             gap: 24px;
             grid-template-columns: repeat(3, 1fr);
         }
+        &_lg {
+            @media (min-width: $md3) {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
     }
     // .docs__item
     &__item {

@@ -3,6 +3,7 @@
 @import "modules/pagination";
 @import "modules/tabs";
 @import "modules/popup";
+@import "modules/select";
 //============ МОДУЛИ ====================
 .title {
 	font-weight: 600;
@@ -195,6 +196,14 @@
 			}
 		}
 	}
+	&_lg {
+		.rates__star {
+			font-size: 20px;
+		}
+		.rates__value {
+			font-size: 14px;
+		}
+	}
 	// .rates__stars
 	&__stars {
 		display: flex;
@@ -271,6 +280,19 @@
 			font-weight: 700;
 		}
 	}
+}
+
+.timecode {
+	position: absolute;
+	bottom: 4px;
+	right: 4px;
+	background: rgba(0, 20, 38, 0.5);
+	border-radius: 2px;
+	color: #fff;
+	font-size: 12px;
+	font-weight: 600;
+	line-height: math.div(16, 12);
+	padding: em(2, 12) em(4, 12);
 }
 
 .swiper-button-next,

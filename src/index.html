@@ -1,240 +1,846 @@
 @@include('html/_head.html', {
-'title': 'ХОККЕРС | Страница товара'
+'title': 'ХОККЕРС | Корзина'
 })
 
 <body>
 	<div class="wrapper">
 		<main class="page">
-			<section class="page__product product">
-				<div class="product__container">
-					<ul class="product__breadcrumbs breadcrumbs ">
+			<section class="page__cart cart">
+				<div class="cart__container">
+					<ul class="cart__breadcrumbs breadcrumbs ">
 						<li class="breadcrumbs__item">
 							<a href="/" class="breadcrumbs__link">Главная</a>
 						</li>
 						<li class="breadcrumbs__item">
-							<a href="/catalog.html" class="breadcrumbs__link">Каталог</a>
-						</li>
-						<li class="breadcrumbs__item">
-							<a href="/catalog.html" class="breadcrumbs__link">Спецодежда</a>
-						</li>
-						<li class="breadcrumbs__item">
-							<a href="/catalog.html" class="breadcrumbs__link">Защитная спецодежда</a>
-						</li>
-						<li class="breadcrumbs__item">
 							<a class="breadcrumbs__link breadcrumbs__link_active">
-								Название товара
+								Корзина
 							</a>
 						</li>
 					</ul>
-					<div class="product__body">
-						<div class="product__slider product-slider swiper">
-							<div class="product-slider__wrapper swiper-wrapper">
-								<div class="product-slider__slide swiper-slide">
-									<img src="@img/product/01.png" class="cover-image" alt="product">
-									<div class="product-slider__slide-labels">
-										<div class="product-slider__slide-label">
-											NEW
+					<div class="cart__header">
+						<h1 class="cart__title title title_lg">
+							Корзина
+						</h1>
+						<a href="" class="cart__support">
+							Нужна помощь с оформлением?
+						</a>
+					</div>
+					<div class="cart__body">
+						<div class="cart__content">
+							<div class="cart__items">
+								<div class="cart__item">
+									<div class="cart__item-thumb">
+										<img src="@img/cart/01.png" class="cover-image" alt="thumb">
+									</div>
+									<div class="cart__item-content">
+										<div class="cart__item-header">
+											<div class="cart__item-title title title_sm">
+												Костюм от электрической дуги мужской зимний СП08-ЗV (60 кал / см2)
+											</div>
+											<div class="cart__item-actions">
+												<button class="cart__item-action icon-heart"></button>
+												<button class="cart__item-action icon-delete"></button>
+											</div>
 										</div>
-										<div class="product-slider__slide-label">
-											-30%
+										<div class="cart__item-body">
+											<div class="cart__item-row">
+												<div class="cart__item-row-item">
+													<div class="cart__item-caption">
+														Цвет:
+													</div>
+													<div class="cart__item-value">
+														Синий
+													</div>
+												</div>
+											</div>
+											<div class="cart__item-row">
+												<div class="cart__item-row-item">
+													<div class="cart__item-caption">
+														Размер / рост:
+													</div>
+													<div class="cart__item-value">
+														48-50 / 180-188 (3 шт.)
+													</div>
+												</div>
+												<div class="cart__item-row-item">
+													<div class="cart__item-caption">
+														Дата отгрузки:
+													</div>
+													<div class="cart__item-value">
+														8 дек. 2022
+													</div>
+												</div>
+												<button type="button" class="cart__item-btn btn btn_white">
+													Добавить / изменить
+												</button>
+												<div class="cart__item-price">
+													3 750 ₽
+												</div>
+											</div>
 										</div>
 									</div>
 								</div>
-								<div class="product-slider__slide swiper-slide">
-									<img src="@img/product/02.png" class="cover-image" alt="product">
-									<button class="product-slider__slide-play icon-play"></button>
+								<div class="cart__item">
+									<div class="cart__item-thumb">
+										<img src="@img/cart/02.png" class="cover-image" alt="thumb">
+									</div>
+									<div class="cart__item-content">
+										<div class="cart__item-header">
+											<div class="cart__item-title title title_sm">
+												Костюм от электрической дуги мужской зимний СП08-ЗV (60 кал / см2)
+											</div>
+											<div class="cart__item-actions">
+												<button class="cart__item-action icon-heart"></button>
+												<button class="cart__item-action icon-delete"></button>
+											</div>
+										</div>
+										<div class="cart__item-body">
+											<div class="cart__item-row">
+												<div class="cart__item-row-item">
+													<div class="cart__item-caption">
+														Цвет:
+													</div>
+													<div class="cart__item-value">
+														Синий
+													</div>
+												</div>
+											</div>
+											<div class="cart__item-row">
+												<div class="cart__item-row-item">
+													<div class="cart__item-caption">
+														Размер / рост:
+													</div>
+													<div class="cart__item-value">
+														48-50 / 180-188 (3 шт.)
+													</div>
+													<div class="cart__item-value">
+														48-50 / 170-176 (2 шт.)
+													</div>
+												</div>
+												<div class="cart__item-row-item">
+													<div class="cart__item-caption">
+														Дата отгрузки:
+													</div>
+													<div class="cart__item-value">
+														8 дек. 2022
+													</div>
+													<div class="cart__item-value">
+														Под заказ
+													</div>
+												</div>
+												<button type="button" class="cart__item-btn btn btn_white">
+													Добавить / изменить
+												</button>
+												<div class="cart__item-price">
+													<div class="cart__item-price-current">
+														6 560 ₽
+													</div>
+													<div class="cart__item-price-old">
+														7 300 ₽
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
 								</div>
-								<div class="product-slider__slide swiper-slide">
-									<img src="@img/product/03.png" class="cover-image" alt="product">
+								<div class="cart__item">
+									<div class="cart__item-thumb">
+										<img src="@img/cart/03.png" class="cover-image" alt="thumb">
+									</div>
+									<div class="cart__item-content">
+										<div class="cart__item-header">
+											<div class="cart__item-title title title_sm">
+												Костюм от электрической дуги мужской зимний СП08-ЗV (60 кал / см2)
+											</div>
+											<div class="cart__item-actions">
+												<button class="cart__item-action icon-heart"></button>
+												<button class="cart__item-action icon-delete"></button>
+											</div>
+										</div>
+										<div class="cart__item-body">
+											<div class="cart__item-row">
+												<div class="cart__item-row-item">
+													<div class="cart__item-caption">
+														Цвет:
+													</div>
+													<div class="cart__item-value">
+														Красный
+													</div>
+												</div>
+											</div>
+											<div class="cart__item-row">
+												<div class="cart__item-row-item">
+													<div class="cart__item-caption">
+														Размер / рост:
+													</div>
+													<div class="cart__item-value">
+														48-50 / 180-188 (3 шт.)
+													</div>
+													<div class="cart__item-value">
+														48-50 / 170-176 (2 шт.)
+													</div>
+													<div class="cart__item-value">
+														48-50 / 160-170 (3 шт.)
+													</div>
+													<div class="cart__item-more" data-spollers>
+														<div class="cart__item-more-title icon-right" data-spoller>
+															Еще 7
+														</div>
+														<div class="cart__item-more-body">
+															<div class="cart__item-value">
+																48-50 / 180-188 (3 шт.)
+															</div>
+															<div class="cart__item-value">
+																48-50 / 170-176 (2 шт.)
+															</div>
+															<div class="cart__item-value">
+																48-50 / 160-170 (3 шт.)
+															</div>
+															<div class="cart__item-value">
+																48-50 / 180-188 (3 шт.)
+															</div>
+															<div class="cart__item-value">
+																48-50 / 170-176 (2 шт.)
+															</div>
+															<div class="cart__item-value">
+																48-50 / 160-170 (3 шт.)
+															</div>
+															<div class="cart__item-value">
+																48-50 / 160-170 (3 шт.)
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="cart__item-row-item">
+													<div class="cart__item-caption">
+														Дата отгрузки:
+													</div>
+													<div class="cart__item-value">
+														8 дек. 2022
+													</div>
+													<div class="cart__item-value">
+														Под заказ
+													</div>
+													<div class="cart__item-value">
+														8 дек. 2022
+													</div>
+												</div>
+												<button type="button" class="cart__item-btn btn btn_white">
+													Добавить / изменить
+												</button>
+												<div class="cart__item-price">
+													1 460 ₽
+												</div>
+											</div>
+										</div>
+									</div>
 								</div>
-								<div class="product-slider__slide swiper-slide">
-									<img src="@img/product/04.png" class="cover-image" alt="product">
-								</div>
-								<div class="product-slider__slide swiper-slide">
-									<img src="@img/product/05.png" class="cover-image" alt="product">
-								</div>
-								<div class="product-slider__slide swiper-slide">
-									<img src="@img/product/06.png" class="cover-image" alt="product">
+							</div>
+							<div class="cart__formalization cart-formalization">
+								<h2 class="cart-formalization__title title title_lg">
+									Оформление заказа
+								</h2>
+								<div class="cart-formalization__tabs tabs" data-tabs>
+									<div class="tabs__header">
+										<div class="tabs__buttons">
+											<button class="tabs__button btn" data-tab-button>
+												Юридическое лицо
+											</button>
+											<button class="tabs__button btn" data-tab-button>
+												Физическое лицо
+											</button>
+										</div>
+									</div>
+									<div class="cart-formalization__content tabs__content">
+										<div class="tabs__content-item tab" data-tab-content>
+											<form action="#" class="cart-formalization__items">
+												<div class="cart-formalization__item">
+													<div class="cart-formalization__item-caption">
+														Выберите способ доставки
+													</div>
+													<div class="cart-formalization__types">
+														<label class="cart-formalization__type">
+															<input type="radio" name="type" value="1"
+																class="cart-formalization__type-input hidden" hidden>
+															<span class="cart-formalization__type-content">
+																<span class="cart-formalization__type-header">
+																	<span class="cart-formalization__type-title">
+																		Самовывоз
+																	</span>
+																	<a href=""
+																		class="cart-formalization__type-info icon-question"></a>
+																</span>
+																<span class="cart-formalization__type-text">
+																	г. Санкт-Петербург ул. Бухарестская 24, корпус 1.
+																	Склад – 100. Время работы ПН-ПТ: 09:00-18:00.
+																	При себе иметь доверенность или печать.
+																</span>
+															</span>
+														</label>
+														<label class="cart-formalization__type">
+															<input type="radio" name="type" value="2"
+																class="cart-formalization__type-input hidden" hidden>
+															<span class="cart-formalization__type-content">
+																<span class="cart-formalization__type-header">
+																	<span class="cart-formalization__type-title">
+																		Доставка по Санкт-Петербургу
+																	</span>
+																	<a href=""
+																		class="cart-formalization__type-info icon-question"></a>
+																</span>
+																<span class="cart-formalization__type-text">
+																	Наша машина, которая доставляет товары по
+																	Санкт-Петербургу и Ленинградской области, ходит
+																	каждый день. Средний срок доставки спецодежды по СПб
+																	– до 3 рабочих дней с момента комплектации товара на
+																	складе.
+																</span>
+															</span>
+														</label>
+														<label class="cart-formalization__type">
+															<input type="radio" name="type" value="2"
+																class="cart-formalization__type-input hidden" hidden>
+															<span class="cart-formalization__type-content">
+																<span class="cart-formalization__type-header">
+																	<span class="cart-formalization__type-title">
+																		Доставка по России
+																	</span>
+																	<a href=""
+																		class="cart-formalization__type-info icon-question"></a>
+																</span>
+																<span class="cart-formalization__type-text">
+																	Доставляем спецодежду по России: автомобильными ТК,
+																	железнодорожными ТК, авиационной ТК
+																</span>
+															</span>
+														</label>
+														<label class="cart-formalization__type">
+															<input type="radio" name="type" value="2"
+																class="cart-formalization__type-input hidden" hidden>
+															<span class="cart-formalization__type-content">
+																<span class="cart-formalization__type-header">
+																	<span class="cart-formalization__type-title">
+																		Доставка курьерской службой
+																	</span>
+																	<a href=""
+																		class="cart-formalization__type-info icon-question"></a>
+																</span>
+																<span class="cart-formalization__type-text">
+																	100% предоплата заказа, отправка по готовности
+																	комплектации товара на складе
+																</span>
+															</span>
+														</label>
+													</div>
+												</div>
+												<div class="cart-formalization__item">
+													<div class="cart-formalization__item-caption">
+														Выберите способ оплаты
+													</div>
+													<div
+														class="cart-formalization__types cart-formalization__types_grid">
+														<label class="cart-formalization__type">
+															<input type="radio" name="type-2" value="1"
+																class="cart-formalization__type-input hidden" hidden>
+															<span class="cart-formalization__type-content">
+																<span class="cart-formalization__type-header">
+																	<span class="cart-formalization__type-title">
+																		Оплата по реквизитам
+																	</span>
+																	<a href=""
+																		class="cart-formalization__type-info icon-question"></a>
+																</span>
+																<span class="cart-formalization__type-text">
+																	Наша машина, которая доставляет товары по
+																	Санкт-Петербургу и Ленинградской области
+																</span>
+															</span>
+														</label>
+														<label class="cart-formalization__type">
+															<input type="radio" name="type-2" value="2"
+																class="cart-formalization__type-input hidden" hidden>
+															<span class="cart-formalization__type-content">
+																<span class="cart-formalization__type-header">
+																	<span class="cart-formalization__type-title">
+																		Банковской картой онлайн
+																	</span>
+																	<a href=""
+																		class="cart-formalization__type-info icon-question"></a>
+																</span>
+																<span class="cart-formalization__type-text">
+																	Наша машина, которая доставляет товары по
+																	Санкт-Петербургу и Ленинградской области
+																</span>
+															</span>
+														</label>
+													</div>
+												</div>
+												<div class="cart-formalization__item">
+													<div class="cart-formalization__item-caption">
+														Контактная информация <a href=""
+															class="cart-formalization__item-input">Авторизоваться</a>
+														<a href=""
+															class="cart-formalization__item-info icon-question"></a>
+													</div>
+													<div class="cart-formalization__form-rows form__rows">
+														<div class="form__row">
+															<div class="form__row-item">
+																<div class="form__label">
+																	Ваше имя
+																</div>
+																<input type="text" name="name" class="form__input"
+																	placeholder="Иван">
+															</div>
+															<div class="form__row-item">
+																<div class="form__label">
+																	Ваша фамилия
+																</div>
+																<input type="text" name="surname" class="form__input"
+																	placeholder="Иван">
+															</div>
+														</div>
+														<div class="form__row">
+															<div class="form__row-item">
+																<div class="form__label">
+																	Номер телефона
+																</div>
+																<input type="tel" name="phone" class="form__input"
+																	placeholder="+7 (___) ___-__-__">
+															</div>
+															<div class="form__row-item">
+																<div class="form__label">
+																	E-mail
+																</div>
+																<input type="email" name="email" class="form__input"
+																	placeholder="primer@hokkers.ru">
+															</div>
+														</div>
+														<div class="form__row">
+															<div class="form__row-item">
+																<div class="form__label">
+																	Комментарий к заказу (не обязательно)
+																</div>
+																<textarea name="message" class="form__textarea"
+																	maxlength="210"
+																	placeholder="Комментарий к заказу"></textarea>
+																<div class="form__message-length">
+																	<span class="form__message-length-current">0</span>
+																	/
+																	<span class="form__message-length-total">210</span>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="cart-formalization__item">
+													<div class="cart-formalization__item-caption">
+														Информация о компании
+													</div>
+													<label class="form__file">
+														<input type="file" name="file-name"
+															class="form__file-input hidden">
+														<span class="form__file-content">
+															<span class="form__file-section form__file-section_lg">
+																<span class="form__file-title icon-paperclip">
+																	Перетащите реквизиты в эту область или нажмите для
+																	загрузки
+																</span>
+																<span class="form__file-formats">
+																	Формат .doc, .pdf, .xls. Файл не должен превышать
+																	2Mb.
+																</span>
+															</span>
+														</span>
+													</label>
+													<div class="cart-formalization__form-rows form__rows">
+														<div class="form__row">
+															<div class="form__row-item">
+																<div class="form__label">
+																	Название компании
+																</div>
+																<input type="text" name="company" class="form__input">
+															</div>
+														</div>
+														<div class="form__row">
+															<div class="form__row-item">
+																<div class="form__label">
+																	ИНН
+																</div>
+																<input type="text" name="inn" class="form__input">
+															</div>
+															<div class="form__row-item">
+																<div class="form__label">
+																	КПП
+																</div>
+																<input type="text" name="kpp" class="form__input">
+															</div>
+														</div>
+														<div class="form__row">
+															<div class="form__row-item">
+																<div class="form__label">
+																	ОГРН
+																</div>
+																<input type="text" name="ogrn" class="form__input">
+															</div>
+															<div class="form__row-item">
+																<div class="form__label">
+																	ОКПО
+																</div>
+																<input type="text" name="okpo" class="form__input">
+															</div>
+														</div>
+														<div class="form__row">
+															<div class="form__row-item">
+																<div class="form__label">
+																	Расчетный счет
+																</div>
+																<input type="text" name="check" class="form__input">
+															</div>
+														</div>
+														<div class="form__row">
+															<div class="form__row-item">
+																<div class="form__label">
+																	Банк
+																</div>
+																<input type="text" name="bank" class="form__input">
+															</div>
+														</div>
+														<div class="form__row">
+															<div class="form__row-item">
+																<div class="form__label">
+																	БИК
+																</div>
+																<input type="text" name="bik" class="form__input">
+															</div>
+															<div class="form__row-item">
+																<div class="form__label">
+																	Корр. счет
+																</div>
+																<input type="text" name="korr" class="form__input">
+															</div>
+														</div>
+														<div class="form__row">
+															<div class="form__row-item">
+																<div class="form__label">
+																	Юридический адрес
+																</div>
+																<input type="text" name="address" class="form__input">
+															</div>
+														</div>
+														<div class="form__row">
+															<div class="form__row-item">
+																<div class="form__label">
+																	Генеральный директор
+																</div>
+																<input type="text" name="director" class="form__input">
+															</div>
+														</div>
+														<div class="form__row">
+															<div class="form__row-item">
+																<div class="form__label">
+																	Номер телефона
+																</div>
+																<input type="tel" name="phone-2" class="form__input"
+																	placeholder="+7 (___) ___-__-__">
+															</div>
+															<div class="form__row-item">
+																<div class="form__label">
+																	E-mail
+																</div>
+																<input type="email" name="email-2" class="form__input"
+																	placeholder="primer@hokkers.ru">
+															</div>
+														</div>
+													</div>
+												</div>
+											</form>
+										</div>
+										<div class="tabs__content-item tab" data-tab-content>
+											<form action="#" class="cart-formalization__items">
+												<div class="cart-formalization__item">
+													<div class="cart-formalization__item-caption">
+														Выберите способ доставки
+													</div>
+													<div class="cart-formalization__types">
+														<div class="cart-formalization__types-item">
+															<label class="cart-formalization__type">
+																<input type="radio" name="type-3" value="1"
+																	class="cart-formalization__type-input hidden"
+																	hidden>
+																<span class="cart-formalization__type-content">
+																	<span class="cart-formalization__type-header">
+																		<span class="cart-formalization__type-title">
+																			Самовывоз
+																		</span>
+																		<a href=""
+																			class="cart-formalization__type-info icon-question"></a>
+																	</span>
+																	<span class="cart-formalization__type-text">
+																		г. Санкт-Петербург ул. Бухарестская 24, корпус
+																		1.
+																		Склад – 100. Время работы ПН-ПТ: 09:00-18:00.
+																		При себе иметь доверенность или печать.
+																	</span>
+																</span>
+															</label>
+														</div>
+
+														<div class="cart-formalization__types-item">
+															<label class="cart-formalization__type">
+																<input type="radio" name="type-3" value="2"
+																	class="cart-formalization__type-input hidden"
+																	hidden>
+																<span class="cart-formalization__type-content">
+																	<span class="cart-formalization__type-header">
+																		<span class="cart-formalization__type-title">
+																			Доставка транспортной компанией
+																		</span>
+																		<a href=""
+																			class="cart-formalization__type-info icon-question"></a>
+																	</span>
+																	<span class="cart-formalization__type-text">
+																		Наша машина, которая доставляет товары по
+																		Санкт-Петербургу и Ленинградской области, ходит
+																		каждый день. Средний срок доставки спецодежды по
+																		СПб
+																		– до 3 рабочих дней с момента комплектации
+																		товара на
+																		складе.
+																	</span>
+																</span>
+															</label>
+														</div>
+
+
+														<div class="cart-formalization__types-item">
+															<label class="cart-formalization__type">
+																<input type="radio" name="type-3" value="3"
+																	class="cart-formalization__type-input hidden"
+																	hidden>
+																<span class="cart-formalization__type-content">
+																	<span class="cart-formalization__type-header">
+																		<span class="cart-formalization__type-title">
+																			Доставка по России
+																		</span>
+																		<a href=""
+																			class="cart-formalization__type-info icon-question"></a>
+																	</span>
+																	<span class="cart-formalization__type-text">
+																		Доставляем спецодежду по России: автомобильными
+																		ТК,
+																		железнодорожными ТК, авиационной ТК
+																	</span>
+																</span>
+															</label>
+														</div>
+
+
+
+														<div class="cart-formalization__types-item">
+															<label class="cart-formalization__type">
+																<input type="radio" name="type-3" value="4"
+																	class="cart-formalization__type-input hidden"
+																	hidden>
+																<span class="cart-formalization__type-content">
+																	<span class="cart-formalization__type-header">
+																		<span class="cart-formalization__type-title">
+																			Доставка курьерской службой
+																		</span>
+																		<a href=""
+																			class="cart-formalization__type-info icon-question"></a>
+																	</span>
+																	<span class="cart-formalization__type-text">
+																		100% предоплата заказа, отправка по готовности
+																		комплектации товара на складе
+																	</span>
+																</span>
+															</label>
+														</div>
+													</div>
+												</div>
+												<div class="cart-formalization__item">
+													<div class="cart-formalization__item-caption">
+														Выберите способ оплаты
+													</div>
+													<div
+														class="cart-formalization__types cart-formalization__types_grid">
+														<label class="cart-formalization__type">
+															<input type="radio" name="type-2" value="1"
+																class="cart-formalization__type-input hidden" hidden>
+															<span class="cart-formalization__type-content">
+																<span class="cart-formalization__type-header">
+																	<span class="cart-formalization__type-title">
+																		Оплата по реквизитам
+																	</span>
+																	<a href=""
+																		class="cart-formalization__type-info icon-question"></a>
+																</span>
+																<span class="cart-formalization__type-text">
+																	Наша машина, которая доставляет товары по
+																	Санкт-Петербургу и Ленинградской области
+																</span>
+															</span>
+														</label>
+														<label class="cart-formalization__type">
+															<input type="radio" name="type-2" value="2"
+																class="cart-formalization__type-input hidden" hidden>
+															<span class="cart-formalization__type-content">
+																<span class="cart-formalization__type-header">
+																	<span class="cart-formalization__type-title">
+																		Банковской картой онлайн
+																	</span>
+																	<a href=""
+																		class="cart-formalization__type-info icon-question"></a>
+																</span>
+																<span class="cart-formalization__type-text">
+																	Наша машина, которая доставляет товары по
+																	Санкт-Петербургу и Ленинградской области
+																</span>
+															</span>
+														</label>
+													</div>
+												</div>
+
+												<div class="cart-formalization__item">
+													<div class="cart-formalization__item-caption">
+														Контактная информация <a href=""
+															class="cart-formalization__item-input">Авторизоваться</a>
+														<a href=""
+															class="cart-formalization__item-info icon-question"></a>
+													</div>
+													<div class="cart-formalization__form-rows form__rows">
+														<div class="form__row">
+															<div class="form__row-item">
+																<div class="form__label">
+																	Ваше имя
+																</div>
+																<input type="text" name="name" class="form__input"
+																	placeholder="Иван">
+															</div>
+															<div class="form__row-item">
+																<div class="form__label">
+																	Ваша фамилия
+																</div>
+																<input type="text" name="surname" class="form__input"
+																	placeholder="Иван">
+															</div>
+														</div>
+														<div class="form__row">
+															<div class="form__row-item">
+																<div class="form__label">
+																	Номер телефона
+																</div>
+																<input type="tel" name="phone" class="form__input"
+																	placeholder="+7 (___) ___-__-__">
+															</div>
+															<div class="form__row-item">
+																<div class="form__label">
+																	E-mail
+																</div>
+																<input type="email" name="email" class="form__input"
+																	placeholder="primer@hokkers.ru">
+															</div>
+														</div>
+														<div class="form__row">
+															<div class="form__row-item">
+																<div class="form__label">
+																	Комментарий к заказу (не обязательно)
+																</div>
+																<textarea name="message" class="form__textarea"
+																	maxlength="210"
+																	placeholder="Комментарий к заказу"></textarea>
+																<div class="form__message-length">
+																	<span class="form__message-length-current">0</span>
+																	/
+																	<span class="form__message-length-total">210</span>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</form>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
-						<div class="product__content">
-							<div class="product__main">
-								<h1 class="product__title title title_xs">
-									Костюм от электрической дуги мужской зимний СП08-ЗV (60 кал / см2)
-								</h1>
-								<div class="product__info">
-									<div class="product__info-item">
-										<span class="product__info-title">
-											Артикул:
-										</span>
-										<span class="product__info-value">
-											0101-0155
-										</span>
+						<aside class="cart__side">
+							<div class="cart__side-items">
+								<div class="cart__side-item">
+									<div class="cart__side-item-title">
+										Итого
 									</div>
-									<div class="product__info-item">
-										<span class="product__info-title">
-											Ожидание:
-										</span>
-										<span class="product__info-value">
-											3-5 дней
-										</span>
+									<span class="cart__side-item-line"></span>
+									<div class="cart__side-item-value">
+										12 560 ₽
+									</div>
+								</div>
+								<div class="cart__side-item">
+									<div class="cart__side-item-title">
+										Товары 3 шт.
+									</div>
+									<span class="cart__side-item-line"></span>
+									<div class="cart__side-item-value">
+										13 300 ₽
+									</div>
+								</div>
+								<div class="cart__side-item">
+									<div class="cart__side-item-title">
+										Скидка
+									</div>
+									<span class="cart__side-item-line"></span>
+									<div class="cart__side-item-value">
+										– 740 ₽
 									</div>
 								</div>
 							</div>
-							<div class="product__content-body">
-								<div class="product__price">
-									<div class="product__price-current">
-										19 560 ₽
-									</div>
-									<div class="product__price-old">
-										21 300 ₽
-									</div>
-									<div class="product__price-wholesale">
-										(Опт. При заказе от 10 000 ₽)
-									</div>
-									<a href="" class="product__price-btn icon-question"></a>
-								</div>
-								<div class="product__sizes">
-									<div class="product__sizes-header">
-										<div class="product__sizes-title">
-											Выберите размер
+							<div class="cart__side-info">
+								<div class="cart__side-info-item">
+									<div class="cart__side-info-row">
+										<div class="cart__side-info-title">
+											Доставка:
 										</div>
-										<a href="#modal-size" data-modal class="product__sizes-btn icon-ruler">
-											Таблица размеров
-										</a>
-									</div>
-									<div class="product__sizes-items">
-										<label class="product__size">
-											<input type="radio" name="size" value="xs"
-												class="product__size-input hidden" hidden>
-											<span class="product__size-value">
-												XS
-											</span>
-										</label>
-										<label class="product__size">
-											<input type="radio" name="size" value="S" class="product__size-input hidden"
-												hidden>
-											<span class="product__size-value">
-												S
-											</span>
-										</label>
-										<label class="product__size">
-											<input type="radio" name="size" value="M" class="product__size-input hidden"
-												hidden>
-											<span class="product__size-value">
-												M
-											</span>
-										</label>
-										<label class="product__size">
-											<input type="radio" name="size" value="L" class="product__size-input hidden"
-												hidden>
-											<span class="product__size-value">
-												L
-											</span>
-										</label>
-										<label class="product__size">
-											<input type="radio" name="size" value="XL"
-												class="product__size-input hidden" hidden>
-											<span class="product__size-value">
-												XL
-											</span>
-										</label>
-										<label class="product__size">
-											<input type="radio" name="size" value="2XL"
-												class="product__size-input hidden" hidden>
-											<span class="product__size-value">
-												2XL
-											</span>
-										</label>
-										<label class="product__size">
-											<input type="radio" name="size" value="3XL"
-												class="product__size-input hidden" hidden>
-											<span class="product__size-value">
-												3XL
-											</span>
-										</label>
-									</div>
-								</div>
-								<div class="product__actions">
-									<button type="button" class="product__cart btn btn_blue btn_lg">
-										Добавить в корзину
-									</button>
-									<button type="button" class="product__favorite icon-heart"></button>
-								</div>
-								<div class="product__desc">
-									<ul class="product__desc-list">
-										<li class="product__desc-item">
-											<div class="product__desc-title">
-												Вид изделия:
-											</div>
-											<span class="product__desc-line"></span>
-											<div class="product__desc-value">
-												Куртка
-											</div>
-										</li>
-										<li class="product__desc-item">
-											<div class="product__desc-title">
-												Бренд:
-											</div>
-											<span class="product__desc-line"></span>
-											<div class="product__desc-value">
-												<a href="" class="product__desc-link">Prof spec</a>
-											</div>
-										</li>
-										<li class="product__desc-item">
-											<div class="product__desc-title">
-												Назначение:
-											</div>
-											<span class="product__desc-line"></span>
-											<div class="product__desc-value">
-												Для защиты от пониженных температур
-											</div>
-										</li>
-										<li class="product__desc-item">
-											<div class="product__desc-title">
-												Основная ткань:
-											</div>
-											<span class="product__desc-line"></span>
-											<div class="product__desc-value">
-												Наутика, пл. 125 г/м2
-											</div>
-										</li>
-									</ul>
-									<a href="" class="product__desc-more product__desc-link">
-										Все характеристики
-									</a>
-									<div class="product__desc-footer">
-										<div class="product__desc-caption">
-											Защитные свойства
+										<div class="cart__side-value">
+											Самовывоз
 										</div>
-										<div class="product__desc-medals">
-											<div class="product__desc-medal">
-												<img src="@img/icons/icon-medal.png" alt="medal">
-												<div class="product__desc-tooltip">
-													Защита от производственных
-													загрязнений
-												</div>
-											</div>
-											<div class="product__desc-medal">
-												<img src="@img/icons/icon-medal-2.png" alt="medal">
-												<div class="product__desc-tooltip">
-													Защита от производственных
-													загрязнений
-												</div>
-											</div>
-											<div class="product__desc-medal">
-												<img src="@img/icons/icon-medal.png" alt="medal">
-												<div class="product__desc-tooltip">
-													Защита от производственных
-													загрязнений
-												</div>
-											</div>
+									</div>
+									<div class="cart__side-info-row">
+										<div class="cart__side-info-text">
+											Вес заказа: <span>8 кг</span>
+										</div>
+										<div class="cart__side-info-text">
+											Объем заказа: <span>80.076 м3</span>
+										</div>
+									</div>
+								</div>
+								<div class="cart__side-info-item">
+									<div class="cart__side-info-row">
+										<div class="cart__side-info-title">
+											Оплата:
+										</div>
+										<div class="cart__side-value">
+											Выбрать способ оплаты
 										</div>
 									</div>
 								</div>
 							</div>
-						</div>
+							<label class="cart__side-checkbox checkbox">
+								<input type="checkbox" name="photo-filter" class="checkbox__input hidden" hidden>
+								<span class="checkbox__content">
+									<span>
+										Нанесение логотипов
+										<a href="" class="checkbox__info icon-question"></a>
+									</span>
+								</span>
+							</label>
+							<button type="button" class="cart__side-btn btn btn_blue btn_lg btn_mw">
+								Оформить заказ
+							</button>
+							<div class="cart__side-privacy">
+								Согласен с условиями <a href="" class="cart__side-privacy-link">Правил пользования
+									торговой площадкой и правилами возврата</a>
+							</div>
+						</aside>
 					</div>
 				</div>
 			</section>

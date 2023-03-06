@@ -50,6 +50,7 @@
             color: #001426;
             &::before {
                 background: #0b8aff;
+                width: calc(100% - em(12, 14));
             }
         }
         position: relative;
@@ -61,12 +62,23 @@
             transform: translateX(-50%);
             height: 2px;
             background: #e6eaee;
-            width: calc(100% - em(16, 14));
+            width: 100%;
             border-radius: 6px;
         }
         // &:not(:last-child) {
         //     margin: em(0) em(12, 14) em(0) em(0);
         // }
+    }
+    &__button-quantity {
+        background: #319cff;
+        width: 16px;
+        height: 16px;
+        display: inline-block;
+        color: #fff;
+        border-radius: 50%;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: math.div(16, 12);
     }
     // .tabs__content
     &__content {

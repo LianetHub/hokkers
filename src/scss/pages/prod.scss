@@ -291,7 +291,7 @@
     &__next,
     &__prev {
         position: static;
-        width: auto;
+        width: auto !important;
         height: auto;
         margin: 0;
         inset: auto;
@@ -450,6 +450,174 @@
         @media (any-hover: hover) {
             &:hover {
                 color: rgba($color: #fff, $alpha: 1);
+            }
+        }
+    }
+    // .calc-section__content
+    &__content {
+        margin: em(24) em(0) em(0) em(0);
+        display: grid;
+        gap: 24px;
+        @media (min-width: $md4) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media (min-width: $md3) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+    // .calc-section__side
+    &__side {
+    }
+    // .calc-section__checkbox
+    &__checkbox {
+        display: block;
+        &:not(:last-child) {
+            margin: em(0) em(0) em(12) rem(0);
+        }
+    }
+    // .calc-section__checkbox-input
+    &__checkbox-input {
+        &:checked {
+            & + .calc-section__checkbox-value {
+                background: #fff;
+                color: #001426;
+                &::before {
+                    background: #319cff;
+                    border-color: #319cff;
+                    @extend %ic, .icon-check;
+                }
+            }
+        }
+    }
+    // .calc-section__checkbox-value
+    &__checkbox-value {
+        position: relative;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 6px;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: math.div(20, 14);
+        cursor: pointer;
+        user-select: none;
+        padding: em(12, 14);
+        transition: background-color 0.3s ease 0s;
+        &::before {
+            content: "";
+            flex-shrink: 0;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            margin: em(0) rem(8) em(0) em(0);
+            width: 20px;
+            height: 20px;
+            font-size: 12px;
+            border-radius: 3px;
+            z-index: 2;
+            color: #fff;
+            border: 2px solid #fff;
+            transition: transform 0.15s ease 0s;
+        }
+        @media (any-hover: hover) {
+            &:hover {
+                background: rgba(255, 255, 255, 0.2);
+            }
+        }
+    }
+    // .calc-section__file
+    &__file {
+        display: none;
+        @media (min-width: $md3) {
+            display: block;
+        }
+        position: relative;
+        grid-column: span 2;
+        & img {
+            border-radius: 8px;
+        }
+    }
+    &__file-item {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        cursor: pointer;
+        padding: em(12);
+        text-align: center;
+    }
+    // .calc-section__info
+    &__info {
+        display: none;
+        @media (min-width: $md4) {
+            display: block;
+        }
+        font-size: 14px;
+        line-height: math.div(20, 14);
+    }
+    // .calc-section__preview
+    &__preview {
+        min-width: 0;
+        display: none;
+        @media (min-width: $md3) {
+            display: block;
+        }
+    }
+    // .calc-section__preview-title
+    &__preview-title {
+        font-size: 12px;
+        font-weight: 600;
+        line-height: math.div(16, 12);
+    }
+    // .calc-section__preview-slider
+    &__preview-slider {
+    }
+    // .calc-section__person
+    &__person {
+        @media (min-width: $md4) {
+            grid-column: span 3;
+        }
+        @media (min-width: $md3) {
+            grid-column: span 2;
+        }
+        & .form__row {
+            &:not(:last-child) {
+                margin: em(0) em(0) em(24) rem(0);
+            }
+        }
+    }
+}
+
+.preview-slider {
+    margin: em(8) em(0) em(0) em(0);
+    // .preview-slider__prev
+    &__prev {
+        background: #fff;
+        color: $mainColor;
+    }
+    // .preview-slider__next
+    &__next {
+        background: #fff;
+        color: $mainColor;
+    }
+    // .preview-slider__wrapper
+    &__wrapper {
+    }
+    // .preview-slider__slide
+    &__slide {
+        position: relative;
+    }
+    // .preview-slider__download
+    &__download {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        color: #64707b;
+        transition: color 0.3s ease 0s;
+        @media (any-hover: hover) {
+            &:hover {
+                color: #45a6ff;
             }
         }
     }
