@@ -1,0 +1,155 @@
+@@include('html/_head.html', {
+'title': 'ХОККЕРС | Реквизиты'
+})
+
+<body>
+	<div class="wrapper">
+		<main class="page">
+			<section class="page__info info">
+				<div class="info__container">
+					<ul class="info__breadcrumbs breadcrumbs ">
+						<li class="breadcrumbs__item">
+							<a href="/" class="breadcrumbs__link">Главная</a>
+						</li>
+						<li class="breadcrumbs__item">
+							<a class="breadcrumbs__link breadcrumbs__link_active">
+								Реквизиты
+							</a>
+						</li>
+					</ul>
+					<div class="info__content">
+						@@include('html/_info-sidebar.html', {
+						"active": 11
+						})
+						<div class="info__content-body requisites">
+							<h1 class="requisites__title title title_md">
+								Реквизиты
+							</h1>
+							<div class="requisites__subtitle">
+								<a href="" class="requisites__subtitle-link">Счета</a> и
+								<a href="" class="requisites__subtitle-link">квитанции</a>
+								на оплату автоматически формируются с актуальными реквизитами.
+							</div>
+							<a href="" class="requisites__btn btn btn_blue icon-print">
+								Распечатать реквизиты
+							</a>
+							<ul class="requisites__list">
+								<li class="requisites__list-item">
+									<div class="requisites__caption">
+										Наименование
+									</div>
+									<div class="requisites__value">
+										ООО “Хоккерс”
+									</div>
+								</li>
+								<li class="requisites__list-item">
+									<div class="requisites__caption">
+										Почтовый адрес
+									</div>
+									<div class="requisites__value">
+										192102, Санкт-Петербург г, вн.тер.г. муниципальный округ Волковское, ул.
+										Бухарестская, д. 24,
+									</div>
+								</li>
+								<li class="requisites__list-item">
+									<div class="requisites__caption">
+										Юридический адрес
+									</div>
+									<div class="requisites__value">
+										192102, Санкт-Петербург г, вн.тер.г. муниципальный округ
+									</div>
+								</li>
+								<li class="requisites__list-item">
+									<div class="requisites__caption">
+										ИНН
+									</div>
+									<div class="requisites__value">
+										7816276550
+									</div>
+								</li>
+								<li class="requisites__list-item">
+									<div class="requisites__caption">
+										КПП
+									</div>
+									<div class="requisites__value">
+										781601001
+									</div>
+								</li>
+								<li class="requisites__list-item">
+									<div class="requisites__caption">
+										Банк
+									</div>
+									<div class="requisites__value">
+										ПАО "БАНК "САНКТ-ПЕТЕРБУРГ" г. Санкт-Петербург
+									</div>
+								</li>
+								<li class="requisites__list-item">
+									<div class="requisites__caption">
+										Корреспондентский счет
+									</div>
+									<div class="requisites__value">
+										30101810900000000790
+									</div>
+								</li>
+								<li class="requisites__list-item">
+									<div class="requisites__caption">
+										Расчетный счет
+									</div>
+									<div class="requisites__value">
+										40702810590540000038
+									</div>
+								</li>
+								<li class="requisites__list-item">
+									<div class="requisites__caption">
+										БИК
+									</div>
+									<div class="requisites__value">
+										044030790
+									</div>
+								</li>
+								<li class="requisites__list-item">
+									<div class="requisites__caption">
+										ОКПО
+									</div>
+									<div class="requisites__value">
+										23109283
+									</div>
+								</li>
+								<li class="requisites__list-item">
+									<div class="requisites__caption">
+										ОКОНХ
+									</div>
+									<div class="requisites__value">
+										40288564000
+									</div>
+								</li>
+								<li class="requisites__list-item">
+									<div class="requisites__caption">
+										ОКВЭД
+									</div>
+									<div class="requisites__value">
+										61.1
+									</div>
+								</li>
+								<li class="requisites__list-item">
+									<div class="requisites__caption">
+										ОГРН
+									</div>
+									<div class="requisites__value">
+										1157847244147
+									</div>
+								</li>
+							</ul>
+							@@include('html/_help-block.html', {
+							"className": "requisites__support"
+							})
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+	</div>
+	@@include('html/_js.html', {})
+</body>
+
+</html>

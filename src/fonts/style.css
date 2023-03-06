@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icons';
-  src:  url('fonts/icons.eot?i86iyz');
-  src:  url('fonts/icons.eot?i86iyz#iefix') format('embedded-opentype'),
-    url('fonts/icons.ttf?i86iyz') format('truetype'),
-    url('fonts/icons.woff?i86iyz') format('woff'),
-    url('fonts/icons.svg?i86iyz#icons') format('svg');
+  src:  url('fonts/icons.eot?88z7bx');
+  src:  url('fonts/icons.eot?88z7bx#iefix') format('embedded-opentype'),
+    url('fonts/icons.ttf?88z7bx') format('truetype'),
+    url('fonts/icons.woff?88z7bx') format('woff'),
+    url('fonts/icons.svg?88z7bx#icons') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,14 +25,74 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-picture:before {
+  content: "\e91d";
+}
+.icon-print:before {
+  content: "\e919";
+}
+.icon-download:before {
+  content: "\e918";
+}
+.icon-check:before {
+  content: "\e911";
+}
+.icon-mail:before {
+  content: "\e90a";
+}
 .icon-question:before {
   content: "\e909";
+}
+.icon-file:before {
+  content: "\e91a";
+}
+.icon-copy:before {
+  content: "\e912";
+}
+.icon-telegram:before {
+  content: "\e913";
+}
+.icon-facebook:before {
+  content: "\e914";
+}
+.icon-twitter:before {
+  content: "\e915";
+}
+.icon-ok:before {
+  content: "\e916";
+}
+.icon-vk:before {
+  content: "\e917";
+}
+.icon-watch:before {
+  content: "\e90f";
+}
+.icon-eye:before {
+  content: "\e910";
+}
+.icon-calendar:before {
+  content: "\e90b";
+}
+.icon-message:before {
+  content: "\e90c";
+}
+.icon-dislike:before {
+  content: "\e90d";
+}
+.icon-like:before {
+  content: "\e90e";
 }
 .icon-close:before {
   content: "\e907";
 }
 .icon-help:before {
   content: "\e906";
+}
+.icon-sort:before {
+  content: "\e91b";
+}
+.icon-star:before {
+  content: "\e91c";
 }
 .icon-image:before {
   content: "\e908";

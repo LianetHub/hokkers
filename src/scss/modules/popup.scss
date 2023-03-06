@@ -1,0 +1,56 @@
+.popup {
+	position: fixed;
+	background: rgba($color: $mainColor, $alpha: 0.65);
+	inset: 0;
+	opacity: 0;
+	visibility: hidden;
+	overflow-y: auto;
+	overflow-x: hidden;
+	transition: all 0.3s linear 0s;
+	z-index: 55555;
+	&.open {
+		opacity: 1;
+		visibility: visible;
+		& .popup__body {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+	// .popup__content
+	&__content {
+		position: relative;
+		min-height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	// .popup__body
+	&__body {
+		transition: all 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0s;
+		opacity: 0;
+		transform: translateY(-100%);
+		width: 100%;
+		background: #fff;
+		border-radius: 6px;
+		padding: em(40);
+		max-width: 744px;
+		display: flex;
+		flex-direction: column;
+	}
+	&__close {
+		&.icon-close {
+			position: absolute;
+			top: 32px;
+			right: 32px;
+			color: #64707b;
+			transition: color 0.3s ease 0s;
+			z-index: 2;
+			font-size: 28px;
+			@media (any-hover: hover) {
+				&:hover {
+					color: $hover;
+				}
+			}
+		}
+	}
+}

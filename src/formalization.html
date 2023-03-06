@@ -1,0 +1,156 @@
+@@include('html/_head.html', {
+'title': 'ХОККЕРС | Как оформить заказ'
+})
+
+<body>
+	<div class="wrapper">
+		<main class="page">
+			<section class="page__info info">
+				<div class="info__container">
+					<ul class="info__breadcrumbs breadcrumbs ">
+						<li class="breadcrumbs__item">
+							<a href="/" class="breadcrumbs__link">Главная</a>
+						</li>
+						<li class="breadcrumbs__item">
+							<a class="breadcrumbs__link breadcrumbs__link_active">
+								Как оформить заказ
+							</a>
+						</li>
+					</ul>
+					<div class="info__content">
+						@@include('html/_info-sidebar.html', {
+						"active": 3
+						})
+						<div class="info__content-body formalization">
+							<h1 class="info__title title title_md">
+								Как оформить заказ
+							</h1>
+							<div data-tabs class="info__tabs tabs">
+								<div class="tabs__header">
+									<div class="tabs__buttons">
+										<button class="tabs__button" data-tab-button>
+											Выбор товара
+										</button>
+										<button class="tabs__button" data-tab-button>
+											Оформление заказа
+										</button>
+										<button class="tabs__button" data-tab-button>
+											Оплата товара
+										</button>
+									</div>
+								</div>
+								<div class="tabs__content">
+									<div data-tab-content class="tabs__content-item">
+										<div class="info__items">
+											<div class="info__item">
+												<div class="info__item-header">
+													<h2 class="info__item-title title_xs">
+														Найти товар через строку поиска
+													</h2>
+												</div>
+												<div class="info__item-body formalization__body">
+													<p class="formalization__body-item">
+														Поле «Поиск по товарам» вы найдете вверху сайта на черном фоне,
+														рядом со значком корзины. Кликните на строку и впишите название
+														товара, который вам нужен (например, «белая каска» или «ботинки
+														Град»).
+													</p>
+													<div class="formalization__body-item">
+														<img src="@img/pic.png" class="cover-image" alt="pic decs">
+													</div>
+													<p class="formalization__body-item">
+														Если запрос введен верно, на странице появится подборка товаров,
+														которые под него подходят по названию. Бывает, что выводится
+														сразу много позиций. В этом случае вы сможете отсортировать их
+														по цене для удобства.
+													</p>
+													<div class="formalization__body-item">
+														<img src="@img/pic.png" class="cover-image" alt="pic decs">
+													</div>
+												</div>
+											</div>
+											<div class="info__item">
+												<div class="info__item-header">
+													<h2 class="info__item-title title_xs">
+														Выбрать товар в каталоге
+													</h2>
+												</div>
+												<div class="info__item-body formalization__body">
+													<p class="formalization__body-item">
+														Второй способ – выбрать товары вручную из каталога. Спецодежда,
+														обувь, СИЗ и другие товары разделены в нём на логичные категории
+														и подкатегории, в которых легко сориентироваться.
+													</p>
+													<p class="formalization__body-item">
+														Дерево категорий автоматически разворачивается, когда вы
+														наводите мышку на кнопку «Каталог спецодежды» в левой верхней
+														части экрана. Точно так же устроены и категории: наводите курсор
+														и сразу видите, что есть внутри. Можно не кликать и очень быстро
+														найти нужную группу товаров в этих выпадающих списках.
+													</p>
+													<p class="formalization__body-item">
+														Например, мы ищем одноразовый комбинезон «Каспер». Наводим
+														курсор на каталог, а потом на категорию «Защитная спецодежда».
+														Видим внутри подпункт «Одноразовая одежда». Нажимаем на ссылку и
+														идем выбирать конкретную модель.
+													</p>
+													<div class="formalization__body-item">
+														<img src="@img/pic.png" class="cover-image" alt="pic decs">
+													</div>
+												</div>
+											</div>
+											<div class="info__item">
+												<div class="info__item-header">
+													<h2 class="info__item-title title_xs">
+														Подобрать по параметрам
+													</h2>
+												</div>
+												<div class="info__item-body formalization__body">
+													<p class="formalization__body-item">
+														Третий инструмент – подбор по параметрам. Используйте его, когда
+														уже нашли нужную категорию в каталоге или через строку поиска.
+													</p>
+													<p class="formalization__body-item">
+														Подбор по параметрам поможет вам отфильтровать из большой
+														подборки только те товары, которые точно подходят. Инструмент вы
+														увидите на странице сбоку, с левой стороны.
+													</p>
+													<p class="formalization__body-item">
+														Здесь столбиком будут перечислены параметры (для каждого типа
+														товара – свои). Например, для брезентовых рукавиц можно задать
+														цену, материал, защитные свойства и т.д. Нажмите на любой пункт
+														и проставьте галочки. Цена указывается цифрами в диапазоне «От»
+														и «До».
+													</p>
+													<div class="formalization__body-item">
+														<img src="@img/pic.png" class="cover-image" alt="pic decs">
+													</div>
+												</div>
+											</div>
+										</div>
+										@@include('html/_info-opinion.html',{
+										"contols": true
+										})
+									</div>
+									<div data-tab-content class="tabs__content-item">
+										Оформление заказа
+									</div>
+									<div data-tab-content class="tabs__content-item">
+										Оплата товара
+									</div>
+								</div>
+							</div>
+							@@include('html/_help-block.html', {
+							"className": "privacy__support"
+							})
+						</div>
+					</div>
+				</div>
+			</section>
+
+		</main>
+	</div>
+	@@include('html/_js.html', {})
+</body>
+
+</html>

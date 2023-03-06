@@ -1,4 +1,4 @@
-node_modules
-gulp
-.vscode
+node_modules/
+gulp/
+.vscode/
 

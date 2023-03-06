@@ -1,0 +1,297 @@
+@@include('html/_head.html', {
+'title': 'ХОККЕРС | Обмен и возврат'
+})
+
+<body>
+	<div class="wrapper">
+		<main class="page">
+			<section class="page__info info">
+				<div class="info__container">
+					<ul class="info__breadcrumbs breadcrumbs ">
+						<li class="breadcrumbs__item">
+							<a href="/" class="breadcrumbs__link">Главная</a>
+						</li>
+						<li class="breadcrumbs__item">
+							<a class="breadcrumbs__link breadcrumbs__link_active">
+								Оплата заказа
+							</a>
+						</li>
+					</ul>
+					<div class="info__content">
+						@@include('html/_info-sidebar.html', {
+						"active": 1
+						})
+						<div class="info__content-body payment">
+							<h1 class="info__title title title_md">
+								Оплата заказа
+							</h1>
+							<div data-tabs class="info__tabs tabs">
+								<div class="tabs__header">
+									<div class="tabs__buttons">
+										<button class="tabs__button" data-tab-button>
+											Юридические лица
+										</button>
+										<button class="tabs__button" data-tab-button>
+											Физические лица
+										</button>
+									</div>
+								</div>
+								<div class="tabs__content">
+									<div data-tab-content class="tabs__content-item">
+										<div class="payment__body">
+											<div class="payment__block">
+												<div class="payment__block-header">
+													<div class="payment__block-icon">
+														<img src="@img/payment/01.svg" alt="icon">
+													</div>
+													<h3 class="payment__block-title">
+														Банковский перевод по счету
+													</h3>
+												</div>
+												<div class="payment__block-body">
+													<p>
+														Клиенты - юридические лица могут оплатить свой заказ путем
+														перечисления денежных средств со своего счета на счет нашей
+														компании.
+														На основании Вашего заказа мы сформируем счет на оплату и
+														отправим
+														его на указанный Вами электронный адрес.
+													</p>
+													<p>
+														Ваш заказ резервируется на 5 (пять) рабочих дней с момента
+														выставления счета. В случае не поступления денежных средств по
+														заказу в пятидневный срок на наш расчетный счет Ваш заказ
+														снимается
+														с резерва. Если Вы оплатили заказ, но средства не были зачислены
+														в
+														указанные сроки, пожалуйста, сообщите об этом нашим менеджерам.
+													</p>
+													<p>
+														Все необходимые для бухгалтерии документы (оригинал счета на
+														оплату,
+														УПД (универсальный передаточный документ), накладная) выдаются
+														вместе с заказом при получении.
+													</p>
+												</div>
+											</div>
+											<div class="payment__block">
+												<div class="payment__block-header">
+													<div class="payment__block-icon">
+														<img src="@img/payment/02.svg" alt="icon">
+													</div>
+													<h3 class="payment__block-title">
+														Банковской картой в магазине
+													</h3>
+												</div>
+												<div class="payment__block-body">
+													<p>
+														Клиенты - юридические лица могут оплатить свой заказ наличными в
+														одном из наших магазинов при самовывозе заказанного товара.
+														Вместе с заказом Вы также получаете оригинал счета на оплату,
+														УПД универсальный передаточный документ, накладную, кассовый
+														чек, а также акт и УПД универсальный передаточный документ на
+														стоимость услуги по доставке.
+													</p>
+												</div>
+											</div>
+											<div class="payment__block">
+												<div class="payment__block-header">
+													<div class="payment__block-icon">
+														<img src="@img/payment/03.svg" alt="icon">
+													</div>
+													<h3 class="payment__block-title">
+														Наличными в магазине
+													</h3>
+												</div>
+												<div class="payment__block-body">
+													<p>
+														Клиенты - юридические лица могут оплатить свой заказ наличными в
+														одном из наших магазинов при самовывозе заказанного товара.
+														Вместе с заказом Вы также получаете оригинал счета на оплату,
+														УПД универсальный передаточный документ, накладную, кассовый
+														чек, а также акт и УПД универсальный передаточный документ на
+														стоимость услуги по доставке.
+													</p>
+												</div>
+											</div>
+										</div>
+										@@include('html/_info-opinion.html',{
+										"contols": false
+										})
+									</div>
+									<div data-tab-content class="tabs__content-item">
+										<div class="payment__body">
+											<div class="payment__block">
+												<div class="payment__block-header">
+													<div class="payment__block-icon">
+														<img src="@img/payment/03.svg" alt="icon">
+													</div>
+													<h3 class="payment__block-title">
+														Наличными в магазине
+													</h3>
+												</div>
+												<div class="payment__block-body">
+													<p>
+														Клиенты - юридические лица могут оплатить свой заказ наличными в
+														одном из наших магазинов при самовывозе заказанного товара.
+														Вместе с заказом Вы также получаете оригинал счета на оплату,
+														УПД универсальный передаточный документ, накладную, кассовый
+														чек, а также акт и УПД универсальный передаточный документ на
+														стоимость услуги по доставке.
+													</p>
+												</div>
+											</div>
+											<div class="payment__block">
+												<div class="payment__block-header">
+													<div class="payment__block-icon">
+														<img src="@img/payment/04.svg" alt="icon">
+													</div>
+													<h3 class="payment__block-title">
+														Наличными в магазине
+													</h3>
+												</div>
+												<div class="payment__block-body">
+													<p>
+														Вы можете оплатить заказ банковской картой на нашем сайте. Если
+														вы оформили заказ через корзину интернет-магазина, то выберите
+														способ оплаты «Банковской картой на сайте». Наш менеджер с Вами
+														свяжется по телефону и поможет провести платеж банковской
+														картой.
+														К оплате принимаются карты, выпущенные российскими банками:
+													</p>
+													<div class="payment__block-items">
+														<figure class="payment__block-item">
+															<img src="@img/payment/mastercard-el.png"
+																alt="mastercard logo">
+															<figcaption class="payment__block-desc">
+																MasterCard Electronic
+															</figcaption>
+														</figure>
+														<figure class="payment__block-item">
+															<img src="@img/payment/mastercard.png"
+																alt="mastercard logo">
+															<figcaption class="payment__block-desc">
+																MasterCard
+															</figcaption>
+														</figure>
+														<figure class="payment__block-item">
+															<img src="@img/payment/visa-el.png" alt="Visa logo">
+															<figcaption class="payment__block-desc">
+																Visa Electron
+															</figcaption>
+														</figure>
+														<figure class="payment__block-item">
+															<img src="@img/payment/visa.png" alt="Visa logo">
+															<figcaption class="payment__block-desc">
+																Visa
+															</figcaption>
+														</figure>
+														<figure class="payment__block-item">
+															<img src="@img/payment/mir.png" alt="mir logo">
+															<figcaption class="payment__block-desc">
+																МИР
+															</figcaption>
+														</figure>
+													</div>
+													<p>
+														Если вы оформили заказ по телефону, то также сообщите о желании
+														сделать оплату банковской картой. Наш менеджер поможет Вам
+														провести такой платеж. Деньги зачисляются мгновенно. Комиссий
+														при таком переводе нет.
+													</p>
+												</div>
+											</div>
+											<div class="payment__block">
+												<div class="payment__block-header">
+													<div class="payment__block-icon">
+														<img src="@img/payment/05.svg" alt="icon">
+													</div>
+													<h3 class="payment__block-title">
+														Оплата через системы интернет-банкинга SberPay, Альфа-Клик и
+														Тинькофф Банк
+													</h3>
+												</div>
+												<div class="payment__block-body">
+													<div class="payment__block-items">
+														<figure class="payment__block-item">
+															<img src="@img/payment/sber.png" alt="sber logo">
+															<figcaption class="payment__block-desc">
+																SberPay
+															</figcaption>
+														</figure>
+														<figure class="payment__block-item">
+															<img src="@img/payment/alpha.png" alt="alpha logo">
+															<figcaption class="payment__block-desc">
+																Альфа-Клик
+															</figcaption>
+														</figure>
+														<figure class="payment__block-item">
+															<img src="@img/payment/tinkoff.png" alt="tinkoff logo">
+															<figcaption class="payment__block-desc">
+																Тинькофф Банк
+															</figcaption>
+														</figure>
+													</div>
+													<p>
+														Не отходя от компьютера вы можете в любой момент оплатить товары
+														с вашего банковского счета или карты через систему
+														интернет-банкинга SberPay, Альфа-Клик и Тинькофф Банк. Деньги
+														зачисляются мгновенно. Комиссий при таком переводе нет. Выберите
+														этот способ оплаты при заказе через корзину интернет-магазина
+														или сообщите о выбранном способе оплаты менеджеру по телефону.
+														Наш менеджер поможет Вам провести такой платеж.
+													</p>
+												</div>
+											</div>
+											<div class="payment__block">
+												<div class="payment__block-header">
+													<div class="payment__block-icon">
+														<img src="@img/payment/06.svg" alt="icon">
+													</div>
+													<h3 class="payment__block-title">
+														Оплата электронными деньгами ЮMoney
+													</h3>
+												</div>
+												<div class="payment__block-body">
+													<div class="payment__block-items">
+														<figure class="payment__block-item">
+															<img src="@img/payment/umoney.png" alt="ЮMoney logo">
+															<figcaption class="payment__block-desc">
+																ЮMoney
+															</figcaption>
+														</figure>
+													</div>
+													<p>
+														Если у Вас есть электронные кошельки в ЮMoney то Вы сможете
+														оплатить свой заказ электронными деньгами одной из этих систем.
+														Деньги зачисляются мгновенно. Комиссий при таком переводе нет.
+														Выберите этот способ оплаты при заказе через корзину
+														интернет-магазина или сообщите о выбранном способе оплаты
+														менеджеру по телефону. Наш менеджер поможет Вам провести такой
+														платеж.
+													</p>
+												</div>
+											</div>
+										</div>
+										@@include('html/_info-opinion.html',{
+										"contols": false
+										})
+									</div>
+								</div>
+							</div>
+							@@include('html/_help-block.html', {
+							"className": "privacy__support"
+							})
+						</div>
+					</div>
+				</div>
+			</section>
+
+		</main>
+
+	</div>
+	@@include('html/_modal-rate.html', {})
+	@@include('html/_js.html', {})
+</body>
+
+</html>

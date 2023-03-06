@@ -1,0 +1,69 @@
+@@include('html/_head.html', {
+'title': 'ХОККЕРС | Отзывы'
+})
+
+<body>
+	<div class="wrapper">
+		<main class="page">
+			<section class="page__info info">
+				<div class="info__container">
+					<ul class="info__breadcrumbs breadcrumbs ">
+						<li class="breadcrumbs__item">
+							<a href="/" class="breadcrumbs__link">Главная</a>
+						</li>
+						<li class="breadcrumbs__item">
+							<a class="breadcrumbs__link breadcrumbs__link_active">
+								Отзывы
+							</a>
+						</li>
+					</ul>
+					<div class="info__content">
+						@@include('html/_info-sidebar.html', {
+						"active": 9
+						})
+						<div class="info__content-body reviews">
+							<h1 class="info__title title title_md">
+								Отзывы
+							</h1>
+							<div data-tabs class="info__tabs tabs">
+								<div class="tabs__header">
+									<div class="tabs__buttons">
+										<button class="tabs__button" data-tab-button>
+											Отзывы о товарах
+										</button>
+										<button class="tabs__button" data-tab-button>
+											Отзывы 2ГИС
+										</button>
+										<button class="tabs__button" data-tab-button>
+											Отзывы Яндекс Карт
+										</button>
+									</div>
+								</div>
+
+
+								<div class="tabs__content">
+									<div data-tab-content class="tabs__content-item">
+										@@include('html/_reviews-body.html',{})
+									</div>
+									<div data-tab-content class="tabs__content-item">
+										Отзывы 2ГИС
+									</div>
+									<div data-tab-content class="tabs__content-item">
+										Отзывы Яндекс Карт
+									</div>
+								</div>
+							</div>
+							@@include('html/_help-block.html', {
+							"className": "reviews__support"
+							})
+						</div>
+					</div>
+				</div>
+			</section>
+
+		</main>
+	</div>
+	@@include('html/_js.html', {})
+</body>
+
+</html>

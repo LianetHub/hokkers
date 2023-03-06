@@ -297,7 +297,8 @@
         inset: auto;
         transform: none;
         color: #001426;
-        &::after {
+        &::after,
+        &::before {
             display: none;
         }
     }
@@ -318,8 +319,6 @@
 .calc-section {
     // .calc-section__title
     &__title {
-        font-size: 24px;
-        line-height: math.div(28, 24);
     }
     // .calc-section__subtitle
     &__subtitle {
@@ -564,6 +563,17 @@
         &:not(:last-child) {
             margin: em(0) em(0) em(20) rem(0);
         }
+        &_sm {
+            border-bottom: 0;
+            padding: 0;
+            .faq__item-title {
+                font-size: 16px;
+                line-height: math.div(20, 16);
+            }
+            .faq__item-answer {
+                max-width: 100%;
+            }
+        }
     }
     // .faq__item-title
     &__item-title {
@@ -583,6 +593,7 @@
             padding: 0 em(6);
         }
         &._active {
+            color: #0b8aff;
             &::before {
                 transform: rotate(-90deg);
             }
@@ -594,6 +605,72 @@
         font-size: 14px;
         max-width: 680px;
         line-height: math.div(20, 14);
+        & p {
+            &:not(:last-child) {
+                margin: em(0) em(0) em(14) rem(0);
+            }
+        }
+    }
+    &__item-list {
+        &:not(:last-child) {
+            margin: em(0) em(0) em(14) rem(0);
+        }
+        & li {
+            position: relative;
+            padding: em(0) em(0) em(0) em(36);
+            &::before {
+                content: "";
+                position: absolute;
+                top: 7px;
+                left: 16px;
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+                background: #001426;
+            }
+            &:not(:last-child) {
+                margin: em(0) em(0) em(8) rem(0);
+            }
+            & a {
+                color: #0b8aff;
+                font-weight: 700;
+                transition: color 0.3s ease 0s;
+                @media (any-hover: hover) {
+                    &:hover {
+                        color: darken($color: #0b8aff, $amount: 10);
+                    }
+                }
+            }
+        }
+    }
+    &__item-table {
+        &:not(:last-child) {
+            margin: em(0) em(0) em(14) rem(0);
+        }
+        display: block;
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+        height: auto;
+        font-size: 12px;
+        line-height: math.div(16, 12);
+        border-radius: 6px;
+        border: 1px solid #e6eaee;
+        & th {
+            background: #e6eaee;
+            font-weight: 600;
+            color: #64707b;
+        }
+        & tr {
+            &:nth-child(even) {
+                background: #f0f4f8;
+            }
+        }
+        & td,
+        th {
+            padding: em(8, 12) em(12, 12);
+            width: 50%;
+        }
     }
     // .faq__info
     &__info {

@@ -1,0 +1,86 @@
+.pagination {
+    display: flex;
+    // .pagination__item
+    &__item {
+        flex: 0 0 25px;
+        height: 25px;
+        font-size: 10px;
+        @media (min-width: $md4) {
+            flex: 0 0 40px;
+            height: 40px;
+            font-size: 14px;
+        }
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background: #fff;
+
+        line-height: math.div(20, 14);
+        transition: background-color 0.15s linear 0s, color 0.15s ease 0s;
+        margin: 0 em(1);
+        &_active {
+            background: #319cff;
+            color: #fff;
+            pointer-events: none;
+        }
+        &[href] {
+            &:not(.pagination__item_left, .pagination__item_right) {
+                @media (any-hover: hover) {
+                    &:hover {
+                        background: #319cff;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+        &_left,
+        &_right {
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+            color: #319cff;
+            border-radius: 0;
+            & span {
+                display: none;
+                @media (min-width: $md5) {
+                    display: block;
+                }
+            }
+            &::before {
+                @extend %ic, .icon-right;
+                @media (min-width: $md5) {
+                    width: 20px;
+                    height: 20px;
+                    flex-shrink: 0;
+                    display: inline-flex;
+                    align-items: center;
+                }
+            }
+            @media (any-hover: hover) {
+                &:hover {
+                    color: darken($color: #319cff, $amount: 10);
+                }
+            }
+        }
+        &_left {
+            margin: em(0) auto em(0) em(0);
+            &::before {
+                transform: rotate(180deg);
+
+                @media (min-width: $md5) {
+                    margin: em(0) em(6) em(0) em(0);
+                }
+            }
+        }
+        &_right {
+            margin: em(0) em(0) em(0) auto;
+            &::before {
+                order: 1;
+                @media (min-width: $md5) {
+                    margin: em(0) em(0) em(0) em(6);
+                }
+            }
+        }
+    }
+}

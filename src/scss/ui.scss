@@ -1,6 +1,8 @@
 //============ МОДУЛИ ====================
 @import "modules/navigation";
-
+@import "modules/pagination";
+@import "modules/tabs";
+@import "modules/popup";
 //============ МОДУЛИ ====================
 .title {
 	font-weight: 600;
@@ -26,6 +28,13 @@
 		line-height: math.div(32, 28);
 	}
 	&_sm {
+		font-size: 20px;
+		line-height: math.div(28, 24);
+		@media (min-width: $md3) {
+			font-size: 24px;
+		}
+	}
+	&_xs {
 		font-size: 18px;
 		@media (min-width: $md3) {
 			font-size: 20px;
@@ -113,6 +122,143 @@
 		font-weight: 600;
 		line-height: math.div(16, 12);
 		color: #001426;
+	}
+}
+
+.author {
+	font-size: 12px;
+	font-weight: 600;
+	line-height: math.div(16, 12);
+	// .author__title
+	&__title {
+		color: #b0b8bf;
+		margin-right: em(4);
+	}
+	// .author__name
+	&__name {
+		color: rgba($color: #64707b, $alpha: 0.8);
+	}
+}
+
+.user-rate {
+	display: flex;
+	&_lg {
+		.user-rate__btn {
+			font-size: 16px;
+			&::before {
+				font-size: 27px;
+			}
+		}
+	}
+	&__btn {
+		display: inline-flex;
+		align-items: center;
+		color: rgba($color: #64707b, $alpha: 0.8);
+		font-size: 12px;
+		&:not(:last-child) {
+			margin: em(0) em(16) em(0) em(0);
+		}
+		&::before {
+			font-size: 16px;
+			margin: em(0) rem(5) em(0) em(0);
+			color: #b0b8bf;
+			transition: color 0.3s ease 0s;
+		}
+		&.icon-like {
+			@media (any-hover: hover) {
+				&:hover {
+					&::before {
+						color: #30bc30;
+					}
+				}
+			}
+		}
+		&.icon-dislike {
+			@media (any-hover: hover) {
+				&:hover {
+					&::before {
+						color: #ec3a3a;
+					}
+				}
+			}
+		}
+	}
+}
+
+.rates {
+	display: flex;
+	align-items: center;
+	&_sm {
+		.rates__star {
+			&:not(:last-child) {
+				margin: em(0) em(4) em(0) em(0);
+			}
+		}
+	}
+	// .rates__stars
+	&__stars {
+		display: flex;
+	}
+	// .rates__star
+	&__star {
+		&:not(:last-child) {
+			margin: em(0) em(7.5) em(0) em(0);
+		}
+		padding: em(0) 0 em(2);
+		color: #e6eaee;
+		&_selected {
+			color: #319cff;
+		}
+	}
+	// .rates__value
+	&__value {
+		margin: em(0) em(0) em(0) em(12, 12);
+		font-size: 12px;
+		font-weight: 600;
+		line-height: math.div(16, 12);
+		color: #64707b;
+		&_gray {
+			color: #b0b8bf;
+		}
+	}
+}
+
+.opinion {
+	display: flex;
+	align-items: center;
+	&__title {
+		font-size: 18px;
+		font-weight: 600;
+		line-height: math.div(24, 18);
+		margin: em(0) em(20, 18) em(0) em(0);
+	}
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+	&::after {
+		display: none;
+	}
+	width: 30px;
+	height: 30px;
+	font-size: 10px;
+	@media (min-width: $md3) {
+		font-size: 14px;
+		width: 42px;
+		height: 42px;
+	}
+	border-radius: 50%;
+}
+
+.swiper-button-next {
+	&::before {
+		@extend %ic, .icon-arrow-right;
+	}
+}
+
+.swiper-button-prev {
+	&::before {
+		@extend %ic, .icon-arrow-left;
 	}
 }
 
