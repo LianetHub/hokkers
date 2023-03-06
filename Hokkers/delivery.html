@@ -9,28 +9,28 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="">
 
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
-	<link rel="stylesheet" href="css/reset.min.css">
-	<link rel="stylesheet" href="css/style.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css?_v=20230306145719">
+	<link rel="stylesheet" href="css/reset.min.css?_v=20230306145719">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230306145719">
 </head>
 
 <body>
-    <div class="wrapper">
-        <main class="page">
-            <section class="page__info info">
-                <div class="info__container">
-                    <ul class="info__breadcrumbs breadcrumbs ">
-                        <li class="breadcrumbs__item">
-                            <a href="/" class="breadcrumbs__link">Главная</a>
-                        </li>
-                        <li class="breadcrumbs__item">
-                            <a class="breadcrumbs__link breadcrumbs__link_active">
-                                Доставка заказа
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="info__content">
-                        <aside class="info__content-sidebar info-sidebar">
+  <div class="wrapper">
+    <main class="page">
+      <section class="page__info info">
+        <div class="info__container">
+          <ul class="info__breadcrumbs breadcrumbs ">
+            <li class="breadcrumbs__item">
+              <a href="/" class="breadcrumbs__link">Главная</a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link breadcrumbs__link_active">
+                Доставка заказа
+              </a>
+            </li>
+          </ul>
+          <div class="info__content">
+            <aside class="info__content-sidebar info-sidebar">
     <nav class="info-sidebar__menu">
         <ul class="info-sidebar__list">
             <li class="info-sidebar__item">
@@ -146,1113 +146,1050 @@
         </ul>
     </nav>
 </aside>
-                        <div class="info__content-body delivery">
-                            <h1 class="info__title title title_md">
-                                Доставка заказа
-                            </h1>
-                            <div data-tabs class="info__tabs tabs">
-                                <div class="tabs__header">
-                                    <div class="tabs__buttons">
-                                        <button class="tabs__button" data-tab-button>
-                                            По Санкт-Петербургу
-                                        </button>
-                                        <button class="tabs__button" data-tab-button>
-                                            По всей России
-                                        </button>
+            <div class="info__content-body delivery">
+              <h1 class="info__title title title_md">
+                Доставка заказа
+              </h1>
+              <div data-tabs class="info__tabs tabs">
+                <div class="tabs__header">
+                  <div class="tabs__buttons">
+                    <button class="tabs__button" data-tab-button>
+                      По Санкт-Петербургу
+                    </button>
+                    <button class="tabs__button" data-tab-button>
+                      По всей России
+                    </button>
+                  </div>
+                </div>
+                <div class="tabs__content">
+                  <div data-tab-content class="tabs__content-item">
+                    <div class="delivery__body">
+                      <div class="delivery__content">
+                        <form action="#" class="delivery__calc form">
+                          <div class="delivery__calc-section">
+                            <div class="delivery__calc-title">
+                              Расчет стоимости доставки
+                            </div>
+                            <div class="delivery__calc-subtitle">
+                              Заполните поле адреса, выберите вес груза и узнайте
+                              стоимость доставки до вашего адреса по Санкт-Петербургу
+                            </div>
+                            <div class="delivery__calc-address">
+                              <div class="form__label form__label_gray">
+                                Введите адрес доставки или координаты доставки
+                              </div>
+                              <input type="" name="" class="form__input" placeholder="ул. Соборная, 1 ">
+                            </div>
+                            <div class="delivery__calc-types">
+                              <label class="delivery__calc-type radio-btn">
+                                <input type="radio" value="courier" name="delivery-type" class="radio-btn__input hidden" hidden>
+                                <span class="radio-btn__value">
+                                  Курьером
+                                </span>
+                              </label>
+                              <label class="delivery__calc-type radio-btn">
+                                <input type="radio" value="courier" checked name="delivery-type" class="radio-btn__input hidden" hidden>
+                                <span class="radio-btn__value">
+                                  Машиной
+                                </span>
+                              </label>
+                            </div>
+                            <div class="delivery__calc-weights">
+                              <label class="delivery__calc-weight delivery-weight">
+                                <input type="radio" value="weight" name="delivery-weight" class="delivery-weight__input hidden" hidden>
+                                <span class="delivery-weight__item">
+                                  <svg width="34" height="17" viewBox="0 0 34 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.06619 0C0.477349 0 0 0.478689 0 1.06918V13.1509C0 13.7414 0.477349 14.2201 1.06619 14.2201H2.23933C2.23911 14.2023 2.23899 14.1845 2.23899 14.1667C2.23899 11.8933 4.07681 10.0503 6.34382 10.0503C8.61082 10.0503 10.4486 11.8933 10.4486 14.1667C10.4486 14.1845 10.4485 14.2023 10.4483 14.2201H23.5631C23.5629 14.2023 23.5627 14.1845 23.5627 14.1667C23.5627 11.8933 25.4006 10.0503 27.6676 10.0503C29.9346 10.0503 31.7724 11.8933 31.7724 14.1667C31.7724 14.1845 31.7723 14.2023 31.7721 14.2201H32.9337C33.5667 14.2201 34.0603 13.6703 33.994 13.039L33.4446 7.80455C33.4003 7.38257 33.1113 7.02679 32.7082 6.89786L27.348 5.18332C27.2418 5.14937 27.1417 5.09893 27.0511 5.03386L20.3228 0.20003C20.1417 0.0699503 19.9246 0 19.7018 0H1.06619Z" fill="#B0B8BF" />
+                                    <path d="M9.16921 14.1667C9.16921 15.7315 7.90424 17 6.34382 17C4.78339 17 3.51842 15.7315 3.51842 14.1667C3.51842 12.6019 4.78339 11.3333 6.34382 11.3333C7.90424 11.3333 9.16921 12.6019 9.16921 14.1667Z" fill="#B0B8BF" />
+                                    <path d="M27.6676 17C29.228 17 30.493 15.7315 30.493 14.1667C30.493 12.6019 29.228 11.3333 27.6676 11.3333C26.1071 11.3333 24.8422 12.6019 24.8422 14.1667C24.8422 15.7315 26.1071 17 27.6676 17Z" fill="#B0B8BF" />
+                                  </svg>
+                                  <span class="delivery-weight__item-value">
+                                    0.7т
+                                  </span>
+                                </span>
+                              </label>
+                              <label class="delivery__calc-weight delivery-weight">
+                                <input type="radio" value="weight" name="delivery-weight" class="delivery-weight__input hidden" hidden>
+                                <span class="delivery-weight__item">
+                                  <svg width="45" height="23" viewBox="0 0 45 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.07138 0C0.479675 0 0 0.490355 0 1.09524V19.0571C0 19.662 0.479676 20.1524 1.07139 20.1524H8.35714C8.35691 20.1342 8.3568 20.1159 8.3568 20.0976C8.3568 17.7688 10.2036 15.881 12.4816 15.881C14.7597 15.881 16.6065 17.7688 16.6065 20.0976C16.6065 20.1159 16.6063 20.1342 16.6061 20.1524H34.4989C34.4987 20.1342 34.4986 20.1159 34.4986 20.0976C34.4986 17.7688 36.3453 15.881 38.6234 15.881C40.9015 15.881 42.7482 17.7688 42.7482 20.0976C42.7482 20.1159 42.7481 20.1342 42.7479 20.1524H43.9285C44.5598 20.1524 45.0543 19.5972 44.9952 18.9547L44.4216 12.7138C44.3814 12.2766 44.0897 11.9062 43.6805 11.7728L38.3595 10.0378C38.2156 9.99091 38.0831 9.91348 37.9706 9.81058L32.3395 4.65997C32.143 4.48029 31.8887 4.38095 31.6251 4.38095H25.5525C24.9608 4.38095 24.4811 3.8906 24.4811 3.28571V1.09524C24.4811 0.490355 24.0015 0 23.4098 0H1.07138Z" fill="#B0B8BF" />
+                                    <path d="M15.3208 20.0976C15.3208 21.7006 14.0497 23 12.4816 23C10.9136 23 9.64246 21.7006 9.64246 20.0976C9.64246 18.4947 10.9136 17.1952 12.4816 17.1952C14.0497 17.1952 15.3208 18.4947 15.3208 20.0976Z" fill="#B0B8BF" />
+                                    <path d="M38.6234 23C40.1914 23 41.4626 21.7006 41.4626 20.0976C41.4626 18.4947 40.1914 17.1952 38.6234 17.1952C37.0554 17.1952 35.7842 18.4947 35.7842 20.0976C35.7842 21.7006 37.0554 23 38.6234 23Z" fill="#B0B8BF" />
+                                  </svg>
+                                  <span class="delivery-weight__item-value">
+                                    1.5т
+                                  </span>
+                                </span>
+                              </label>
+                              <label class="delivery__calc-weight delivery-weight">
+                                <input type="radio" value="weight" name="delivery-weight" class="delivery-weight__input hidden" hidden>
+                                <span class="delivery-weight__item">
+                                  <svg width="54" height="25" viewBox="0 0 54 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.06528 0C0.476944 0 0 0.476733 0 1.06481V21.1667C0 21.7548 0.476944 22.2315 1.06528 22.2315H9.14456C9.14445 22.2232 9.14437 22.2149 9.14431 22.2066C9.14425 22.1971 9.14422 22.1877 9.14422 22.1782C9.14422 19.9141 10.9804 18.0787 13.2456 18.0787C15.5107 18.0787 17.3469 19.9141 17.3469 22.1782C17.3469 22.196 17.3468 22.2138 17.3466 22.2315H43.5532L43.553 22.2182C43.5529 22.2049 43.5528 22.1916 43.5528 22.1782C43.5528 19.9141 45.3891 18.0787 47.6542 18.0787C49.9193 18.0787 51.7555 19.9141 51.7555 22.1782C51.7555 22.196 51.7554 22.2138 51.7552 22.2315H52.9346C53.5603 22.2315 54.0513 21.695 53.9957 21.0721L53.4153 14.5656C53.3777 14.1446 53.0946 13.7857 52.6938 13.6509L47.712 11.9759C47.5686 11.9277 47.4371 11.8495 47.3262 11.7465L41.7289 6.54427C41.5318 6.36108 41.2727 6.25926 41.0035 6.25926H34.6577C34.0694 6.25926 33.5924 5.78252 33.5924 5.19444V1.06482C33.5924 0.476734 33.1155 0 32.5272 0H1.06528Z" fill="#B0B8BF" />
+                                    <path d="M16.0686 22.1782C16.0686 23.7367 14.8047 25 13.2456 25C11.6865 25 10.4226 23.7367 10.4226 22.1782C10.4226 20.6198 11.6865 19.3565 13.2456 19.3565C14.8047 19.3565 16.0686 20.6198 16.0686 22.1782Z" fill="#B0B8BF" />
+                                    <path d="M47.6542 25C49.2133 25 50.4772 23.7367 50.4772 22.1782C50.4772 20.6198 49.2133 19.3565 47.6542 19.3565C46.0951 19.3565 44.8312 20.6198 44.8312 22.1782C44.8312 23.7367 46.0951 25 47.6542 25Z" fill="#B0B8BF" />
+                                  </svg>
+                                  <span class="delivery-weight__item-value">
+                                    1.8т
+                                  </span>
+                                </span>
+                              </label>
+                              <label class="delivery__calc-weight delivery-weight">
+                                <input type="radio" value="weight" name="delivery-weight" class="delivery-weight__input hidden" hidden>
+                                <span class="delivery-weight__item">
+                                  <svg width="48" height="26" viewBox="0 0 48 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.06642 0C0.477452 0 0 0.487055 0 1.08787V22.0837C0 22.6845 0.477451 23.1716 1.06642 23.1716H10.9844C10.9843 23.1615 10.9842 23.1515 10.9842 23.1414C10.9841 23.1333 10.9841 23.1252 10.9841 23.1172C10.9841 20.804 12.8223 18.9289 15.0898 18.9289C17.3573 18.9289 19.1955 20.804 19.1955 23.1172C19.1955 23.1353 19.1954 23.1534 19.1952 23.1716H37.5382C37.538 23.1534 37.5379 23.1353 37.5379 23.1172C37.5379 20.804 39.3761 18.9289 41.6436 18.9289C43.9111 18.9289 45.7493 20.804 45.7493 23.1172C45.7493 23.1353 45.7492 23.1534 45.749 23.1716H46.9335C47.5585 23.1716 48.0495 22.6258 47.996 21.9906L47.4031 14.949C47.3697 14.5523 47.1265 14.2059 46.7691 14.0459L42.3965 12.0887C42.2179 12.0088 42.0643 11.8804 41.9522 11.7176L38.9228 7.3163C38.7232 7.02622 38.3975 6.85356 38.0501 6.85356H32.5791C31.9901 6.85356 31.5126 6.3665 31.5126 5.76569V1.08787C31.5126 0.487054 31.0352 0 30.4462 0H1.06642Z" fill="#B0B8BF" />
+                                    <path d="M17.9158 23.1172C17.9158 24.7093 16.6506 26 15.0898 26C13.5291 26 12.2638 24.7093 12.2638 23.1172C12.2638 21.525 13.5291 20.2343 15.0898 20.2343C16.6506 20.2343 17.9158 21.525 17.9158 23.1172Z" fill="#B0B8BF" />
+                                    <path d="M41.6436 26C43.2044 26 44.4696 24.7093 44.4696 23.1172C44.4696 21.525 43.2044 20.2343 41.6436 20.2343C40.0829 20.2343 38.8176 21.525 38.8176 23.1172C38.8176 24.7093 40.0829 26 41.6436 26Z" fill="#B0B8BF" />
+                                  </svg>
+                                  <span class="delivery-weight__item-value">
+                                    3.6т
+                                  </span>
+                                </span>
+                              </label>
+                              <label class="delivery__calc-weight delivery-weight">
+                                <input type="radio" value="weight" name="delivery-weight" class="delivery-weight__input hidden" hidden>
+                                <span class="delivery-weight__item">
+                                  <svg width="62" height="32" viewBox="0 0 62 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 1.06667C0 0.477563 0.488217 0 1.09046 0H38.5478C39.1501 0 39.6383 0.477563 39.6383 1.06667V6.72C39.6383 7.3091 40.1265 7.78666 40.7288 7.78666H46.9407C47.3736 7.78666 47.7655 8.03712 47.9394 8.42489L50.1302 13.311C50.2847 13.6555 50.6133 13.895 50.995 13.9411L59.6859 14.9924C60.1777 15.0519 60.5667 15.4283 60.6328 15.9087L61.9901 25.7778C62.0781 26.4176 61.5694 26.9867 60.9094 26.9867H59.5272C59.3308 23.9219 56.7505 21.4961 53.5962 21.4961C50.442 21.4961 47.8617 23.9219 47.6652 26.9867H24.4104C24.1857 23.9766 21.6179 21.6028 18.4833 21.6028C15.3488 21.6028 12.781 23.9766 12.5563 26.9867H1.09046C0.488216 26.9867 0 26.5091 0 25.92V1.06667Z" fill="#B0B8BF" />
+                                    <path d="M23.1178 27.4161C23.1178 29.9198 21.0429 31.9495 18.4833 31.9495C15.9238 31.9495 13.8489 29.9198 13.8489 27.4161C13.8489 24.9124 15.9238 22.8828 18.4833 22.8828C21.0429 22.8828 23.1178 24.9124 23.1178 27.4161Z" fill="#B0B8BF" />
+                                    <path d="M53.5962 32C56.1558 32 58.2307 29.9465 58.2307 27.4133C58.2307 24.8802 56.1558 22.8267 53.5962 22.8267C51.0367 22.8267 48.9618 24.8802 48.9618 27.4133C48.9618 29.9465 51.0367 32 53.5962 32Z" fill="#B0B8BF" />
+                                  </svg>
+                                  <span class="delivery-weight__item-value">
+                                    6.0т
+                                  </span>
+                                </span>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="delivery__calc-section">
+                            <div class="delivery__calc-title">
+                              Цены на доставку
+                            </div>
+                            <div class="delivery__calc-price">
+                              <div class="delivery__calc-price-items">
+                                <label class="delivery__calc-price-item delivery-price">
+                                  <input type="radio" name="delivery-price" value="standart" class="delivery-price__input hidden" hidden>
+                                  <span class="delivery-price__text">
+                                    <span class="delivery-price__title">
+                                      Стандартная (2-5 дней)
+                                    </span>
+                                    <span class="delivery-price__value">
+                                      709 ₽
+                                    </span>
+                                    <a href="" class="delivery-price__info icon-question"></a>
+                                  </span>
+                                </label>
+                                <label class="delivery__calc-price-item delivery-price">
+                                  <input type="radio" name="delivery-price" value="day" class="delivery-price__input hidden" hidden>
+                                  <span class="delivery-price__text">
+                                    <span class="delivery-price__title">
+                                      День в день
+                                    </span>
+                                    <span class="delivery-price__value">
+                                      709 ₽
+                                    </span>
+                                  </span>
+                                </label>
+                                <label class="delivery__calc-price-item delivery-price">
+                                  <input type="radio" name="delivery-price" value="express" class="delivery-price__input hidden" hidden>
+                                  <span class="delivery-price__text">
+                                    <span class="delivery-price__title">
+                                      Экспресс (2-7 часов)
+                                    </span>
+                                    <span class="delivery-price__value">
+                                      709 ₽
+                                    </span>
+                                    <a href="" class="delivery-price__info icon-question"></a>
+                                  </span>
+                                </label>
+                                <label class="delivery__calc-price-item delivery-price">
+                                  <input type="radio" name="delivery-price" value="time" class="delivery-price__input hidden" hidden>
+                                  <span class="delivery-price__text">
+                                    <span class="delivery-price__title">
+                                      Точно ко времени
+                                    </span>
+                                    <span class="delivery-price__value">
+                                      709 ₽
+                                    </span>
+                                  </span>
+                                </label>
+                              </div>
+                              <div class="delivery__calc-price-footer icon-help">
+                                Подъем от 450 ₽
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                        <div data-tabs class="delivery__privacy tabs">
+                          <div class="tabs__header">
+                            <div class="tabs__buttons">
+                              <button type="button" class="tabs__button" data-tab-button>
+                                Правила доставки
+                              </button>
+                              <button type="button" class="tabs__button" data-tab-button>
+                                Правила разгрузки и подъема
+                              </button>
+                            </div>
+                          </div>
+                          <div class="tabs__content">
+                            <div data-tab-content class="tabs__content-item">
+                              <div class="delivery__faq" data-spollers>
+                                <div class="delivery__faq-block">
+                                  <div class="faq__item faq__item_sm">
+                                    <div class="faq__item-title" data-spoller>
+                                      Для оказания услуги просим указать
                                     </div>
+                                    <div class="faq__item-answer">
+                                      <ul class="faq__item-list">
+                                        <li>Номер дома (корпус, строение);</li>
+                                        <li>Особенности подъезда к дому (с какой
+                                          улицы, двор, арка, пропуск, место
+                                          для
+                                          разгрузки);</li>
+                                        <li>Номер квартиры;</li>
+                                        <li>Код парадной;</li>
+                                        <li>Этаж;</li>
+                                        <li>Наличие лифта;</li>
+                                        <li>Номер телефона того, кто примет
+                                          заказ на
+                                          адресе.</li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                  <div class="faq__item faq__item_sm">
+                                    <div class="faq__item-title" data-spoller>
+                                      Правила оказания услуги
+                                    </div>
+                                    <div class="faq__item-answer">
+                                      <p>
+                                        В услугу доставки (кроме курьерской) не
+                                        входит разгрузка, подъем и пронос товара
+                                        —
+                                        это отдельные услуги.
+                                      </p>
+                                      <ul class="faq__item-list">
+                                        <li>
+                                          Доставка осуществляется после того,
+                                          как
+                                          Вы
+                                          подтвердите готовность получить
+                                          товар. В
+                                          день
+                                          доставки просим оставаться на связи
+                                          по
+                                          указанному
+                                          в заказе номеру телефона.
+                                        </li>
+                                        <li>
+                                          Отправляясь на адрес, водитель
+                                          обязательно
+                                          Вам
+                                          позвонит, если вы выбрали любой вид
+                                          доставки, кроме
+                                          «Точно ко времени» или «Экспресс».
+                                          «Петрович»
+                                          гарантирует своевременную доставку
+                                          в выбранном интервале.
+                                        </li>
+                                        <li>
+                                          Если Вы выбрали доставку «Точно ко
+                                          времени»
+                                          или
+                                          «Экспресс», машина прибудет на адрес
+                                          даже
+                                          без
+                                          предварительного подтверждения
+                                          заказа по
+                                          телефону.
+                                        </li>
+                                        <li>
+                                          Вы можете перенести время доставки
+                                          или
+                                          скорректировать заказ, обратившись в
+                                          круглосуточный
+                                          Контакт-центр по номеру <a href="tel:3348888">334-88-88</a>
+                                          (не
+                                          забудьте
+                                          при звонке указать код города).
+                                        </li>
+                                        <li>
+                                          Если подъезд к месту разгрузки
+                                          затруднен, то
+                                          машина
+                                          остановится на максимально близком
+                                          от
+                                          него
+                                          расстоянии, не нарушая ПДД и
+                                          исключая
+                                          вероятность
+                                          повреждения транспорта. Для
+                                          разгрузки
+                                          автомобиля
+                                          весом до 1,8 тонн включительно
+                                          отводится
+                                          30
+                                          минут,
+                                          весом свыше 1,8 тонн – 60 минут.
+                                          Далее
+                                          оплачивается
+                                          каждый час простоя: автомобиля весом
+                                          до
+                                          1,8
+                                          тонн —
+                                          300 руб/час, автомобиля весом более
+                                          1,8
+                                          тонн
+                                          —
+                                          600 руб/час.
+                                        </li>
+                                        <li>
+                                          Оплатить доставку можно заранее
+                                          любым
+                                          удобным
+                                          способом (на сайте, по телефону), а
+                                          также на
+                                          месте
+                                          наличными или банковской картой до
+                                          начала
+                                          момента
+                                          разгрузки.
+                                        </li>
+                                        <li>
+                                          Если возникли вопросы по качеству
+                                          или
+                                          количеству
+                                          товара, Вы можете обратиться к
+                                          представителю
+                                          компании на месте или в Службу
+                                          поддержки
+                                          клиентов
+                                          по телефону <a href="tel:88005059651">
+                                            8 (800) 505-96-51</a>.
+                                          Номер
+                                          телефона
+                                          также указан в товарном чеке.
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                  <div class="faq__item faq__item_sm">
+                                    <div class="faq__item-title" data-spoller>
+                                      Стоимость услуги
+                                    </div>
+                                    <div class="faq__item-answer">
+                                      <ul class="faq__item-list">
+                                        <li>
+                                          Стоимость услуги зависит от веса,
+                                          объемов и габаритов
+                                          приобретенного товара, а также
+                                          выбранного вида
+                                          доставки. Мы предлагаем машины
+                                          грузоподъемностью
+                                          от 0,7 до 15 тонн, а также от 5 до
+                                          15
+                                          тонн
+                                          с манипулятором. При расчете
+                                          стоимости
+                                          услуги
+                                          учитывается количество адресов и
+                                          точек
+                                          разгрузки.
+                                        </li>
+                                        <li>
+                                          Услуги по разгрузке товара, его
+                                          проносу
+                                          и подъему
+                                          оплачиваются отдельно.
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                  <div class="faq__item faq__item_sm">
+                                    <div class="faq__item-title" data-spoller>
+                                      Особенности заказа
+                                    </div>
+                                    <div class="faq__item-answer">
+                                      <ul class="faq__item-list">
+                                        <li>
+                                          Суммарный вес заказа «Курьерской
+                                          доставки»
+                                          не может превышать 10 кг, а
+                                          габаритные
+                                          размеры
+                                          — 110х45х30 см. Стоимость подъема в
+                                          данном случае
+                                          включена в стоимость доставки.
+                                        </li>
+                                        <li>
+                                          Цена на «Пакетную доставку
+                                          длинномеров»
+                                          распространяется только на заказы
+                                          материалов
+                                          длиной от 5,85 м. При этом
+                                          максимальный
+                                          вес заказа
+                                          составляет 650 кг, а максимальный
+                                          объем
+                                          — 1 м3.
+                                        </li>
+                                        <li>
+                                          Для остальных видов доставки не
+                                          существует
+                                          ограничений по весу и габаритам
+                                          товара.
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                  <div class="faq__item faq__item_sm">
+                                    <div class="faq__item-title" data-spoller>
+                                      Получение заказа
+                                    </div>
+                                    <div class="faq__item-answer">
+                                      <ul class="faq__item-list">
+                                        <li>
+                                          Для юридических лиц: если заказ
+                                          оплачен
+                                          по безналичному расчету, то
+                                          потребуется
+                                          предъявить
+                                          доверенность, заполненную в
+                                          соответствии
+                                          с законодательством РФ, или
+                                          поставить на
+                                          экземпляры
+                                          документов СТД «Петрович» круглую
+                                          печать
+                                          организации или ИП.
+                                        </li>
+                                        <li>
+                                          Если на месте потребовалась доплата,
+                                          то
+                                          чек будет
+                                          отправлен на Вашу электронную почту.
+                                          Его
+                                          также
+                                          можно получить в строительном центре
+                                          «Петрович»,
+                                          откуда отгружался товар, или
+                                          получить
+                                          при следующей
+                                          доставке.
+                                        </li>
+                                        <li>
+                                          Если заказ оплачивается на адресе,
+                                          то мы
+                                          просим Вас
+                                          спуститься к водителю для проверки
+                                          материала
+                                          и оплаты заказа.
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                  <div class="faq__item faq__item_sm">
+                                    <div class="faq__item-title" data-spoller>
+                                      Время доставки
+                                    </div>
+                                    <div class="faq__item-answer">
+                                      <ul class="faq__item-list">
+                                        <li>
+                                          «Петрович» доставляет в выбранном
+                                          интервале
+                                          времени (в течение 2-х, 4-х часов, в
+                                          течение дня) или
+                                          точно к указанному времени.
+                                        </li>
+                                        <li>
+                                          Время на подъем не входит в интервал
+                                          доставки.
+                                        </li>
+                                        <li>
+                                          Если на один адрес оформляется сразу
+                                          несколько
+                                          доставок, то каждый следующий
+                                          интервал
+                                          смещается
+                                          на один час.
+                                        </li>
+                                        <li>
+                                          Если заказ включает услугу колеровки
+                                          краски объемом
+                                          более 50 литров, но не более 300л
+                                          или
+                                          колеровку
+                                          штукатурки свыше 720 кг (30 банок),
+                                          но
+                                          не более
+                                          1200 кг (50 банок), с доставкой на
+                                          текущий день,
+                                          интервал доставки смещается на 2
+                                          часа.
+                                        </li>
+                                        <li>
+                                          Интервал доставки в зонах 5-6
+                                          сдвигается
+                                          на один час.
+                                        </li>
+                                        <li>
+                                          Интервал доставки в зонах 7-9
+                                          сдвигается
+                                          на два часа.
+                                        </li>
+                                        <li>
+                                          Интервал доставки за 9 зоной
+                                          согласуется
+                                          в индивидуальном порядке.
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
                                 </div>
-                                <div class="tabs__content">
-                                    <div data-tab-content class="tabs__content-item">
-                                        <div class="delivery__body">
-                                            <div class="delivery__content">
-                                                <form action="#" class="delivery__calc form">
-                                                    <div class="delivery__calc-section">
-                                                        <div class="delivery__calc-title">
-                                                            Расчет стоимости доставки
-                                                        </div>
-                                                        <div class="delivery__calc-subtitle">
-                                                            Заполните поле адреса, выберите вес груза и узнайте
-                                                            стоимость доставки до вашего адреса по Санкт-Петербургу
-                                                        </div>
-                                                        <div class="delivery__calc-address">
-                                                            <div class="form__label form__label_gray">
-                                                                Введите адрес доставки или координаты доставки
-                                                            </div>
-                                                            <input type="" name="" class="form__input"
-                                                                placeholder="ул. Соборная, 1 ">
-                                                        </div>
-                                                        <div class="delivery__calc-types">
-                                                            <label class="delivery__calc-type radio-btn">
-                                                                <input type="radio" value="courier" name="delivery-type"
-                                                                    class="radio-btn__input hidden" hidden>
-                                                                <span class="radio-btn__value">
-                                                                    Курьером
-                                                                </span>
-                                                            </label>
-                                                            <label class="delivery__calc-type radio-btn">
-                                                                <input type="radio" value="courier" checked
-                                                                    name="delivery-type" class="radio-btn__input hidden"
-                                                                    hidden>
-                                                                <span class="radio-btn__value">
-                                                                    Машиной
-                                                                </span>
-                                                            </label>
-                                                        </div>
-                                                        <div class="delivery__calc-weights">
-                                                            <label class="delivery__calc-weight delivery-weight">
-                                                                <input type="radio" value="weight"
-                                                                    name="delivery-weight"
-                                                                    class="delivery-weight__input hidden" hidden>
-                                                                <span class="delivery-weight__item">
-                                                                    <svg width="34" height="17" viewBox="0 0 34 17"
-                                                                        fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                        <path
-                                                                            d="M1.06619 0C0.477349 0 0 0.478689 0 1.06918V13.1509C0 13.7414 0.477349 14.2201 1.06619 14.2201H2.23933C2.23911 14.2023 2.23899 14.1845 2.23899 14.1667C2.23899 11.8933 4.07681 10.0503 6.34382 10.0503C8.61082 10.0503 10.4486 11.8933 10.4486 14.1667C10.4486 14.1845 10.4485 14.2023 10.4483 14.2201H23.5631C23.5629 14.2023 23.5627 14.1845 23.5627 14.1667C23.5627 11.8933 25.4006 10.0503 27.6676 10.0503C29.9346 10.0503 31.7724 11.8933 31.7724 14.1667C31.7724 14.1845 31.7723 14.2023 31.7721 14.2201H32.9337C33.5667 14.2201 34.0603 13.6703 33.994 13.039L33.4446 7.80455C33.4003 7.38257 33.1113 7.02679 32.7082 6.89786L27.348 5.18332C27.2418 5.14937 27.1417 5.09893 27.0511 5.03386L20.3228 0.20003C20.1417 0.0699503 19.9246 0 19.7018 0H1.06619Z"
-                                                                            fill="#B0B8BF" />
-                                                                        <path
-                                                                            d="M9.16921 14.1667C9.16921 15.7315 7.90424 17 6.34382 17C4.78339 17 3.51842 15.7315 3.51842 14.1667C3.51842 12.6019 4.78339 11.3333 6.34382 11.3333C7.90424 11.3333 9.16921 12.6019 9.16921 14.1667Z"
-                                                                            fill="#B0B8BF" />
-                                                                        <path
-                                                                            d="M27.6676 17C29.228 17 30.493 15.7315 30.493 14.1667C30.493 12.6019 29.228 11.3333 27.6676 11.3333C26.1071 11.3333 24.8422 12.6019 24.8422 14.1667C24.8422 15.7315 26.1071 17 27.6676 17Z"
-                                                                            fill="#B0B8BF" />
-                                                                    </svg>
-                                                                    <span class="delivery-weight__item-value">
-                                                                        0.7т
-                                                                    </span>
-                                                                </span>
-                                                            </label>
-                                                            <label class="delivery__calc-weight delivery-weight">
-                                                                <input type="radio" value="weight"
-                                                                    name="delivery-weight"
-                                                                    class="delivery-weight__input hidden" hidden>
-                                                                <span class="delivery-weight__item">
-                                                                    <svg width="45" height="23" viewBox="0 0 45 23"
-                                                                        fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                        <path
-                                                                            d="M1.07138 0C0.479675 0 0 0.490355 0 1.09524V19.0571C0 19.662 0.479676 20.1524 1.07139 20.1524H8.35714C8.35691 20.1342 8.3568 20.1159 8.3568 20.0976C8.3568 17.7688 10.2036 15.881 12.4816 15.881C14.7597 15.881 16.6065 17.7688 16.6065 20.0976C16.6065 20.1159 16.6063 20.1342 16.6061 20.1524H34.4989C34.4987 20.1342 34.4986 20.1159 34.4986 20.0976C34.4986 17.7688 36.3453 15.881 38.6234 15.881C40.9015 15.881 42.7482 17.7688 42.7482 20.0976C42.7482 20.1159 42.7481 20.1342 42.7479 20.1524H43.9285C44.5598 20.1524 45.0543 19.5972 44.9952 18.9547L44.4216 12.7138C44.3814 12.2766 44.0897 11.9062 43.6805 11.7728L38.3595 10.0378C38.2156 9.99091 38.0831 9.91348 37.9706 9.81058L32.3395 4.65997C32.143 4.48029 31.8887 4.38095 31.6251 4.38095H25.5525C24.9608 4.38095 24.4811 3.8906 24.4811 3.28571V1.09524C24.4811 0.490355 24.0015 0 23.4098 0H1.07138Z"
-                                                                            fill="#B0B8BF" />
-                                                                        <path
-                                                                            d="M15.3208 20.0976C15.3208 21.7006 14.0497 23 12.4816 23C10.9136 23 9.64246 21.7006 9.64246 20.0976C9.64246 18.4947 10.9136 17.1952 12.4816 17.1952C14.0497 17.1952 15.3208 18.4947 15.3208 20.0976Z"
-                                                                            fill="#B0B8BF" />
-                                                                        <path
-                                                                            d="M38.6234 23C40.1914 23 41.4626 21.7006 41.4626 20.0976C41.4626 18.4947 40.1914 17.1952 38.6234 17.1952C37.0554 17.1952 35.7842 18.4947 35.7842 20.0976C35.7842 21.7006 37.0554 23 38.6234 23Z"
-                                                                            fill="#B0B8BF" />
-                                                                    </svg>
-                                                                    <span class="delivery-weight__item-value">
-                                                                        1.5т
-                                                                    </span>
-                                                                </span>
-                                                            </label>
-                                                            <label class="delivery__calc-weight delivery-weight">
-                                                                <input type="radio" value="weight"
-                                                                    name="delivery-weight"
-                                                                    class="delivery-weight__input hidden" hidden>
-                                                                <span class="delivery-weight__item">
-                                                                    <svg width="54" height="25" viewBox="0 0 54 25"
-                                                                        fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                        <path
-                                                                            d="M1.06528 0C0.476944 0 0 0.476733 0 1.06481V21.1667C0 21.7548 0.476944 22.2315 1.06528 22.2315H9.14456C9.14445 22.2232 9.14437 22.2149 9.14431 22.2066C9.14425 22.1971 9.14422 22.1877 9.14422 22.1782C9.14422 19.9141 10.9804 18.0787 13.2456 18.0787C15.5107 18.0787 17.3469 19.9141 17.3469 22.1782C17.3469 22.196 17.3468 22.2138 17.3466 22.2315H43.5532L43.553 22.2182C43.5529 22.2049 43.5528 22.1916 43.5528 22.1782C43.5528 19.9141 45.3891 18.0787 47.6542 18.0787C49.9193 18.0787 51.7555 19.9141 51.7555 22.1782C51.7555 22.196 51.7554 22.2138 51.7552 22.2315H52.9346C53.5603 22.2315 54.0513 21.695 53.9957 21.0721L53.4153 14.5656C53.3777 14.1446 53.0946 13.7857 52.6938 13.6509L47.712 11.9759C47.5686 11.9277 47.4371 11.8495 47.3262 11.7465L41.7289 6.54427C41.5318 6.36108 41.2727 6.25926 41.0035 6.25926H34.6577C34.0694 6.25926 33.5924 5.78252 33.5924 5.19444V1.06482C33.5924 0.476734 33.1155 0 32.5272 0H1.06528Z"
-                                                                            fill="#B0B8BF" />
-                                                                        <path
-                                                                            d="M16.0686 22.1782C16.0686 23.7367 14.8047 25 13.2456 25C11.6865 25 10.4226 23.7367 10.4226 22.1782C10.4226 20.6198 11.6865 19.3565 13.2456 19.3565C14.8047 19.3565 16.0686 20.6198 16.0686 22.1782Z"
-                                                                            fill="#B0B8BF" />
-                                                                        <path
-                                                                            d="M47.6542 25C49.2133 25 50.4772 23.7367 50.4772 22.1782C50.4772 20.6198 49.2133 19.3565 47.6542 19.3565C46.0951 19.3565 44.8312 20.6198 44.8312 22.1782C44.8312 23.7367 46.0951 25 47.6542 25Z"
-                                                                            fill="#B0B8BF" />
-                                                                    </svg>
-                                                                    <span class="delivery-weight__item-value">
-                                                                        1.8т
-                                                                    </span>
-                                                                </span>
-                                                            </label>
-                                                            <label class="delivery__calc-weight delivery-weight">
-                                                                <input type="radio" value="weight"
-                                                                    name="delivery-weight"
-                                                                    class="delivery-weight__input hidden" hidden>
-                                                                <span class="delivery-weight__item">
-                                                                    <svg width="48" height="26" viewBox="0 0 48 26"
-                                                                        fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                        <path
-                                                                            d="M1.06642 0C0.477452 0 0 0.487055 0 1.08787V22.0837C0 22.6845 0.477451 23.1716 1.06642 23.1716H10.9844C10.9843 23.1615 10.9842 23.1515 10.9842 23.1414C10.9841 23.1333 10.9841 23.1252 10.9841 23.1172C10.9841 20.804 12.8223 18.9289 15.0898 18.9289C17.3573 18.9289 19.1955 20.804 19.1955 23.1172C19.1955 23.1353 19.1954 23.1534 19.1952 23.1716H37.5382C37.538 23.1534 37.5379 23.1353 37.5379 23.1172C37.5379 20.804 39.3761 18.9289 41.6436 18.9289C43.9111 18.9289 45.7493 20.804 45.7493 23.1172C45.7493 23.1353 45.7492 23.1534 45.749 23.1716H46.9335C47.5585 23.1716 48.0495 22.6258 47.996 21.9906L47.4031 14.949C47.3697 14.5523 47.1265 14.2059 46.7691 14.0459L42.3965 12.0887C42.2179 12.0088 42.0643 11.8804 41.9522 11.7176L38.9228 7.3163C38.7232 7.02622 38.3975 6.85356 38.0501 6.85356H32.5791C31.9901 6.85356 31.5126 6.3665 31.5126 5.76569V1.08787C31.5126 0.487054 31.0352 0 30.4462 0H1.06642Z"
-                                                                            fill="#B0B8BF" />
-                                                                        <path
-                                                                            d="M17.9158 23.1172C17.9158 24.7093 16.6506 26 15.0898 26C13.5291 26 12.2638 24.7093 12.2638 23.1172C12.2638 21.525 13.5291 20.2343 15.0898 20.2343C16.6506 20.2343 17.9158 21.525 17.9158 23.1172Z"
-                                                                            fill="#B0B8BF" />
-                                                                        <path
-                                                                            d="M41.6436 26C43.2044 26 44.4696 24.7093 44.4696 23.1172C44.4696 21.525 43.2044 20.2343 41.6436 20.2343C40.0829 20.2343 38.8176 21.525 38.8176 23.1172C38.8176 24.7093 40.0829 26 41.6436 26Z"
-                                                                            fill="#B0B8BF" />
-                                                                    </svg>
-                                                                    <span class="delivery-weight__item-value">
-                                                                        3.6т
-                                                                    </span>
-                                                                </span>
-                                                            </label>
-                                                            <label class="delivery__calc-weight delivery-weight">
-                                                                <input type="radio" value="weight"
-                                                                    name="delivery-weight"
-                                                                    class="delivery-weight__input hidden" hidden>
-                                                                <span class="delivery-weight__item">
-                                                                    <svg width="62" height="32" viewBox="0 0 62 32"
-                                                                        fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                        <path
-                                                                            d="M0 1.06667C0 0.477563 0.488217 0 1.09046 0H38.5478C39.1501 0 39.6383 0.477563 39.6383 1.06667V6.72C39.6383 7.3091 40.1265 7.78666 40.7288 7.78666H46.9407C47.3736 7.78666 47.7655 8.03712 47.9394 8.42489L50.1302 13.311C50.2847 13.6555 50.6133 13.895 50.995 13.9411L59.6859 14.9924C60.1777 15.0519 60.5667 15.4283 60.6328 15.9087L61.9901 25.7778C62.0781 26.4176 61.5694 26.9867 60.9094 26.9867H59.5272C59.3308 23.9219 56.7505 21.4961 53.5962 21.4961C50.442 21.4961 47.8617 23.9219 47.6652 26.9867H24.4104C24.1857 23.9766 21.6179 21.6028 18.4833 21.6028C15.3488 21.6028 12.781 23.9766 12.5563 26.9867H1.09046C0.488216 26.9867 0 26.5091 0 25.92V1.06667Z"
-                                                                            fill="#B0B8BF" />
-                                                                        <path
-                                                                            d="M23.1178 27.4161C23.1178 29.9198 21.0429 31.9495 18.4833 31.9495C15.9238 31.9495 13.8489 29.9198 13.8489 27.4161C13.8489 24.9124 15.9238 22.8828 18.4833 22.8828C21.0429 22.8828 23.1178 24.9124 23.1178 27.4161Z"
-                                                                            fill="#B0B8BF" />
-                                                                        <path
-                                                                            d="M53.5962 32C56.1558 32 58.2307 29.9465 58.2307 27.4133C58.2307 24.8802 56.1558 22.8267 53.5962 22.8267C51.0367 22.8267 48.9618 24.8802 48.9618 27.4133C48.9618 29.9465 51.0367 32 53.5962 32Z"
-                                                                            fill="#B0B8BF" />
-                                                                    </svg>
-                                                                    <span class="delivery-weight__item-value">
-                                                                        6.0т
-                                                                    </span>
-                                                                </span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="delivery__calc-section">
-                                                        <div class="delivery__calc-title">
-                                                            Цены на доставку
-                                                        </div>
-                                                        <div class="delivery__calc-price">
-                                                            <div class="delivery__calc-price-items">
-                                                                <label class="delivery__calc-price-item delivery-price">
-                                                                    <input type="radio" name="delivery-price"
-                                                                        value="standart"
-                                                                        class="delivery-price__input hidden" hidden>
-                                                                    <span class="delivery-price__text">
-                                                                        <span class="delivery-price__title">
-                                                                            Стандартная (2-5 дней)
-                                                                        </span>
-                                                                        <span class="delivery-price__value">
-                                                                            709 ₽
-                                                                        </span>
-                                                                        <a href=""
-                                                                            class="delivery-price__info icon-question"></a>
-                                                                    </span>
-                                                                </label>
-                                                                <label class="delivery__calc-price-item delivery-price">
-                                                                    <input type="radio" name="delivery-price"
-                                                                        value="day" class="delivery-price__input hidden"
-                                                                        hidden>
-                                                                    <span class="delivery-price__text">
-                                                                        <span class="delivery-price__title">
-                                                                            День в день
-                                                                        </span>
-                                                                        <span class="delivery-price__value">
-                                                                            709 ₽
-                                                                        </span>
-                                                                    </span>
-                                                                </label>
-                                                                <label class="delivery__calc-price-item delivery-price">
-                                                                    <input type="radio" name="delivery-price"
-                                                                        value="express"
-                                                                        class="delivery-price__input hidden" hidden>
-                                                                    <span class="delivery-price__text">
-                                                                        <span class="delivery-price__title">
-                                                                            Экспресс (2-7 часов)
-                                                                        </span>
-                                                                        <span class="delivery-price__value">
-                                                                            709 ₽
-                                                                        </span>
-                                                                        <a href=""
-                                                                            class="delivery-price__info icon-question"></a>
-                                                                    </span>
-                                                                </label>
-                                                                <label class="delivery__calc-price-item delivery-price">
-                                                                    <input type="radio" name="delivery-price"
-                                                                        value="time"
-                                                                        class="delivery-price__input hidden" hidden>
-                                                                    <span class="delivery-price__text">
-                                                                        <span class="delivery-price__title">
-                                                                            Точно ко времени
-                                                                        </span>
-                                                                        <span class="delivery-price__value">
-                                                                            709 ₽
-                                                                        </span>
-                                                                    </span>
-                                                                </label>
-                                                            </div>
-                                                            <div class="delivery__calc-price-footer icon-help">
-                                                                Подъем от 450 ₽
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                                <div data-tabs class="delivery__privacy tabs">
-                                                    <div class="tabs__header">
-                                                        <div class="tabs__buttons">
-                                                            <button type="button" class="tabs__button" data-tab-button>
-                                                                Правила доставки
-                                                            </button>
-                                                            <button type="button" class="tabs__button" data-tab-button>
-                                                                Правила разгрузки и подъема
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                    <div class="tabs__content">
-                                                        <div data-tab-content class="tabs__content-item">
-                                                            <div class="delivery__faq" data-spollers>
-                                                                <div class="delivery__faq-block">
-                                                                    <div class="faq__item faq__item_sm">
-                                                                        <div class="faq__item-title" data-spoller>
-                                                                            Для оказания услуги просим указать
-                                                                        </div>
-                                                                        <div class="faq__item-answer">
-                                                                            <ul class="faq__item-list">
-                                                                                <li>Номер дома (корпус, строение);</li>
-                                                                                <li>Особенности подъезда к дому (с какой
-                                                                                    улицы, двор, арка, пропуск, место
-                                                                                    для
-                                                                                    разгрузки);</li>
-                                                                                <li>Номер квартиры;</li>
-                                                                                <li>Код парадной;</li>
-                                                                                <li>Этаж;</li>
-                                                                                <li>Наличие лифта;</li>
-                                                                                <li>Номер телефона того, кто примет
-                                                                                    заказ на
-                                                                                    адресе.</li>
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="faq__item faq__item_sm">
-                                                                        <div class="faq__item-title" data-spoller>
-                                                                            Правила оказания услуги
-                                                                        </div>
-                                                                        <div class="faq__item-answer">
-                                                                            <p>
-                                                                                В услугу доставки (кроме курьерской) не
-                                                                                входит разгрузка, подъем и пронос товара
-                                                                                —
-                                                                                это отдельные услуги.
-                                                                            </p>
-                                                                            <ul class="faq__item-list">
-                                                                                <li>
-                                                                                    Доставка осуществляется после того,
-                                                                                    как
-                                                                                    Вы
-                                                                                    подтвердите готовность получить
-                                                                                    товар. В
-                                                                                    день
-                                                                                    доставки просим оставаться на связи
-                                                                                    по
-                                                                                    указанному
-                                                                                    в заказе номеру телефона.
-                                                                                </li>
-                                                                                <li>
-                                                                                    Отправляясь на адрес, водитель
-                                                                                    обязательно
-                                                                                    Вам
-                                                                                    позвонит, если вы выбрали любой вид
-                                                                                    доставки, кроме
-                                                                                    «Точно ко времени» или «Экспресс».
-                                                                                    «Петрович»
-                                                                                    гарантирует своевременную доставку
-                                                                                    в выбранном интервале.
-                                                                                </li>
-                                                                                <li>
-                                                                                    Если Вы выбрали доставку «Точно ко
-                                                                                    времени»
-                                                                                    или
-                                                                                    «Экспресс», машина прибудет на адрес
-                                                                                    даже
-                                                                                    без
-                                                                                    предварительного подтверждения
-                                                                                    заказа по
-                                                                                    телефону.
-                                                                                </li>
-                                                                                <li>
-                                                                                    Вы можете перенести время доставки
-                                                                                    или
-                                                                                    скорректировать заказ, обратившись в
-                                                                                    круглосуточный
-                                                                                    Контакт-центр по номеру <a
-                                                                                        href="tel:3348888">334-88-88</a>
-                                                                                    (не
-                                                                                    забудьте
-                                                                                    при звонке указать код города).
-                                                                                </li>
-                                                                                <li>
-                                                                                    Если подъезд к месту разгрузки
-                                                                                    затруднен, то
-                                                                                    машина
-                                                                                    остановится на максимально близком
-                                                                                    от
-                                                                                    него
-                                                                                    расстоянии, не нарушая ПДД и
-                                                                                    исключая
-                                                                                    вероятность
-                                                                                    повреждения транспорта. Для
-                                                                                    разгрузки
-                                                                                    автомобиля
-                                                                                    весом до 1,8 тонн включительно
-                                                                                    отводится
-                                                                                    30
-                                                                                    минут,
-                                                                                    весом свыше 1,8 тонн – 60 минут.
-                                                                                    Далее
-                                                                                    оплачивается
-                                                                                    каждый час простоя: автомобиля весом
-                                                                                    до
-                                                                                    1,8
-                                                                                    тонн —
-                                                                                    300 руб/час, автомобиля весом более
-                                                                                    1,8
-                                                                                    тонн
-                                                                                    —
-                                                                                    600 руб/час.
-                                                                                </li>
-                                                                                <li>
-                                                                                    Оплатить доставку можно заранее
-                                                                                    любым
-                                                                                    удобным
-                                                                                    способом (на сайте, по телефону), а
-                                                                                    также на
-                                                                                    месте
-                                                                                    наличными или банковской картой до
-                                                                                    начала
-                                                                                    момента
-                                                                                    разгрузки.
-                                                                                </li>
-                                                                                <li>
-                                                                                    Если возникли вопросы по качеству
-                                                                                    или
-                                                                                    количеству
-                                                                                    товара, Вы можете обратиться к
-                                                                                    представителю
-                                                                                    компании на месте или в Службу
-                                                                                    поддержки
-                                                                                    клиентов
-                                                                                    по телефону <a
-                                                                                        href="tel:88005059651">
-                                                                                        8 (800) 505-96-51</a>.
-                                                                                    Номер
-                                                                                    телефона
-                                                                                    также указан в товарном чеке.
-                                                                                </li>
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="faq__item faq__item_sm">
-                                                                        <div class="faq__item-title" data-spoller>
-                                                                            Стоимость услуги
-                                                                        </div>
-                                                                        <div class="faq__item-answer">
-                                                                            <ul class="faq__item-list">
-                                                                                <li>
-                                                                                    Стоимость услуги зависит от веса,
-                                                                                    объемов и габаритов
-                                                                                    приобретенного товара, а также
-                                                                                    выбранного вида
-                                                                                    доставки. Мы предлагаем машины
-                                                                                    грузоподъемностью
-                                                                                    от 0,7 до 15 тонн, а также от 5 до
-                                                                                    15
-                                                                                    тонн
-                                                                                    с манипулятором. При расчете
-                                                                                    стоимости
-                                                                                    услуги
-                                                                                    учитывается количество адресов и
-                                                                                    точек
-                                                                                    разгрузки.
-                                                                                </li>
-                                                                                <li>
-                                                                                    Услуги по разгрузке товара, его
-                                                                                    проносу
-                                                                                    и подъему
-                                                                                    оплачиваются отдельно.
-                                                                                </li>
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="faq__item faq__item_sm">
-                                                                        <div class="faq__item-title" data-spoller>
-                                                                            Особенности заказа
-                                                                        </div>
-                                                                        <div class="faq__item-answer">
-                                                                            <ul class="faq__item-list">
-                                                                                <li>
-                                                                                    Суммарный вес заказа «Курьерской
-                                                                                    доставки»
-                                                                                    не может превышать 10 кг, а
-                                                                                    габаритные
-                                                                                    размеры
-                                                                                    — 110х45х30 см. Стоимость подъема в
-                                                                                    данном случае
-                                                                                    включена в стоимость доставки.
-                                                                                </li>
-                                                                                <li>
-                                                                                    Цена на «Пакетную доставку
-                                                                                    длинномеров»
-                                                                                    распространяется только на заказы
-                                                                                    материалов
-                                                                                    длиной от 5,85 м. При этом
-                                                                                    максимальный
-                                                                                    вес заказа
-                                                                                    составляет 650 кг, а максимальный
-                                                                                    объем
-                                                                                    — 1 м3.
-                                                                                </li>
-                                                                                <li>
-                                                                                    Для остальных видов доставки не
-                                                                                    существует
-                                                                                    ограничений по весу и габаритам
-                                                                                    товара.
-                                                                                </li>
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="faq__item faq__item_sm">
-                                                                        <div class="faq__item-title" data-spoller>
-                                                                            Получение заказа
-                                                                        </div>
-                                                                        <div class="faq__item-answer">
-                                                                            <ul class="faq__item-list">
-                                                                                <li>
-                                                                                    Для юридических лиц: если заказ
-                                                                                    оплачен
-                                                                                    по безналичному расчету, то
-                                                                                    потребуется
-                                                                                    предъявить
-                                                                                    доверенность, заполненную в
-                                                                                    соответствии
-                                                                                    с законодательством РФ, или
-                                                                                    поставить на
-                                                                                    экземпляры
-                                                                                    документов СТД «Петрович» круглую
-                                                                                    печать
-                                                                                    организации или ИП.
-                                                                                </li>
-                                                                                <li>
-                                                                                    Если на месте потребовалась доплата,
-                                                                                    то
-                                                                                    чек будет
-                                                                                    отправлен на Вашу электронную почту.
-                                                                                    Его
-                                                                                    также
-                                                                                    можно получить в строительном центре
-                                                                                    «Петрович»,
-                                                                                    откуда отгружался товар, или
-                                                                                    получить
-                                                                                    при следующей
-                                                                                    доставке.
-                                                                                </li>
-                                                                                <li>
-                                                                                    Если заказ оплачивается на адресе,
-                                                                                    то мы
-                                                                                    просим Вас
-                                                                                    спуститься к водителю для проверки
-                                                                                    материала
-                                                                                    и оплаты заказа.
-                                                                                </li>
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="faq__item faq__item_sm">
-                                                                        <div class="faq__item-title" data-spoller>
-                                                                            Время доставки
-                                                                        </div>
-                                                                        <div class="faq__item-answer">
-                                                                            <ul class="faq__item-list">
-                                                                                <li>
-                                                                                    «Петрович» доставляет в выбранном
-                                                                                    интервале
-                                                                                    времени (в течение 2-х, 4-х часов, в
-                                                                                    течение дня) или
-                                                                                    точно к указанному времени.
-                                                                                </li>
-                                                                                <li>
-                                                                                    Время на подъем не входит в интервал
-                                                                                    доставки.
-                                                                                </li>
-                                                                                <li>
-                                                                                    Если на один адрес оформляется сразу
-                                                                                    несколько
-                                                                                    доставок, то каждый следующий
-                                                                                    интервал
-                                                                                    смещается
-                                                                                    на один час.
-                                                                                </li>
-                                                                                <li>
-                                                                                    Если заказ включает услугу колеровки
-                                                                                    краски объемом
-                                                                                    более 50 литров, но не более 300л
-                                                                                    или
-                                                                                    колеровку
-                                                                                    штукатурки свыше 720 кг (30 банок),
-                                                                                    но
-                                                                                    не более
-                                                                                    1200 кг (50 банок), с доставкой на
-                                                                                    текущий день,
-                                                                                    интервал доставки смещается на 2
-                                                                                    часа.
-                                                                                </li>
-                                                                                <li>
-                                                                                    Интервал доставки в зонах 5-6
-                                                                                    сдвигается
-                                                                                    на один час.
-                                                                                </li>
-                                                                                <li>
-                                                                                    Интервал доставки в зонах 7-9
-                                                                                    сдвигается
-                                                                                    на два часа.
-                                                                                </li>
-                                                                                <li>
-                                                                                    Интервал доставки за 9 зоной
-                                                                                    согласуется
-                                                                                    в индивидуальном порядке.
-                                                                                </li>
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div
-                                                                    class="delivery__faq-block delivery__faq-info icon-help">
-                                                                    Если водитель опоздает, то доставка будет
-                                                                    для Вас <strong>бесплатной</strong>.
-                                                                </div>
-                                                                <div class="delivery__faq-block">
-                                                                    <div class="faq__item faq__item_sm">
-                                                                        <div class="faq__item-title" data-spoller>
-                                                                            Тестовый раздел для примера отступа
-                                                                        </div>
-                                                                        <div class="faq__item-answer">
-                                                                            <ul class="faq__item-list">
-                                                                                <li>
-                                                                                    «Петрович» доставляет в выбранном
-                                                                                    интервале
-                                                                                    времени (в течение 2-х, 4-х часов, в
-                                                                                    течение дня) или
-                                                                                    точно к указанному времени.
-                                                                                </li>
-                                                                                <li>
-                                                                                    Время на подъем не входит в интервал
-                                                                                    доставки.
-                                                                                </li>
-                                                                                <li>
-                                                                                    Если на один адрес оформляется сразу
-                                                                                    несколько
-                                                                                    доставок, то каждый следующий
-                                                                                    интервал
-                                                                                    смещается
-                                                                                    на один час.
-                                                                                </li>
-                                                                                <li>
-                                                                                    Если заказ включает услугу колеровки
-                                                                                    краски объемом
-                                                                                    более 50 литров, но не более 300л
-                                                                                    или
-                                                                                    колеровку
-                                                                                    штукатурки свыше 720 кг (30 банок),
-                                                                                    но
-                                                                                    не более
-                                                                                    1200 кг (50 банок), с доставкой на
-                                                                                    текущий день,
-                                                                                    интервал доставки смещается на 2
-                                                                                    часа.
-                                                                                </li>
-                                                                                <li>
-                                                                                    Интервал доставки в зонах 5-6
-                                                                                    сдвигается
-                                                                                    на один час.
-                                                                                </li>
-                                                                                <li>
-                                                                                    Интервал доставки в зонах 7-9
-                                                                                    сдвигается
-                                                                                    на два часа.
-                                                                                </li>
-                                                                                <li>
-                                                                                    Интервал доставки за 9 зоной
-                                                                                    согласуется
-                                                                                    в индивидуальном порядке.
-                                                                                </li>
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="faq__item faq__item_sm">
-                                                                        <div class="faq__item-title" data-spoller>
-                                                                            Также тестовый раздел чтобы был
-                                                                        </div>
-                                                                        <div class="faq__item-answer">
-                                                                            <ul class="faq__item-list">
-                                                                                <li>
-                                                                                    «Петрович» доставляет в выбранном
-                                                                                    интервале
-                                                                                    времени (в течение 2-х, 4-х часов, в
-                                                                                    течение дня) или
-                                                                                    точно к указанному времени.
-                                                                                </li>
-                                                                                <li>
-                                                                                    Время на подъем не входит в интервал
-                                                                                    доставки.
-                                                                                </li>
-                                                                                <li>
-                                                                                    Если на один адрес оформляется сразу
-                                                                                    несколько
-                                                                                    доставок, то каждый следующий
-                                                                                    интервал
-                                                                                    смещается
-                                                                                    на один час.
-                                                                                </li>
-                                                                                <li>
-                                                                                    Если заказ включает услугу колеровки
-                                                                                    краски объемом
-                                                                                    более 50 литров, но не более 300л
-                                                                                    или
-                                                                                    колеровку
-                                                                                    штукатурки свыше 720 кг (30 банок),
-                                                                                    но
-                                                                                    не более
-                                                                                    1200 кг (50 банок), с доставкой на
-                                                                                    текущий день,
-                                                                                    интервал доставки смещается на 2
-                                                                                    часа.
-                                                                                </li>
-                                                                                <li>
-                                                                                    Интервал доставки в зонах 5-6
-                                                                                    сдвигается
-                                                                                    на один час.
-                                                                                </li>
-                                                                                <li>
-                                                                                    Интервал доставки в зонах 7-9
-                                                                                    сдвигается
-                                                                                    на два часа.
-                                                                                </li>
-                                                                                <li>
-                                                                                    Интервал доставки за 9 зоной
-                                                                                    согласуется
-                                                                                    в индивидуальном порядке.
-                                                                                </li>
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="faq__item faq__item_sm">
-                                                                        <div class="faq__item-title" data-spoller>
-                                                                            И еще один на всякий случай
-                                                                        </div>
-                                                                        <div class="faq__item-answer">
-                                                                            <ul class="faq__item-list">
-                                                                                <li>
-                                                                                    «Петрович» доставляет в выбранном
-                                                                                    интервале
-                                                                                    времени (в течение 2-х, 4-х часов, в
-                                                                                    течение дня) или
-                                                                                    точно к указанному времени.
-                                                                                </li>
-                                                                                <li>
-                                                                                    Время на подъем не входит в интервал
-                                                                                    доставки.
-                                                                                </li>
-                                                                                <li>
-                                                                                    Если на один адрес оформляется сразу
-                                                                                    несколько
-                                                                                    доставок, то каждый следующий
-                                                                                    интервал
-                                                                                    смещается
-                                                                                    на один час.
-                                                                                </li>
-                                                                                <li>
-                                                                                    Если заказ включает услугу колеровки
-                                                                                    краски объемом
-                                                                                    более 50 литров, но не более 300л
-                                                                                    или
-                                                                                    колеровку
-                                                                                    штукатурки свыше 720 кг (30 банок),
-                                                                                    но
-                                                                                    не более
-                                                                                    1200 кг (50 банок), с доставкой на
-                                                                                    текущий день,
-                                                                                    интервал доставки смещается на 2
-                                                                                    часа.
-                                                                                </li>
-                                                                                <li>
-                                                                                    Интервал доставки в зонах 5-6
-                                                                                    сдвигается
-                                                                                    на один час.
-                                                                                </li>
-                                                                                <li>
-                                                                                    Интервал доставки в зонах 7-9
-                                                                                    сдвигается
-                                                                                    на два часа.
-                                                                                </li>
-                                                                                <li>
-                                                                                    Интервал доставки за 9 зоной
-                                                                                    согласуется
-                                                                                    в индивидуальном порядке.
-                                                                                </li>
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="faq__item faq__item_sm">
-                                                                        <div class="faq__item-title" data-spoller>
-                                                                            Разгрузка манипулятором
-                                                                        </div>
-                                                                        <div class="faq__item-answer">
-                                                                            <ul class="faq__item-list">
-                                                                                <li>
-                                                                                    Манипулятором осуществляется только
-                                                                                    разгрузка
-                                                                                    товара.
-                                                                                </li>
-                                                                                <li>
-                                                                                    Разгрузка запрещена под линией
-                                                                                    электропередач, над
-                                                                                    бытовыми объектами и заборами.
-                                                                                </li>
-                                                                                <li>
-                                                                                    Разгрузка осуществляется на
-                                                                                    расстоянии 2-15 метров
-                                                                                    от кузова автомобиля (зависит от
-                                                                                    технических
-                                                                                    характеристик манипулятора) — в
-                                                                                    радиусе действия
-                                                                                    стрелы и в зоне прямой видимости
-                                                                                    места разгрузки.
-                                                                                </li>
-                                                                            </ul>
-                                                                            <p>
-                                                                                Настоящие правила не являются публичной
-                                                                                офертой.
-                                                                            </p>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div data-tab-content class="tabs__content-item">
-                                                            <div class="delivery__faq" data-spollers>
-                                                                <div class="delivery__faq-block">
-                                                                    <p>
-                                                                        Грузчики компании поднимают товар на лифте или
-                                                                        вручную, а также доносят материалы до места
-                                                                        складирования.
-                                                                        В стоимость услуг подъема и разгрузки (кроме
-                                                                        разгрузки манипулятором и товаров с отметкой
-                                                                        «только выгрузка
-                                                                        из автомобиля») входит 50м проноса товара до
-                                                                        места складирования.
-                                                                    </p>
-                                                                </div>
-                                                                <div class="delivery__faq-block">
-                                                                    <div class="faq__item faq__item_sm">
-                                                                        <div class="faq__item-title" data-spoller>
-                                                                            Какую информацию Вам нужно предоставить
-                                                                        </div>
-                                                                        <div class="faq__item-answer">
-                                                                            <ul class="faq__item-list">
-                                                                                <li>
-                                                                                    Укажите, есть ли лифт. Если да, то
-                                                                                    уточните —
-                                                                                    пассажирский или грузовой.
-                                                                                </li>
-                                                                                <li>
-                                                                                    Если лифт отсутствует, то заказ
-                                                                                    поднимается вручную
-                                                                                    (его стоимость рассчитывается
-                                                                                    заранее).
-                                                                                </li>
-                                                                                <li>
-                                                                                    Сообщите заранее об особенностях
-                                                                                    места разгрузки
-                                                                                    (технический этаж, наличие
-                                                                                    освещения, доступность
-                                                                                    и т.д.). Разгрузка не
-                                                                                    осуществляется, если нарушены
-                                                                                    правила безопасности и есть угроза
-                                                                                    жизни и здоровью
-                                                                                    сотрудников компании.
-                                                                                </li>
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="faq__item faq__item_sm">
-                                                                        <div class="faq__item-title" data-spoller>
-                                                                            Стоимость разгрузки и подъема
-                                                                        </div>
-                                                                        <div class="faq__item-answer">
-                                                                            <p>
-                                                                                Рассчитывается, исходя из категории
-                                                                                товара, веса, размеров и способа подъема
-                                                                                (вручную или на лифте). Мы рассчитаем ее
-                                                                                при оформлении заказа на сайте или в
-                                                                                приложении. Если нам не удалось сделать
-                                                                                это при оформлении, с вами свяжется
-                                                                                оператор и сообщит стоимость подъема.
-                                                                                Некоторые особенности:
-                                                                            </p>
-                                                                            <ul class="faq__item-list">
-                                                                                <li>
-                                                                                    Стоимость разгрузки в подвал или на
-                                                                                    цокольный этаж
-                                                                                    равна стоимости подъема вручную на
-                                                                                    второй этаж.
-                                                                                </li>
-                                                                                <li>
-                                                                                    В курьерскую доставку входит
-                                                                                    стоимость подъема.
-                                                                                </li>
-                                                                                <li>
-                                                                                    Скидки по карте Клуба Друзей
-                                                                                    Петровича
-                                                                                    не распространяются на подъем и
-                                                                                    спуск.
-                                                                                </li>
-                                                                            </ul>
-                                                                            <p>
-                                                                                Если на месте потребовалась доплата, то
-                                                                                чек будет отправлен на Вашу электронную
-                                                                                почту. Его также можно получить в
-                                                                                строительном центре «Петрович» или
-                                                                                получить при следующей доставке.
-                                                                            </p>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="faq__item faq__item_sm">
-                                                                        <div class="faq__item-title" data-spoller>
-                                                                            Стоимость разгрузки и подъема
-                                                                        </div>
-                                                                        <div class="faq__item-answer">
-                                                                            <table class="faq__item-table">
-                                                                                <thead>
-                                                                                    <tr>
-                                                                                        <th>Стоимость подъема</th>
-                                                                                        <th>Время необходимое для
-                                                                                            подъёма всего материала,
-                                                                                            указанного в заказе</th>
-                                                                                    </tr>
-                                                                                </thead>
-                                                                                <tbody>
-                                                                                    <tr>
-                                                                                        <td>
-                                                                                            <strong>До 450
-                                                                                                рублей</strong>
-                                                                                        </td>
-                                                                                        <td>
-                                                                                            до 40 минут
-                                                                                        </td>
-                                                                                    </tr>
-                                                                                    <tr>
-                                                                                        <td>
-                                                                                            <strong> До 1000
-                                                                                                рублей</strong>
-                                                                                        </td>
-                                                                                        <td>
-                                                                                            до 1 часа 30 минут
-                                                                                        </td>
-                                                                                    </tr>
-                                                                                    <tr>
-                                                                                        <td>
-                                                                                            <strong>До 3000
-                                                                                                рублей</strong>
-                                                                                        </td>
-                                                                                        <td>
-                                                                                            до 3-х часов
-                                                                                        </td>
-                                                                                    </tr>
-                                                                                    <tr>
-                                                                                        <td>
-                                                                                            <strong>До 5000
-                                                                                                рублей</strong>
-                                                                                        </td>
-                                                                                        <td>
-                                                                                            до 4-х часов
-                                                                                        </td>
-                                                                                    </tr>
-                                                                                    <tr>
-                                                                                        <td>
-                                                                                            <strong>До 10000
-                                                                                                рублей</strong>
-                                                                                        </td>
-                                                                                        <td>
-                                                                                            до 5-ти часов
-                                                                                        </td>
-                                                                                    </tr>
-                                                                                    <tr>
-                                                                                        <td>
-                                                                                            <strong>От 10000 до 12000
-                                                                                                рублей</strong>
-                                                                                        </td>
-                                                                                        <td>
-                                                                                            до 8-ми часов
-                                                                                        </td>
-                                                                                    </tr>
-                                                                                    <tr>
-                                                                                        <td>
-                                                                                            <strong>Более 12000
-                                                                                                рублей</strong>
+                                <div class="delivery__faq-block delivery__faq-info icon-help">
+                                  Если водитель опоздает, то доставка будет
+                                  для Вас <strong>бесплатной</strong>.
+                                </div>
+                                <div class="delivery__faq-block">
+                                  <div class="faq__item faq__item_sm">
+                                    <div class="faq__item-title" data-spoller>
+                                      Тестовый раздел для примера отступа
+                                    </div>
+                                    <div class="faq__item-answer">
+                                      <ul class="faq__item-list">
+                                        <li>
+                                          «Петрович» доставляет в выбранном
+                                          интервале
+                                          времени (в течение 2-х, 4-х часов, в
+                                          течение дня) или
+                                          точно к указанному времени.
+                                        </li>
+                                        <li>
+                                          Время на подъем не входит в интервал
+                                          доставки.
+                                        </li>
+                                        <li>
+                                          Если на один адрес оформляется сразу
+                                          несколько
+                                          доставок, то каждый следующий
+                                          интервал
+                                          смещается
+                                          на один час.
+                                        </li>
+                                        <li>
+                                          Если заказ включает услугу колеровки
+                                          краски объемом
+                                          более 50 литров, но не более 300л
+                                          или
+                                          колеровку
+                                          штукатурки свыше 720 кг (30 банок),
+                                          но
+                                          не более
+                                          1200 кг (50 банок), с доставкой на
+                                          текущий день,
+                                          интервал доставки смещается на 2
+                                          часа.
+                                        </li>
+                                        <li>
+                                          Интервал доставки в зонах 5-6
+                                          сдвигается
+                                          на один час.
+                                        </li>
+                                        <li>
+                                          Интервал доставки в зонах 7-9
+                                          сдвигается
+                                          на два часа.
+                                        </li>
+                                        <li>
+                                          Интервал доставки за 9 зоной
+                                          согласуется
+                                          в индивидуальном порядке.
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                  <div class="faq__item faq__item_sm">
+                                    <div class="faq__item-title" data-spoller>
+                                      Также тестовый раздел чтобы был
+                                    </div>
+                                    <div class="faq__item-answer">
+                                      <ul class="faq__item-list">
+                                        <li>
+                                          «Петрович» доставляет в выбранном
+                                          интервале
+                                          времени (в течение 2-х, 4-х часов, в
+                                          течение дня) или
+                                          точно к указанному времени.
+                                        </li>
+                                        <li>
+                                          Время на подъем не входит в интервал
+                                          доставки.
+                                        </li>
+                                        <li>
+                                          Если на один адрес оформляется сразу
+                                          несколько
+                                          доставок, то каждый следующий
+                                          интервал
+                                          смещается
+                                          на один час.
+                                        </li>
+                                        <li>
+                                          Если заказ включает услугу колеровки
+                                          краски объемом
+                                          более 50 литров, но не более 300л
+                                          или
+                                          колеровку
+                                          штукатурки свыше 720 кг (30 банок),
+                                          но
+                                          не более
+                                          1200 кг (50 банок), с доставкой на
+                                          текущий день,
+                                          интервал доставки смещается на 2
+                                          часа.
+                                        </li>
+                                        <li>
+                                          Интервал доставки в зонах 5-6
+                                          сдвигается
+                                          на один час.
+                                        </li>
+                                        <li>
+                                          Интервал доставки в зонах 7-9
+                                          сдвигается
+                                          на два часа.
+                                        </li>
+                                        <li>
+                                          Интервал доставки за 9 зоной
+                                          согласуется
+                                          в индивидуальном порядке.
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                  <div class="faq__item faq__item_sm">
+                                    <div class="faq__item-title" data-spoller>
+                                      И еще один на всякий случай
+                                    </div>
+                                    <div class="faq__item-answer">
+                                      <ul class="faq__item-list">
+                                        <li>
+                                          «Петрович» доставляет в выбранном
+                                          интервале
+                                          времени (в течение 2-х, 4-х часов, в
+                                          течение дня) или
+                                          точно к указанному времени.
+                                        </li>
+                                        <li>
+                                          Время на подъем не входит в интервал
+                                          доставки.
+                                        </li>
+                                        <li>
+                                          Если на один адрес оформляется сразу
+                                          несколько
+                                          доставок, то каждый следующий
+                                          интервал
+                                          смещается
+                                          на один час.
+                                        </li>
+                                        <li>
+                                          Если заказ включает услугу колеровки
+                                          краски объемом
+                                          более 50 литров, но не более 300л
+                                          или
+                                          колеровку
+                                          штукатурки свыше 720 кг (30 банок),
+                                          но
+                                          не более
+                                          1200 кг (50 банок), с доставкой на
+                                          текущий день,
+                                          интервал доставки смещается на 2
+                                          часа.
+                                        </li>
+                                        <li>
+                                          Интервал доставки в зонах 5-6
+                                          сдвигается
+                                          на один час.
+                                        </li>
+                                        <li>
+                                          Интервал доставки в зонах 7-9
+                                          сдвигается
+                                          на два часа.
+                                        </li>
+                                        <li>
+                                          Интервал доставки за 9 зоной
+                                          согласуется
+                                          в индивидуальном порядке.
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                  <div class="faq__item faq__item_sm">
+                                    <div class="faq__item-title" data-spoller>
+                                      Разгрузка манипулятором
+                                    </div>
+                                    <div class="faq__item-answer">
+                                      <ul class="faq__item-list">
+                                        <li>
+                                          Манипулятором осуществляется только
+                                          разгрузка
+                                          товара.
+                                        </li>
+                                        <li>
+                                          Разгрузка запрещена под линией
+                                          электропередач, над
+                                          бытовыми объектами и заборами.
+                                        </li>
+                                        <li>
+                                          Разгрузка осуществляется на
+                                          расстоянии 2-15 метров
+                                          от кузова автомобиля (зависит от
+                                          технических
+                                          характеристик манипулятора) — в
+                                          радиусе действия
+                                          стрелы и в зоне прямой видимости
+                                          места разгрузки.
+                                        </li>
+                                      </ul>
+                                      <p>
+                                        Настоящие правила не являются публичной
+                                        офертой.
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div data-tab-content class="tabs__content-item">
+                              <div class="delivery__faq" data-spollers>
+                                <div class="delivery__faq-block">
+                                  <p>
+                                    Грузчики компании поднимают товар на лифте или
+                                    вручную, а также доносят материалы до места
+                                    складирования.
+                                    В стоимость услуг подъема и разгрузки (кроме
+                                    разгрузки манипулятором и товаров с отметкой
+                                    «только выгрузка
+                                    из автомобиля») входит 50м проноса товара до
+                                    места складирования.
+                                  </p>
+                                </div>
+                                <div class="delivery__faq-block">
+                                  <div class="faq__item faq__item_sm">
+                                    <div class="faq__item-title" data-spoller>
+                                      Какую информацию Вам нужно предоставить
+                                    </div>
+                                    <div class="faq__item-answer">
+                                      <ul class="faq__item-list">
+                                        <li>
+                                          Укажите, есть ли лифт. Если да, то
+                                          уточните —
+                                          пассажирский или грузовой.
+                                        </li>
+                                        <li>
+                                          Если лифт отсутствует, то заказ
+                                          поднимается вручную
+                                          (его стоимость рассчитывается
+                                          заранее).
+                                        </li>
+                                        <li>
+                                          Сообщите заранее об особенностях
+                                          места разгрузки
+                                          (технический этаж, наличие
+                                          освещения, доступность
+                                          и т.д.). Разгрузка не
+                                          осуществляется, если нарушены
+                                          правила безопасности и есть угроза
+                                          жизни и здоровью
+                                          сотрудников компании.
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                  <div class="faq__item faq__item_sm">
+                                    <div class="faq__item-title" data-spoller>
+                                      Стоимость разгрузки и подъема
+                                    </div>
+                                    <div class="faq__item-answer">
+                                      <p>
+                                        Рассчитывается, исходя из категории
+                                        товара, веса, размеров и способа подъема
+                                        (вручную или на лифте). Мы рассчитаем ее
+                                        при оформлении заказа на сайте или в
+                                        приложении. Если нам не удалось сделать
+                                        это при оформлении, с вами свяжется
+                                        оператор и сообщит стоимость подъема.
+                                        Некоторые особенности:
+                                      </p>
+                                      <ul class="faq__item-list">
+                                        <li>
+                                          Стоимость разгрузки в подвал или на
+                                          цокольный этаж
+                                          равна стоимости подъема вручную на
+                                          второй этаж.
+                                        </li>
+                                        <li>
+                                          В курьерскую доставку входит
+                                          стоимость подъема.
+                                        </li>
+                                        <li>
+                                          Скидки по карте Клуба Друзей
+                                          Петровича
+                                          не распространяются на подъем и
+                                          спуск.
+                                        </li>
+                                      </ul>
+                                      <p>
+                                        Если на месте потребовалась доплата, то
+                                        чек будет отправлен на Вашу электронную
+                                        почту. Его также можно получить в
+                                        строительном центре «Петрович» или
+                                        получить при следующей доставке.
+                                      </p>
+                                    </div>
+                                  </div>
+                                  <div class="faq__item faq__item_sm">
+                                    <div class="faq__item-title" data-spoller>
+                                      Стоимость разгрузки и подъема
+                                    </div>
+                                    <div class="faq__item-answer">
+                                      <table class="faq__item-table">
+                                        <thead>
+                                          <tr>
+                                            <th>Стоимость подъема</th>
+                                            <th>Время необходимое для
+                                              подъёма всего материала,
+                                              указанного в заказе</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <td>
+                                              <strong>До 450
+                                                рублей</strong>
+                                            </td>
+                                            <td>
+                                              до 40 минут
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>
+                                              <strong> До 1000
+                                                рублей</strong>
+                                            </td>
+                                            <td>
+                                              до 1 часа 30 минут
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>
+                                              <strong>До 3000
+                                                рублей</strong>
+                                            </td>
+                                            <td>
+                                              до 3-х часов
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>
+                                              <strong>До 5000
+                                                рублей</strong>
+                                            </td>
+                                            <td>
+                                              до 4-х часов
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>
+                                              <strong>До 10000
+                                                рублей</strong>
+                                            </td>
+                                            <td>
+                                              до 5-ти часов
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>
+                                              <strong>От 10000 до 12000
+                                                рублей</strong>
+                                            </td>
+                                            <td>
+                                              до 8-ми часов
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>
+                                              <strong>Более 12000
+                                                рублей</strong>
 
-                                                                                        </td>
-                                                                                        <td>
-                                                                                            Интервал подъема
-                                                                                            по согласованию с менеджером
-                                                                                        </td>
-                                                                                    </tr>
-                                                                                </tbody>
-                                                                            </table>
-                                                                            <p>
-                                                                                «Петрович» оставляет за собой право
-                                                                                определять количество грузчиков,
-                                                                                необходимых для подъема заказа. Время
-                                                                                подъема начинается с момента прибытия
-                                                                                машины на адрес.
-                                                                            </p>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="faq__item faq__item_sm">
-                                                                        <div class="faq__item-title" data-spoller>
-                                                                            Безопасность оказания услуги
-                                                                        </div>
-                                                                        <div class="faq__item-answer">
-                                                                            <p>
-                                                                                Бригада подъема соблюдает правила
-                                                                                техники безопасности и НЕ ВЫПОЛНЯЕТ
-                                                                                работы, если требуется:
-                                                                            </p>
-                                                                            <ul class="faq__item-list">
-                                                                                <li>
-                                                                                    Выход на крышу.
-                                                                                </li>
-                                                                                <li>
-                                                                                    Проход в шахту лифта.
-                                                                                </li>
-                                                                                <li>
-                                                                                    Работа в непосредственной близости к
-                                                                                    оголенным
-                                                                                    электропроводам.
-                                                                                </li>
-                                                                                <li>
-                                                                                    Работа в условиях повышенной
-                                                                                    задымленности,
-                                                                                    загазованности, запыленности.
-                                                                                </li>
-                                                                                <li>
-                                                                                    Подъем товара по пожарной или
-                                                                                    приставной лестнице.
-                                                                                </li>
-                                                                                <li>
-                                                                                    Подъем товара по строительным лесам.
-                                                                                </li>
-                                                                                <li>
-                                                                                    Подача товаров в окна, чердаки,
-                                                                                    подвалы, через
-                                                                                    ограждения и преграды.
-                                                                                </li>
-                                                                                <li>
-                                                                                    Работа в помещениях высотой ниже 180
-                                                                                    см.
-                                                                                </li>
-                                                                                <li>
-                                                                                    Пронос и подъем товара по временным
-                                                                                    сооружениям
-                                                                                    и через инженерные коммуникации.
-                                                                                </li>
-                                                                                <li>
-                                                                                    Подъем товара по лестнице без перил.
-                                                                                </li>
-                                                                                <li>
-                                                                                    Перекидывание товара через перила
-                                                                                    или между ними.
-                                                                                </li>
-                                                                                <li>
-                                                                                    Подъем товара в условиях
-                                                                                    недостаточной
-                                                                                    освещенности.
-                                                                                </li>
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="faq__item faq__item_sm">
-                                                                        <div class="faq__item-title" data-spoller>
-                                                                            При подъеме гарантируем
-                                                                        </div>
-                                                                        <div class="faq__item-answer">
-                                                                            <ul class="faq__item-list">
-                                                                                <li>
-                                                                                    Сохранить потребительские свойства
-                                                                                    товара.
-                                                                                </li>
-                                                                                <li>
-                                                                                    При необходимости произвести сухую
-                                                                                    уборку
-                                                                                    и оставить лестницу чистой.
-                                                                                </li>
-                                                                                <li>
-                                                                                    После оказания услуги предоставить
-                                                                                    расчетный лист
-                                                                                    подъема на подпись.
-                                                                                </li>
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="faq__item faq__item_sm">
-                                                                        <div class="faq__item-title" data-spoller>
-                                                                            Наша ответственность
-                                                                        </div>
-                                                                        <div class="faq__item-answer">
-                                                                            «Петрович» несет полную ответственность за
-                                                                            сроки и качество оказания услуги. Если
-                                                                            заявленные сроки оказания услуги нарушены,
-                                                                            то «Петрович» компенсирует ее стоимость.
-                                                                            Если во время оказания услуги причинен ущерб
-                                                                            имуществу, то «Петрович» обязуется
-                                                                            возместить стоимость ремонтных работ.
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="faq__item faq__item_sm">
-                                                                        <div class="faq__item-title" data-spoller>
-                                                                            Просим
-                                                                        </div>
-                                                                        <div class="faq__item-answer">
-                                                                            <ul class="faq__item-list">
-                                                                                <li>
-                                                                                    Проверить количество материала и его
-                                                                                    внешний вид
-                                                                                </li>
-                                                                                <li>
-                                                                                    Обеспечить место для прохода
-                                                                                    грузчиков
-                                                                                    и складирования товара
-                                                                                </li>
-                                                                                <li>
-                                                                                    Предоставить доступ к лифту и
-                                                                                    лестничной площадке
-                                                                                </li>
-                                                                                <li>
-                                                                                    Если при оформлении заказа не были
-                                                                                    указаны
-                                                                                    особенности места разгрузки (сложный
-                                                                                    подъезд,
-                                                                                    технический этаж и пр.), то доплата
-                                                                                    осуществляется
-                                                                                    на месте согласно расценкам
-                                                                                </li>
-                                                                            </ul>
-                                                                            <p>
-                                                                                Настоящие правила не являются публичной
-                                                                                офертой.
-                                                                            </p>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
+                                            </td>
+                                            <td>
+                                              Интервал подъема
+                                              по согласованию с менеджером
+                                            </td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                      <p>
+                                        «Петрович» оставляет за собой право
+                                        определять количество грузчиков,
+                                        необходимых для подъема заказа. Время
+                                        подъема начинается с момента прибытия
+                                        машины на адрес.
+                                      </p>
+                                    </div>
+                                  </div>
+                                  <div class="faq__item faq__item_sm">
+                                    <div class="faq__item-title" data-spoller>
+                                      Безопасность оказания услуги
+                                    </div>
+                                    <div class="faq__item-answer">
+                                      <p>
+                                        Бригада подъема соблюдает правила
+                                        техники безопасности и НЕ ВЫПОЛНЯЕТ
+                                        работы, если требуется:
+                                      </p>
+                                      <ul class="faq__item-list">
+                                        <li>
+                                          Выход на крышу.
+                                        </li>
+                                        <li>
+                                          Проход в шахту лифта.
+                                        </li>
+                                        <li>
+                                          Работа в непосредственной близости к
+                                          оголенным
+                                          электропроводам.
+                                        </li>
+                                        <li>
+                                          Работа в условиях повышенной
+                                          задымленности,
+                                          загазованности, запыленности.
+                                        </li>
+                                        <li>
+                                          Подъем товара по пожарной или
+                                          приставной лестнице.
+                                        </li>
+                                        <li>
+                                          Подъем товара по строительным лесам.
+                                        </li>
+                                        <li>
+                                          Подача товаров в окна, чердаки,
+                                          подвалы, через
+                                          ограждения и преграды.
+                                        </li>
+                                        <li>
+                                          Работа в помещениях высотой ниже 180
+                                          см.
+                                        </li>
+                                        <li>
+                                          Пронос и подъем товара по временным
+                                          сооружениям
+                                          и через инженерные коммуникации.
+                                        </li>
+                                        <li>
+                                          Подъем товара по лестнице без перил.
+                                        </li>
+                                        <li>
+                                          Перекидывание товара через перила
+                                          или между ними.
+                                        </li>
+                                        <li>
+                                          Подъем товара в условиях
+                                          недостаточной
+                                          освещенности.
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                  <div class="faq__item faq__item_sm">
+                                    <div class="faq__item-title" data-spoller>
+                                      При подъеме гарантируем
+                                    </div>
+                                    <div class="faq__item-answer">
+                                      <ul class="faq__item-list">
+                                        <li>
+                                          Сохранить потребительские свойства
+                                          товара.
+                                        </li>
+                                        <li>
+                                          При необходимости произвести сухую
+                                          уборку
+                                          и оставить лестницу чистой.
+                                        </li>
+                                        <li>
+                                          После оказания услуги предоставить
+                                          расчетный лист
+                                          подъема на подпись.
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                  <div class="faq__item faq__item_sm">
+                                    <div class="faq__item-title" data-spoller>
+                                      Наша ответственность
+                                    </div>
+                                    <div class="faq__item-answer">
+                                      «Петрович» несет полную ответственность за
+                                      сроки и качество оказания услуги. Если
+                                      заявленные сроки оказания услуги нарушены,
+                                      то «Петрович» компенсирует ее стоимость.
+                                      Если во время оказания услуги причинен ущерб
+                                      имуществу, то «Петрович» обязуется
+                                      возместить стоимость ремонтных работ.
+                                    </div>
+                                  </div>
+                                  <div class="faq__item faq__item_sm">
+                                    <div class="faq__item-title" data-spoller>
+                                      Просим
+                                    </div>
+                                    <div class="faq__item-answer">
+                                      <ul class="faq__item-list">
+                                        <li>
+                                          Проверить количество материала и его
+                                          внешний вид
+                                        </li>
+                                        <li>
+                                          Обеспечить место для прохода
+                                          грузчиков
+                                          и складирования товара
+                                        </li>
+                                        <li>
+                                          Предоставить доступ к лифту и
+                                          лестничной площадке
+                                        </li>
+                                        <li>
+                                          Если при оформлении заказа не были
+                                          указаны
+                                          особенности места разгрузки (сложный
+                                          подъезд,
+                                          технический этаж и пр.), то доплата
+                                          осуществляется
+                                          на месте согласно расценкам
+                                        </li>
+                                      </ul>
+                                      <p>
+                                        Настоящие правила не являются публичной
+                                        офертой.
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
 
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="delivery__map">
-                                                <div id="map" class="delivery__map-content"></div>
-                                                <label class="delivery__map-checkbox checkbox checkbox_blue">
-                                                    <input type="checkbox" name="map-areas" id="map-areas" checked
-                                                        class="checkbox__input hidden" hidden>
-                                                    <span class="checkbox__content">
-                                                        Показать зоны доставки
-                                                    </span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="info__footer">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="delivery__map">
+                        <div id="map" class="delivery__map-content"></div>
+                        <label class="delivery__map-checkbox checkbox checkbox_blue">
+                          <input type="checkbox" name="map-areas" id="map-areas" checked class="checkbox__input hidden" hidden>
+                          <span class="checkbox__content">
+                            Показать зоны доставки
+                          </span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="info__footer">
     <div class="info__footer-opinion opinion">
         <div class="opinion__title">
             Информация была полезна?
@@ -1268,13 +1205,13 @@
     </div>
     
 </div>
-                                    </div>
-                                    <div data-tab-content class="tabs__content-item">
-                                        Внешний контент 2
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="privacy__support support">
+                  </div>
+                  <div data-tab-content class="tabs__content-item">
+                    Внешний контент 2
+                  </div>
+                </div>
+              </div>
+              <div class="privacy__support support">
     <div class="support__caption">
         Требуется помощь менеджера?
     </div>
@@ -1296,17 +1233,90 @@
         </div>
     </div>
 </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <div id="modal-rate" class="popup">
+    <div class="popup__content">
+        <div class="popup__body">
+            <button type="button" class="popup__close icon-close"></button>
+            <form action="#" class="popup__form form">
+                <h3 class="form__title title title_sm">
+                    Спасибо за вашу оценку!
+                </h3>
+                <p class="form__text">
+                    Уделите пожалуйста пару минут своего времени и напишите чего вам не хватает для положительной оценки
+                    контента. Помогите нам стать лучше и полезнее для вас!
+                </p>
+                <div class="form__rows">
+                    <div class="form__row">
+                        <div class="form__row-item">
+                            <div class="form__label">
+                                Ваше имя
+                            </div>
+                            <input type="text" name="name" class="form__input" placeholder="Иван Иванов">
+                        </div>
+                    </div>
+                    <div class="form__row">
+                        <div class="form__row-item">
+                            <div class="form__label">
+                                Номер телефона
+                            </div>
+                            <input type="tel" name="phone" class="form__input" placeholder="+7 (___) ___-__-__">
+                        </div>
+                        <div class="form__row-item">
+                            <div class="form__label">
+                                E-mail
+                            </div>
+                            <input type="email" name="email" class="form__input" placeholder="primer@hokkers.ru">
+                        </div>
+                    </div>
+                    <div class="form__row">
+                        <div class="form__row-item">
+                            <div class="form__label">
+                                Комментарий к заказу (не обязательно)
+                            </div>
+                            <textarea name="message" class="form__textarea" maxlength="210"
+                                placeholder="Комментарий к заказу"></textarea>
+                            <div class="form__message-length">
+                                <span class="form__message-length-current">0</span>
+                                /
+                                <span class="form__message-length-total">210</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </section>
-
-        </main>
+                <div class="form__footer">
+                    <button type="submit" class="form__btn btn btn_blue">
+                        Отправить
+                    </button>
+                    <div class="form__privacy">
+                        Нажимая на кнопку "Отправить", вы соглашаетесь
+                        с <a href="" class="form__privacy-link">Политикой конфиденциальности</a>
+                    </div>
+                </div>
+            </form>
+            <!-- <div class="popup__succes icon-check">
+                <div class="popup__succes-title title title_sm">
+                    Спасибо за вашу обратную связь
+                </div>
+                <div class="popup__succes-subtitle">
+                    Мы обязательно учтем все ваши комментарии и пожелания для улучшения нашего сайта для вас
+                </div>
+                <button type="button" class="popup__succes-btn btn btn_blue popup__close">
+                    Понятно
+                </button>
+            </div> -->
+        </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/inputmask@5.0.7/dist/inputmask.min.js"></script>
-<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
-<script src="js/app.min.js"></script>
+</div>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js?_v=20230306145719"></script>
+<script src="https://cdn.jsdelivr.net/npm/inputmask@5.0.7/dist/inputmask.min.js?_v=20230306145719"></script>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&_v=20230306145719"></script>
+<script src="js/app.min.js?_v=20230306145719"></script>
 </body>
 
 </html>

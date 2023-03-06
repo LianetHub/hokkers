@@ -357,6 +357,26 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    if (document.querySelector(".product-slider")) {
+        const productSlider = new Swiper(".product-slider", {
+            speed: 800,
+            spaceBetween: 4,
+            simulateTouch: true,
+            breakpoints: {
+                767.98: {
+                    slidesPerView: 2,
+                },
+                991.98: {
+                    slidesPerView: 2,
+                    grid: {
+                        rows: 3,
+                        fill: "row",
+                    },
+                },
+            },
+        });
+    }
+
     /* sliders */
 
     document.querySelectorAll(".form__textarea").forEach((textarea) => {

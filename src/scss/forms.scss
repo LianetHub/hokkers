@@ -211,7 +211,7 @@
 			align-items: center;
 			width: 16px;
 			height: 16px;
-			font-size: 16px;
+			font-size: 10px;
 			border-radius: 3px;
 			z-index: 2;
 			background: #fff;
@@ -284,6 +284,9 @@
 	}
 	&_sm {
 		font-size: 12px;
+	}
+	&_lg {
+		padding: em(10, 14) em(24, 14);
 	}
 	&:disabled,
 	&[aria-disabled="true"] {

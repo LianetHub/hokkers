@@ -1,0 +1,247 @@
+@@include('html/_head.html', {
+'title': 'ХОККЕРС | Страница товара'
+})
+
+<body>
+	<div class="wrapper">
+		<main class="page">
+			<section class="page__product product">
+				<div class="product__container">
+					<ul class="product__breadcrumbs breadcrumbs ">
+						<li class="breadcrumbs__item">
+							<a href="/" class="breadcrumbs__link">Главная</a>
+						</li>
+						<li class="breadcrumbs__item">
+							<a href="/catalog.html" class="breadcrumbs__link">Каталог</a>
+						</li>
+						<li class="breadcrumbs__item">
+							<a href="/catalog.html" class="breadcrumbs__link">Спецодежда</a>
+						</li>
+						<li class="breadcrumbs__item">
+							<a href="/catalog.html" class="breadcrumbs__link">Защитная спецодежда</a>
+						</li>
+						<li class="breadcrumbs__item">
+							<a class="breadcrumbs__link breadcrumbs__link_active">
+								Название товара
+							</a>
+						</li>
+					</ul>
+					<div class="product__body">
+						<div class="product__slider product-slider swiper">
+							<div class="product-slider__wrapper swiper-wrapper">
+								<div class="product-slider__slide swiper-slide">
+									<img src="@img/product/01.png" class="cover-image" alt="product">
+									<div class="product-slider__slide-labels">
+										<div class="product-slider__slide-label">
+											NEW
+										</div>
+										<div class="product-slider__slide-label">
+											-30%
+										</div>
+									</div>
+								</div>
+								<div class="product-slider__slide swiper-slide">
+									<img src="@img/product/02.png" class="cover-image" alt="product">
+									<button class="product-slider__slide-play icon-play"></button>
+								</div>
+								<div class="product-slider__slide swiper-slide">
+									<img src="@img/product/03.png" class="cover-image" alt="product">
+								</div>
+								<div class="product-slider__slide swiper-slide">
+									<img src="@img/product/04.png" class="cover-image" alt="product">
+								</div>
+								<div class="product-slider__slide swiper-slide">
+									<img src="@img/product/05.png" class="cover-image" alt="product">
+								</div>
+								<div class="product-slider__slide swiper-slide">
+									<img src="@img/product/06.png" class="cover-image" alt="product">
+								</div>
+							</div>
+						</div>
+						<div class="product__content">
+							<div class="product__main">
+								<h1 class="product__title title title_xs">
+									Костюм от электрической дуги мужской зимний СП08-ЗV (60 кал / см2)
+								</h1>
+								<div class="product__info">
+									<div class="product__info-item">
+										<span class="product__info-title">
+											Артикул:
+										</span>
+										<span class="product__info-value">
+											0101-0155
+										</span>
+									</div>
+									<div class="product__info-item">
+										<span class="product__info-title">
+											Ожидание:
+										</span>
+										<span class="product__info-value">
+											3-5 дней
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="product__content-body">
+								<div class="product__price">
+									<div class="product__price-current">
+										19 560 ₽
+									</div>
+									<div class="product__price-old">
+										21 300 ₽
+									</div>
+									<div class="product__price-wholesale">
+										(Опт. При заказе от 10 000 ₽)
+									</div>
+									<a href="" class="product__price-btn icon-question"></a>
+								</div>
+								<div class="product__sizes">
+									<div class="product__sizes-header">
+										<div class="product__sizes-title">
+											Выберите размер
+										</div>
+										<a href="#modal-size" data-modal class="product__sizes-btn icon-ruler">
+											Таблица размеров
+										</a>
+									</div>
+									<div class="product__sizes-items">
+										<label class="product__size">
+											<input type="radio" name="size" value="xs"
+												class="product__size-input hidden" hidden>
+											<span class="product__size-value">
+												XS
+											</span>
+										</label>
+										<label class="product__size">
+											<input type="radio" name="size" value="S" class="product__size-input hidden"
+												hidden>
+											<span class="product__size-value">
+												S
+											</span>
+										</label>
+										<label class="product__size">
+											<input type="radio" name="size" value="M" class="product__size-input hidden"
+												hidden>
+											<span class="product__size-value">
+												M
+											</span>
+										</label>
+										<label class="product__size">
+											<input type="radio" name="size" value="L" class="product__size-input hidden"
+												hidden>
+											<span class="product__size-value">
+												L
+											</span>
+										</label>
+										<label class="product__size">
+											<input type="radio" name="size" value="XL"
+												class="product__size-input hidden" hidden>
+											<span class="product__size-value">
+												XL
+											</span>
+										</label>
+										<label class="product__size">
+											<input type="radio" name="size" value="2XL"
+												class="product__size-input hidden" hidden>
+											<span class="product__size-value">
+												2XL
+											</span>
+										</label>
+										<label class="product__size">
+											<input type="radio" name="size" value="3XL"
+												class="product__size-input hidden" hidden>
+											<span class="product__size-value">
+												3XL
+											</span>
+										</label>
+									</div>
+								</div>
+								<div class="product__actions">
+									<button type="button" class="product__cart btn btn_blue btn_lg">
+										Добавить в корзину
+									</button>
+									<button type="button" class="product__favorite icon-heart"></button>
+								</div>
+								<div class="product__desc">
+									<ul class="product__desc-list">
+										<li class="product__desc-item">
+											<div class="product__desc-title">
+												Вид изделия:
+											</div>
+											<span class="product__desc-line"></span>
+											<div class="product__desc-value">
+												Куртка
+											</div>
+										</li>
+										<li class="product__desc-item">
+											<div class="product__desc-title">
+												Бренд:
+											</div>
+											<span class="product__desc-line"></span>
+											<div class="product__desc-value">
+												<a href="" class="product__desc-link">Prof spec</a>
+											</div>
+										</li>
+										<li class="product__desc-item">
+											<div class="product__desc-title">
+												Назначение:
+											</div>
+											<span class="product__desc-line"></span>
+											<div class="product__desc-value">
+												Для защиты от пониженных температур
+											</div>
+										</li>
+										<li class="product__desc-item">
+											<div class="product__desc-title">
+												Основная ткань:
+											</div>
+											<span class="product__desc-line"></span>
+											<div class="product__desc-value">
+												Наутика, пл. 125 г/м2
+											</div>
+										</li>
+									</ul>
+									<a href="" class="product__desc-more product__desc-link">
+										Все характеристики
+									</a>
+									<div class="product__desc-footer">
+										<div class="product__desc-caption">
+											Защитные свойства
+										</div>
+										<div class="product__desc-medals">
+											<div class="product__desc-medal">
+												<img src="@img/icons/icon-medal.png" alt="medal">
+												<div class="product__desc-tooltip">
+													Защита от производственных
+													загрязнений
+												</div>
+											</div>
+											<div class="product__desc-medal">
+												<img src="@img/icons/icon-medal-2.png" alt="medal">
+												<div class="product__desc-tooltip">
+													Защита от производственных
+													загрязнений
+												</div>
+											</div>
+											<div class="product__desc-medal">
+												<img src="@img/icons/icon-medal.png" alt="medal">
+												<div class="product__desc-tooltip">
+													Защита от производственных
+													загрязнений
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+	</div>
+	@@include('html/_modal-size.html', {})
+	@@include('html/_js.html', {})
+</body>
+
+</html>
