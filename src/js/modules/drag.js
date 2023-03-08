@@ -10,6 +10,10 @@ export const drag = () => {
             }
         });
 
+        inputFile.addEventListener("focus", (e) => {
+            inputFile.value = null;
+        });
+
         dropZoneElement.addEventListener("dragover", (e) => {
             e.preventDefault();
             dropZoneElement.classList.add("over");
@@ -41,62 +45,88 @@ export const drag = () => {
      */
 
     function updateThumbnail(dropZoneElement, file) {
-        let thumbnailElement =
-            dropZoneElement.querySelector(".form__file-thumb");
-        let thumbImage = dropZoneElement.querySelector(".form__file-image");
-        let thumbName = dropZoneElement.querySelector(".form__file-name");
-        let removeBtn = dropZoneElement.querySelector(".form__file-remove");
+        let fileList = document.querySelector(".form__file-list");
 
-        // First time - remove the prompt
-        if (
-            !dropZoneElement
-                .querySelector(".form__file-content")
-                .classList.contains("hidden")
-        ) {
-            dropZoneElement
-                .querySelector(".form__file-content")
-                .classList.add("hidden");
+        let thumbnailElement, thumbSize, thumbName, removeBtn;
+
+        if (dropZoneElement.hasAttribute("data-upload-hidden")) {
+            dropZoneElement.classList.add("hidden");
         }
 
-        // First time - there is no thumbnail element, so lets create it
-        if (!thumbnailElement) {
-            thumbnailElement = document.createElement("span");
-            thumbnailElement.classList.add("form__file-thumb");
-
-            thumbImage = document.createElement("span");
-            thumbImage.classList.add("form__file-image");
-            thumbnailElement.appendChild(thumbImage);
-
-            thumbName = document.createElement("span");
-            thumbName.classList.add("form__file-name");
-            thumbnailElement.appendChild(thumbName);
-
-            removeBtn = document.createElement("button");
-            removeBtn.classList.add("form__file-remove");
-            removeBtn.classList.add("btn");
-            removeBtn.classList.add("btn_blue");
-            removeBtn.classList.add("btn_sm");
-            removeBtn.classList.add("icon-close");
-            removeBtn.setAttribute("type", "button");
-            removeBtn.innerHTML = "Удалить файл";
-            thumbnailElement.appendChild(removeBtn);
-
-            dropZoneElement.appendChild(thumbnailElement);
+        if (document.querySelector("[data-upload-more]")) {
+            document
+                .querySelector("[data-upload-more]")
+                .classList.remove("hidden");
         }
+
+        if (!fileList) {
+            fileList = document.createElement("div");
+            fileList.classList.add("form__file-list");
+            dropZoneElement.after(fileList);
+        }
+
+        thumbnailElement = document.createElement("span");
+        thumbnailElement.classList.add("form__file-thumb");
+        fileList.appendChild(thumbnailElement);
+
+        // console.log("work");
+        // thumbImage = document.createElement("span");
+        // thumbImage.classList.add("form__file-image");
+        // thumbnailElement.appendChild(thumbImage);
+
+        thumbName = document.createElement("span");
+        thumbName.classList.add("form__file-name");
+        thumbnailElement.appendChild(thumbName);
+
+        thumbSize = document.createElement("span");
+        thumbSize.classList.add("form__file-size");
+        thumbnailElement.appendChild(thumbSize);
+
+        removeBtn = document.createElement("button");
+        removeBtn.classList.add("form__file-remove");
+
+        removeBtn.classList.add("icon-delete");
+        removeBtn.setAttribute("type", "button");
+
+        thumbnailElement.appendChild(removeBtn);
 
         let fileName = file.name;
+        let fileSize = getSize(file.size);
         thumbName.innerHTML = fileName;
+        thumbSize.innerHTML = fileSize;
 
-        // Show thumbnail for image files
-        if (file.type.startsWith("image/")) {
-            const reader = new FileReader();
+        // console.log(file);
 
-            reader.readAsDataURL(file);
-            reader.onload = () => {
-                thumbImage.style.backgroundImage = `url('${reader.result}')`;
-            };
-        } else {
-            thumbImage.style.backgroundImage = null;
+        // // Show thumbnail for image files
+        // if (file.type.startsWith("image/")) {
+        //     const reader = new FileReader();
+
+        //     reader.readAsDataURL(file);
+        //     reader.onload = () => {
+        //         thumbImage.style.backgroundImage = `url('${reader.result}')`;
+        //     };
+        // } else {
+        //     thumbImage.style.backgroundImage = null;
+        // }
+    }
+
+    function getSize(bits) {
+        let size;
+
+        if (bits / 1024 < 1) {
+            size = bits + "B";
         }
+
+        if (bits / 1024 > 1) {
+            if (bits / Math.pow(1024, 2) < 1) {
+                size = (bits / 1024).toFixed(1) + "KB";
+            }
+
+            if (bits / Math.pow(1024, 2) > 1) {
+                size = (bits / Math.pow(1024, 2)).toFixed(1) + "MB";
+            }
+        }
+
+        return size;
     }
 };

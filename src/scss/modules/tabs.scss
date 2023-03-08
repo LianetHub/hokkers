@@ -25,6 +25,73 @@
             background: #e6eaee;
             border-radius: 6px;
         }
+        &_altrenate {
+            @media (max-width: $md4) {
+                margin: em(16) em(0) em(0) em(0);
+                display: block;
+                overflow: visible;
+                &::before {
+                    display: none;
+                }
+                .tabs__buttons {
+                    margin: 0;
+                }
+                .tabs__button {
+                    flex: 0 1 50%;
+                    border: 1px solid #e6eaee;
+                    color: #001426;
+                    text-align: left;
+                    justify-content: flex-start;
+                    border-radius: 6px;
+                    padding: em(12, 14) em(12, 14) em(12, 14) em(40, 14);
+                    &:not(:last-child) {
+                        margin: em(0) em(10) em(0) em(0);
+                    }
+                    &.active::before,
+                    &::before {
+                        position: absolute;
+                        top: 50%;
+                        left: 13px;
+                        transform: translateY(-50%);
+                        width: 18px;
+                        height: 18px;
+                        border: 1px solid #b0b8bf;
+                        border-radius: 50%;
+                        background: none;
+                    }
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        left: 17px;
+                        transform: translateY(-50%);
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 50%;
+                        background: #319cff;
+                        opacity: 0;
+                        transition: opacity 0.3s ease 0s;
+                    }
+                    &.active {
+                        border-color: #319cff;
+                        &::after {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+            @media (max-width: $md5) {
+                .tabs__buttons {
+                    flex-direction: column;
+                    margin: 0;
+                }
+                .tabs__button {
+                    &:not(:last-child) {
+                        margin: em(0) em(0) em(8) rem(0);
+                    }
+                }
+            }
+        }
     }
     // .tabs__buttons
     &__buttons {

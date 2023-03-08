@@ -29,7 +29,7 @@
 			margin-bottom: em(10);
 		}
 		@media (min-width: $md5) {
-			flex: 1 1 auto;
+			flex: 1;
 			padding: 0 em(6);
 			&:not(:last-child) {
 				margin-bottom: em(0);
@@ -170,29 +170,37 @@
 		// }
 	}
 	&__file {
-	}
-	// .form__file-content
-	&__file-content {
-	}
-	&__file-section {
-		position: relative;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		border: 2px dashed #319cff;
-		background: rgba($color: $hover, $alpha: 0.5);
-		border-radius: 6px;
-		padding: em(15) em(10) em(21);
-		max-width: 137px;
-		margin: 0 auto;
+		// margin: em(16) em(0) em(0) em(0);
+		display: block;
 		&_lg {
-			max-width: 100%;
-			border-color: #b0b8bf;
-			background: #fff;
-			font-size: 14px;
-			line-height: math.div(20, 14);
-			cursor: pointer;
+			.form__file-section {
+				max-width: 100%;
+				border-color: #b0b8bf;
+				background: #fff;
+				font-size: 14px;
+				line-height: math.div(20, 14);
+				cursor: pointer;
+			}
+
+			& ~ .form__file-list {
+				.form__file-thumb {
+					flex-direction: row;
+					&::before {
+						margin: em(0) rem(10) em(0) em(0);
+					}
+				}
+
+				& .form__file-name {
+					margin: em(0) auto em(0) em(8);
+				}
+				& .form__file-remove {
+					margin: em(0) em(0) em(0) em(8);
+				}
+				& .form__file-size,
+				.form__file-remove {
+					color: #64707b;
+				}
+			}
 			.form__file-title {
 				color: #319cff;
 				flex-direction: row;
@@ -217,7 +225,49 @@
 				transform: none;
 			}
 		}
+		&_sm {
+			margin: em(10) em(0) em(0) em(0);
+			@media (min-width: $md5) {
+				margin: em(0) em(0) em(0) em(13);
+			}
+			.form__file-content {
+				display: inline-flex;
+				align-items: center;
+				font-size: 12px;
+				font-weight: 600;
+				line-height: math.div(16, 12);
+				color: #319cff;
+				transition: color 0.3s ease 0s;
+				cursor: pointer;
+				@media (any-hover: hover) {
+					&:hover {
+						color: darken($color: #319cff, $amount: 10);
+					}
+				}
+				&::before {
+					@extend %ic, .icon-paperclip;
+					margin: em(0) em(6) em(0) em(0);
+				}
+			}
+		}
 	}
+	// .form__file-content
+	&__file-content {
+	}
+	&__file-section {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		border: 2px dashed #319cff;
+		background: rgba($color: $hover, $alpha: 0.5);
+		border-radius: 6px;
+		padding: em(15) em(10) em(21);
+		max-width: 137px;
+		margin: 0 auto;
+	}
+
 	// .form__file-title
 	&__file-title {
 		position: relative;
@@ -258,9 +308,25 @@
 		display: flex;
 		align-items: center;
 		flex-direction: column;
+		padding: em(23) em(0);
+		border-bottom: 1px solid #e6eaee;
 		font-size: 14px;
 		font-weight: 600;
 		line-height: math.div(17, 14);
+		&::before {
+			@extend %ic, .icon-check;
+			background: #0ac25a;
+			color: #fff;
+			flex-shrink: 0;
+			width: 20px;
+			height: 20px;
+			margin: em(0) em(0) rem(10) rem(0);
+			font-size: 8px;
+			border-radius: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
 	}
 	// .form__file-image
 	&__file-image {
@@ -273,12 +339,47 @@
 	}
 	// .form__file-name
 	&__file-name {
-		margin: em(40) em(0) em(0) em(0);
+		margin: em(20) em(0) em(0) em(0);
+
+		font-size: 16px;
+		line-height: math.div(24, 16);
+	}
+	&__file-size {
+		font-size: 16px;
+		line-height: math.div(24, 16);
+
+		color: #fff;
 	}
 	&__file-remove {
-		margin: em(20) em(0) em(0) em(0);
+		margin: em(8) em(0) em(0) em(0);
+		font-size: 20px;
+		color: #fff;
+		text-align: center;
+		transition: color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $mainColor;
+			}
+		}
 	}
 	&__select {
+	}
+	&__options {
+		margin: em(10) em(0) em(0) em(0);
+		font-size: 12px;
+		display: flex;
+		flex-direction: column;
+		@media (min-width: $md5) {
+			flex-direction: row;
+		}
+	}
+	&__option {
+		&:not(:last-child) {
+			margin: em(0) em(0) em(10) rem(0);
+			@media (min-width: $md5) {
+				margin: em(0) em(73) em(0) em(0);
+			}
+		}
 	}
 }
 
@@ -335,29 +436,15 @@
 			font-size: 8px;
 			border-radius: 3px;
 			z-index: 2;
-			background: #fff;
+			background: transparent;
 			color: #64707b;
 			border: 2px solid #64707b;
 			transition: transform 0.15s ease 0s;
 		}
 	}
 	&__info {
-		width: 14px;
-		height: 14px;
-		background: #fff;
-		color: #319cff;
-		border-radius: 50%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		font-size: 10px;
+		display: inline-block;
 		margin: em(0) em(0) em(0) em(5);
-		@media (any-hover: hover) {
-			&:hover {
-				background: #319cff;
-				color: #fff;
-			}
-		}
 	}
 }
 

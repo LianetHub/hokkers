@@ -6,3 +6,4 @@ export { tabs } from "./tabs.js";
 export { map } from "./map.js";
 export { drag } from "./drag.js";
 export { select } from "./select.js";
+export { da } from "./dynamicAdapt.js";

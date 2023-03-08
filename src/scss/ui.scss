@@ -295,6 +295,96 @@
 	padding: em(2, 12) em(4, 12);
 }
 
+.clue-tooltip {
+	position: relative;
+	cursor: help;
+	@media (any-hover: hover) {
+		&:hover {
+			& .clue-tooltip__body {
+				display: block;
+				animation: fade-in-bottom 0.2s linear;
+			}
+		}
+	}
+	// .clue-tooltip__item
+	&__item {
+	}
+	// .clue-tooltip__body
+	&__body {
+		position: absolute;
+		font-size: 12px;
+		font-weight: 600;
+		line-height: math.div(16, 12);
+		background: #ffffff;
+		text-align: center;
+		display: none;
+		// display: block;
+		color: #64707b;
+		border-radius: 6px;
+		min-width: 190px;
+		left: 50%;
+		top: -5px;
+		z-index: 9;
+		transform: translate(-50%, -110%);
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.08), 0px 8px 12px rgba(0, 0, 0, 0.04), 0px 15px 30px rgba(0, 0, 0, 0.07),
+			0px -1px 2px rgba(0, 0, 0, 0.09);
+		padding: em(4, 12) em(8, 12);
+		&::after {
+			content: "";
+			display: block;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 0.521vw 0.313vw 0 0.313vw;
+			border-color: #fff transparent transparent transparent;
+			position: absolute;
+			left: calc(50% - 0.313vw);
+			top: calc(100% - 0.052vw);
+		}
+	}
+}
+
+.question-btn {
+	margin: em(0) em(0) em(0) rem(4);
+	flex-shrink: 0;
+	width: 16px;
+	height: 16px;
+	background: #f0f4f8;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #319cff;
+	font-size: 10px;
+	transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: #319cff;
+			color: #f0f4f8;
+		}
+	}
+	&.question-btn_white {
+		background: #fff;
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: #319cff;
+				color: #f0f4f8;
+			}
+		}
+	}
+}
+
+@keyframes fade-in-bottom {
+	0% {
+		margin-top: 10px;
+		opacity: 0;
+	}
+	100% {
+		margin-top: 0;
+		opacity: 1;
+	}
+}
+
 .swiper-button-next,
 .swiper-button-prev {
 	&::after {

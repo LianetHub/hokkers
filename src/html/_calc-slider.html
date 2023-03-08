@@ -149,23 +149,26 @@
                 </div>
                 <div class="calc-section__file">
                     <img src="@img/calc.jpg" alt="calc image">
-                    <label class="calc-section__file-item form__file">
-                        <input type="file" accept="image/*" name="file-name" class="form__file-input hidden">
-                        <span class="form__file-content">
-                            <span class="form__file-section ">
-                                <span class="form__file-title icon-download">
-                                    Или перетащите
-                                    файл сюда
+                    <div class="calc-section__file-item">
+                        <label data-upload-hidden class="form__file">
+                            <input type="file" accept="image/*" name="file-name" class="form__file-input hidden">
+                            <span class="form__file-content">
+                                <span class="form__file-section ">
+                                    <span class="form__file-title icon-download">
+                                        Или перетащите
+                                        файл сюда
+                                    </span>
+                                    <span class="form__file-formats">
+                                        JPG / PNG
+                                    </span>
                                 </span>
-                                <span class="form__file-formats">
-                                    JPG / PNG
+                                <span class="form__file-btn btn btn_blue btn_sm icon-download">
+                                    Выбрать с компьютера
                                 </span>
                             </span>
-                            <span class="form__file-btn btn btn_blue btn_sm icon-download">
-                                Выбрать с компьютера
-                            </span>
-                        </span>
-                    </label>
+                        </label>
+                    </div>
+
                 </div>
                 <div class="calc-section__info">
                     Загрузка изображения для предпросмотра необязательна, но это поможет менеджеру более точно

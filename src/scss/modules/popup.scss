@@ -79,6 +79,14 @@
 	&__succes-title {
 		margin: rem(32) em(0) em(0) em(0);
 	}
+	&__succes-number {
+		margin: em(16, 18) em(0) em(0) em(0);
+		font-size: 18px;
+		line-height: math.div(24, 18);
+		& span {
+			font-weight: 600;
+		}
+	}
 	// .popup__succes-subtitle
 	&__succes-subtitle {
 		margin: em(16) em(0) em(0) em(0);
@@ -87,5 +95,101 @@
 	// .popup__succes-btn
 	&__succes-btn {
 		margin: rem(32) em(0) em(0) em(0);
+	}
+	// .popup__succes-footer
+	&__succes-footer {
+		margin: em(32) em(0) em(0) em(0);
+		display: flex;
+		align-items: center;
+	}
+	// .popup__succes-footer-btn
+	&__succes-footer-btn {
+		margin: em(0) em(32) em(0) em(0);
+	}
+	// .popup__succes-download
+	&__succes-download {
+		display: inline-flex;
+		align-items: center;
+		font-size: 14px;
+		font-weight: 600;
+		line-height: math.div(20, 14);
+		color: #319cff;
+		transition: color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: darken($color: #319cff, $amount: 10);
+			}
+		}
+		&::before {
+			font-size: 20px;
+			margin-right: em(6, 20);
+		}
+	}
+	// .popup__consult
+	&__consult {
+		margin: em(16) em(0) em(0) em(0);
+		width: 100%;
+		background: #f0f4f8;
+		border-radius: 6px;
+		padding: em(20);
+		display: flex;
+		align-items: center;
+	}
+	// .popup__consult-thumb
+	&__consult-thumb {
+		flex: 0 0 81px;
+		height: 81px;
+		margin: em(0) em(12) em(0) em(0);
+		& img {
+			border-radius: 50%;
+			border: 1px solid #e6eaee;
+		}
+	}
+	// .popup__consult-content
+	&__consult-content {
+		flex: 1 1 auto;
+		display: grid;
+		align-items: center;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 16px;
+		text-align: left;
+	}
+	// .popup__consult-body
+	&__consult-body {
+	}
+	// .popup__consult-name
+	&__consult-name {
+		font-size: 14px;
+		font-weight: 600;
+		line-height: math.div(20, 14);
+		color: #001426;
+	}
+	// .popup__consult-posititon
+	&__consult-posititon {
+		font-size: 12px;
+		line-height: math.div(16, 12);
+		color: rgba($color: #001426, $alpha: 0.6);
+	}
+	// .popup__consult-contacts
+	&__consult-contacts {
+	}
+	// .popup__consult-contacts-title
+	&__consult-contacts-title {
+		font-size: 12px;
+		line-height: math.div(16, 12);
+		color: rgba($color: #001426, $alpha: 0.6);
+	}
+	// .popup__consult-contacts-phone
+	&__consult-contacts-phone {
+		font-size: 14px;
+		font-weight: 600;
+		line-height: math.div(20, 14);
+		color: #001426;
+		transition: color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $hover;
+			}
+		}
 	}
 }

@@ -13,6 +13,55 @@ document.addEventListener("DOMContentLoaded", () => {
     devFunctions.map();
     devFunctions.drag();
     devFunctions.select();
+    devFunctions.da.init();
+
+    const cartTypes = document.querySelectorAll(".cart-formalization__types");
+
+    if (cartTypes) {
+        cartTypes.forEach((cartType) => {
+            const cartMoreItems = cartType.querySelectorAll("[data-type-more]");
+
+            cartMoreItems.forEach((cartMoreItem) => {
+                const moreItems = document.querySelectorAll(".type-more");
+                const btnItems = document.querySelectorAll(
+                    ".cart-formalization__types-item"
+                );
+
+                moreItems.forEach((moreItem) => {
+                    slide.slideUp(moreItem);
+                });
+
+                btnItems.forEach((btnItem) => {
+                    btnItem.classList.remove("active");
+                });
+
+                cartMoreItem.addEventListener("change", (e) => {
+                    const target = e.target;
+
+                    const parentItem = target.closest(
+                        ".cart-formalization__types-item"
+                    );
+                    const moreContent = parentItem.querySelector(".type-more");
+
+                    btnItems.forEach((btnItem) => {
+                        if (
+                            btnItem.classList.contains("active") &&
+                            btnItem.querySelector(".type-more")
+                        ) {
+                            slide.slideUp(btnItem.querySelector(".type-more"));
+                        }
+                        btnItem.classList.remove("active");
+                    });
+
+                    parentItem.classList.add("active");
+
+                    if (moreContent) {
+                        slide.slideDown(moreContent);
+                    }
+                });
+            });
+        });
+    }
 
     document.addEventListener("click", (e) => {
         const target = e.target;
@@ -47,9 +96,16 @@ document.addEventListener("DOMContentLoaded", () => {
         if (target.classList.contains("form__file-remove")) {
             e.preventDefault();
 
-            const formFile = target.closest(".form__file");
-            const formContent = formFile.querySelector(".form__file-content");
-            formContent.classList.remove("hidden");
+            const formFileList = target.closest(".form__file-list");
+            const formFileItems =
+                formFileList.querySelectorAll(".form__file-thumb");
+            const formContent = formFileList.previousElementSibling;
+            const moreLoadItem = document.querySelector("[data-upload-more]");
+
+            if (formFileItems.length == 1) {
+                formContent.classList.remove("hidden");
+                moreLoadItem && moreLoadItem.classList.add("hidden");
+            }
 
             const thumb = target.closest(".form__file-thumb");
             thumb.remove();
@@ -58,7 +114,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // close ESCAPE
     document.addEventListener("keydown", function (e) {
-        if (e.key === "Escape") {
+        if (e.key === "Escape" && document.querySelector(".popup.open")) {
             const popupActive = document.querySelector(".popup.open");
             popupClose(popupActive);
         }
@@ -426,28 +482,35 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    if (document.querySelector(".care-slider")) {
-        const careSlider = new Swiper(".care-slider", {
-            speed: 800,
-            spaceBetween: 24,
-            grabCursor: true,
-            simulateTouch: true,
-            watchSlidesProgress: true,
-            navigation: {
-                nextEl: ".product-care__next",
-                prevEl: ".product-care__prev",
-            },
-            breakpoints: {
-                576.98: {
-                    slidesPerView: 2,
+    if (document.querySelectorAll(".product-care")) {
+        document.querySelectorAll(".product-care").forEach((careSection) => {
+            const prev = careSection.querySelector(".product-care__prev");
+            const next = careSection.querySelector(".product-care__next");
+            const careSlider = careSection.querySelector(".care-slider");
+
+            new Swiper(careSlider, {
+                speed: 800,
+                spaceBetween: 24,
+                grabCursor: true,
+                simulateTouch: true,
+                watchSlidesProgress: true,
+                slidesPerView: "auto",
+                navigation: {
+                    nextEl: next,
+                    prevEl: prev,
                 },
-                991.98: {
-                    slidesPerView: 3,
-                },
-                1199.98: {
-                    slidesPerView: 4,
-                },
-            },
+                // breakpoints: {
+                //     576.98: {
+                //         slidesPerView: 2,
+                //     },
+                //     991.98: {
+                //         slidesPerView: 3,
+                //     },
+                //     1199.98: {
+                //         slidesPerView: 4,
+                //     },
+                // },
+            });
         });
     }
 
@@ -501,6 +564,18 @@ document.addEventListener("DOMContentLoaded", () => {
                 },
             },
         });
+
+        const detailsBtns = document.querySelectorAll("[data-details]");
+        if (detailsBtns) {
+            detailsBtns.forEach((detailsBtn) => {
+                detailsBtn.addEventListener("click", (e) => {
+                    const target = e.target.closest("[data-details]");
+                    const targetIndex = target.dataset.details;
+
+                    detailsSlider.slideTo(targetIndex);
+                });
+            });
+        }
     }
 
     /* sliders */

@@ -9,9 +9,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="">
 
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css?_v=20230306234144">
-	<link rel="stylesheet" href="css/reset.min.css?_v=20230306234144">
-	<link rel="stylesheet" href="css/style.min.css?_v=20230306234144">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css?_v=20230308155040">
+	<link rel="stylesheet" href="css/reset.min.css?_v=20230308155040">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230308155040">
 </head>
 
 <body>
@@ -105,7 +105,13 @@
                   <div class="product__price-wholesale">
                     (Опт. При заказе от 10 000 ₽)
                   </div>
-                  <a href="" class="product__price-btn icon-question"></a>
+
+                  <div class="product__price-tooltip clue-tooltip">
+                    <span class="question-btn icon-question"></span>
+                    <div class="clue-tooltip__body">
+                      Текст подсказки
+                    </div>
+                  </div>
                 </div>
                 <div class="product__sizes">
                   <div class="product__sizes-header">
@@ -209,31 +215,32 @@
                   <a href="" class="product__desc-more product__desc-link">
                     Все характеристики
                   </a>
-                  <div class="product__desc-footer">
-                    <div class="product__desc-caption">
-                      Защитные свойства
+
+                </div>
+                <div class="product__footer">
+                  <div class="product__footer-caption">
+                    Защитные свойства
+                  </div>
+                  <div class="product__footer-medals">
+                    <div class="product__footer-medal clue-tooltip">
+                      <picture><source srcset="img/icons/icon-medal.webp"type="image/webp"><img src="img/icons/icon-medal.png" alt="medal"></picture>
+                      <div class="clue-tooltip__body">
+                        Защита от производственных
+                        загрязнений
+                      </div>
                     </div>
-                    <div class="product__desc-medals">
-                      <div class="product__desc-medal">
-                        <picture><source srcset="img/icons/icon-medal.webp"type="image/webp"><img src="img/icons/icon-medal.png" alt="medal"></picture>
-                        <div class="product__desc-tooltip">
-                          Защита от производственных
-                          загрязнений
-                        </div>
+                    <div class="product__footer-medal clue-tooltip">
+                      <picture><source srcset="img/icons/icon-medal-2.webp"type="image/webp"><img src="img/icons/icon-medal-2.png" alt="medal"></picture>
+                      <div class="clue-tooltip__body">
+                        Защита от производственных
+                        загрязнений
                       </div>
-                      <div class="product__desc-medal">
-                        <picture><source srcset="img/icons/icon-medal-2.webp"type="image/webp"><img src="img/icons/icon-medal-2.png" alt="medal"></picture>
-                        <div class="product__desc-tooltip">
-                          Защита от производственных
-                          загрязнений
-                        </div>
-                      </div>
-                      <div class="product__desc-medal">
-                        <picture><source srcset="img/icons/icon-medal.webp"type="image/webp"><img src="img/icons/icon-medal.png" alt="medal"></picture>
-                        <div class="product__desc-tooltip">
-                          Защита от производственных
-                          загрязнений
-                        </div>
+                    </div>
+                    <div class="product__footer-medal clue-tooltip">
+                      <picture><source srcset="img/icons/icon-medal.webp"type="image/webp"><img src="img/icons/icon-medal.png" alt="medal"></picture>
+                      <div class="clue-tooltip__body">
+                        Защита от производственных
+                        загрязнений
                       </div>
                     </div>
                   </div>
@@ -668,23 +675,26 @@
                 </div>
                 <div class="calc-section__file">
                     <picture><source srcset="img/calc.webp"type="image/webp"><img src="img/calc.jpg" alt="calc image"></picture>
-                    <label class="calc-section__file-item form__file">
-                        <input type="file" accept="image/*" name="file-name" class="form__file-input hidden">
-                        <span class="form__file-content">
-                            <span class="form__file-section ">
-                                <span class="form__file-title icon-download">
-                                    Или перетащите
-                                    файл сюда
+                    <div class="calc-section__file-item">
+                        <label data-upload-hidden class="form__file">
+                            <input type="file" accept="image/*" name="file-name" class="form__file-input hidden">
+                            <span class="form__file-content">
+                                <span class="form__file-section ">
+                                    <span class="form__file-title icon-download">
+                                        Или перетащите
+                                        файл сюда
+                                    </span>
+                                    <span class="form__file-formats">
+                                        JPG / PNG
+                                    </span>
                                 </span>
-                                <span class="form__file-formats">
-                                    JPG / PNG
+                                <span class="form__file-btn btn btn_blue btn_sm icon-download">
+                                    Выбрать с компьютера
                                 </span>
                             </span>
-                            <span class="form__file-btn btn btn_blue btn_sm icon-download">
-                                Выбрать с компьютера
-                            </span>
-                        </span>
-                    </label>
+                        </label>
+                    </div>
+
                 </div>
                 <div class="calc-section__info">
                     Загрузка изображения для предпросмотра необязательна, но это поможет менеджеру более точно
@@ -1725,134 +1735,337 @@
                         <button class="product-care__next swiper-button-next"></button>
                       </div>
                     </div>
-                    <div class="product-care__slider care-slider ">
-                      <div class="care-slider__wrapper swiper-wrapper">
+                    <div class="product-care__body">
+                      <div class="product-care__slider care-slider ">
+                        <div class="care-slider__wrapper swiper-wrapper">
 
-                        <div class="care-slider__slide swiper-slide">
-                          <div class="care-slider__slide-num">
-                            Правило № 1
-                          </div>
-                          <div class="care-slider__slide-title">
-                            Выбирайте обувь правильно
-                          </div>
-                          <div class="care-slider__slide-image">
-                            <picture><source srcset="img/product/care/01.webp"type="image/webp"><img src="img/product/care/01.png" alt="img desc"></picture>
-                          </div>
-                          <div class="care-slider__slide-text">
-                            Эксплуатация обуви должна осуществляться в соответствии с ее
-                            сезонным назначением.
+                          <div class="care-slider__slide swiper-slide">
+                            <div class="care-slider__slide-num">
+                              Правило № 1
+                            </div>
+                            <div class="care-slider__slide-title">
+                              Выбирайте обувь правильно
+                            </div>
+                            <div class="care-slider__slide-image">
+                              <picture><source srcset="img/product/care/01.webp"type="image/webp"><img src="img/product/care/01.png" alt="img desc"></picture>
+                            </div>
+                            <div class="care-slider__slide-text">
+                              Эксплуатация обуви должна осуществляться в соответствии с ее
+                              сезонным назначением.
 
+                              Обувь должна мспользоваться строго по назначению и быть
+                              подобрана с учетом условий труда, фактического наличия
+                              вредных и
+                              опасных факторов на рабочих местах.
+
+                              Обувь изготовленная с защитными подносками обеспечивает
+                              защиту
+                              пальцев стопы от ударов с энергией до 200 Дж.
+
+                              Обувь изготовленная с проколозащитной прокладкой
+                              обеспечивает
+                              защиту от проколов и порезов не менее 1200 Н, что
+                              соответствует
+                              ГОСТ 28507-99.
+
+                              Обувь с подошвой из полиуретана и термопластичного
+                              полиуретана
+                              обладает маслобензостойкими, кислотощелочестойкими,
+                              износостойкими свойствами ГОСТ 12.4.137-2001.
+
+                              Обувь с подошвой из нитрильной резины, кроме того обладает
+                              термостойкими свойствами ГОСТ 12.4.032-95.
+                            </div>
+                          </div>
+                          <div class="care-slider__slide swiper-slide">
+                            <div class="care-slider__slide-num">
+                              Правило № 2
+                            </div>
+                            <div class="care-slider__slide-title">
+                              Подбирайте обувь
+                              по размеру
+                            </div>
+                            <div class="care-slider__slide-image">
+                              <picture><source srcset="img/product/care/02.webp"type="image/webp"><img src="img/product/care/02.png" alt="img desc"></picture>
+                            </div>
+                            <div class="care-slider__slide-text">
+                              Обувь должна быть подобрана по размеру стопы. Размер обуви,
+                              указанный в метрической системе, соответствует фактической
+                              длине
+                              стопы носчика, выраженной в миллиметрах.
+                            </div>
+                          </div>
+                          <div class="care-slider__slide swiper-slide">
+                            <div class="care-slider__slide-num">
+                              Правило № 3
+                            </div>
+                            <div class="care-slider__slide-title">
+                              Не торопитесь, надевая обувь
+                            </div>
+                            <div class="care-slider__slide-image">
+                              <picture><source srcset="img/product/care/03.webp"type="image/webp"><img src="img/product/care/03.png" alt="img desc"></picture>
+                            </div>
+                            <div class="care-slider__slide-text">
+                              При надевании обуви необходимо тщательно расшнуровать ее,
+                              расстегнуть молнии, застежки. Расправьте вкладные стельки,
+                              проверьте, нет ли в обуви инородных предметов, повреждений,
+                              излишней влаги. Использовать можно только обувь, внутренняя
+                              поверхность которой находится в исправном и относительно
+                              сухом
+                              состоянии.
+                              При надевании желательно пользоваться рожком для обуви во
+                              избежание залома задника. Тщательно зашнуруйте обувь,
+                              застегните
+                              застежки. Помните, что эксплуатировать обувь в незастегнутом
+                              виде опасно, это может привести к вывихам стопы во время
+                              ходьбы
+                              и другим травмам.
+
+                              Снимая обувь, расшнуруйте ее, расстегните все застежки.
+                              Снимайте
+                              обувь руками, не используйте для этих целей вторую ногу.
+                            </div>
+                          </div>
+                          <div class="care-slider__slide swiper-slide">
+                            <div class="care-slider__slide-num">
+                              Правило № 4
+                            </div>
+                            <div class="care-slider__slide-title">
+                              Зимнюю обувь выбирайте на размер больше
+                            </div>
+                            <div class="care-slider__slide-image">
+                              <picture><source srcset="img/product/care/04.webp"type="image/webp"><img src="img/product/care/04.png" alt="img desc"></picture>
+                            </div>
+                            <div class="care-slider__slide-text">
+                              Утепленная обувь должна применяться в комплекте с плотными
+                              махровыми, шерстяными или специализированными термозащитными
+                              носками.
+
+                              Для этого подбирайте утепленную обувь на один размер больше
+                              фактического размера стопы. Так вы исключите сдавливание
+                              утеплителя и стопы и сбережете тепло.
+
+                              Зимняя обувь должна эксплуатироваться в комплекте с
+                              утепленной
+                              одеждой, головным убором и перчатками, соответствующими
+                              погодным
+                              условиям по теплозащитным свойствам.
+
+                              После носки утепленную обувь необходимо просушить.
+
+                              Не рекомендуется использовать утепленную обувь в теплых
+                              помещениях, при отсутствии пониженных температур окружающего
+                              воздуха. Это приводит к отсыреванию обуви изнутри из-за
+                              потоотделения, что негативно отражается и на теплозащитных
+                              свойствах и на гигиене носки.
+                            </div>
+                          </div>
+                          <div class="care-slider__slide swiper-slide">
+                            <div class="care-slider__slide-num">
+                              Правило № 5
+                            </div>
+                            <div class="care-slider__slide-title">
+                              Будьте осторожны!
+                            </div>
+                            <div class="care-slider__slide-image">
+                              <picture><source srcset="img/product/care/05.webp"type="image/webp"><img src="img/product/care/05.png" alt="img desc"></picture>
+                            </div>
+                            <div class="care-slider__slide-text">
+                              Избегайте ходьбы по опасным наледям и участкам с гололедом.
+                              Соблюдайте осторожность при подъеме по лестницам, ходьбе по
+                              неровным поверхностям. Не разрешается забираться на высотные
+                              металлоконструкции, если данные виды работ не являются
+                              прямыми
+                              обязанностями работника.
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product__care product-care">
+                    <div class="product-care__header">
+                      <h3 class="product-care__title title title_sm">
+                        Правила ухода за обувью
+                      </h3>
+                      <div class="product-care__controls">
+                        <button class="product-care__prev swiper-button-prev"></button>
+                        <button class="product-care__next swiper-button-next"></button>
+                      </div>
+                    </div>
+                    <div class="product-care__body">
+                      <div class="product-care__side">
+                        <div class="product__survey-video">
+                          <div class="product__survey-poster">
+                            <picture><source srcset="img/product/logo-slider/04.webp"type="image/webp"><img src="img/product/logo-slider/04.jpg" class="cover-image" alt="desc"></picture>
+                            <a href="" class="logo-slider__item-play icon-play"></a>
+                            <div class="product__survey-timecode timecode">
+                              1:23
+                            </div>
+                          </div>
+                          <div class="product__survey-hint">
+                            Видеоинструкция по уходу
+                            за одеждой и обувью
+                          </div>
+                        </div>
+                        <div class="product-care__side-text">
+                          <p>
                             Обувь должна мспользоваться строго по назначению и быть
-                            подобрана с учетом условий труда, фактического наличия вредных и
-                            опасных факторов на рабочих местах.
-
-                            Обувь изготовленная с защитными подносками обеспечивает защиту
-                            пальцев стопы от ударов с энергией до 200 Дж.
-
-                            Обувь изготовленная с проколозащитной прокладкой обеспечивает
-                            защиту от проколов и порезов не менее 1200 Н, что соответствует
-                            ГОСТ 28507-99.
-
-                            Обувь с подошвой из полиуретана и термопластичного полиуретана
-                            обладает маслобензостойкими, кислотощелочестойкими,
-                            износостойкими свойствами ГОСТ 12.4.137-2001.
-
-                            Обувь с подошвой из нитрильной резины, кроме того обладает
-                            термостойкими свойствами ГОСТ 12.4.032-95.
-                          </div>
-                        </div>
-                        <div class="care-slider__slide swiper-slide">
-                          <div class="care-slider__slide-num">
-                            Правило № 2
-                          </div>
-                          <div class="care-slider__slide-title">
-                            Подбирайте обувь
-                            по размеру
-                          </div>
-                          <div class="care-slider__slide-image">
-                            <picture><source srcset="img/product/care/02.webp"type="image/webp"><img src="img/product/care/02.png" alt="img desc"></picture>
-                          </div>
-                          <div class="care-slider__slide-text">
-                            Обувь должна быть подобрана по размеру стопы. Размер обуви,
-                            указанный в метрической системе, соответствует фактической длине
-                            стопы носчика, выраженной в миллиметрах.
-                          </div>
-                        </div>
-                        <div class="care-slider__slide swiper-slide">
-                          <div class="care-slider__slide-num">
-                            Правило № 3
-                          </div>
-                          <div class="care-slider__slide-title">
-                            Не торопитесь, надевая обувь
-                          </div>
-                          <div class="care-slider__slide-image">
-                            <picture><source srcset="img/product/care/03.webp"type="image/webp"><img src="img/product/care/03.png" alt="img desc"></picture>
-                          </div>
-                          <div class="care-slider__slide-text">
+                            подобрана с
+                            учетом условий труда, фактического наличия вредных и опасных
+                            факторов на рабочих местах
+                          </p>
+                          <p>
                             При надевании обуви необходимо тщательно расшнуровать ее,
                             расстегнуть молнии, застежки. Расправьте вкладные стельки,
                             проверьте, нет ли в обуви инородных предметов, повреждений,
-                            излишней влаги. Использовать можно только обувь, внутренняя
-                            поверхность которой находится в исправном и относительно сухом
-                            состоянии.
-                            При надевании желательно пользоваться рожком для обуви во
-                            избежание залома задника. Тщательно зашнуруйте обувь, застегните
-                            застежки. Помните, что эксплуатировать обувь в незастегнутом
-                            виде опасно, это может привести к вывихам стопы во время ходьбы
-                            и другим травмам.
-
-                            Снимая обувь, расшнуруйте ее, расстегните все застежки. Снимайте
-                            обувь руками, не используйте для этих целей вторую ногу.
-                          </div>
+                            излишней
+                            влаги. Использовать можно только
+                          </p>
                         </div>
-                        <div class="care-slider__slide swiper-slide">
-                          <div class="care-slider__slide-num">
-                            Правило № 4
-                          </div>
-                          <div class="care-slider__slide-title">
-                            Зимнюю обувь выбирайте на размер больше
-                          </div>
-                          <div class="care-slider__slide-image">
-                            <picture><source srcset="img/product/care/04.webp"type="image/webp"><img src="img/product/care/04.png" alt="img desc"></picture>
-                          </div>
-                          <div class="care-slider__slide-text">
-                            Утепленная обувь должна применяться в комплекте с плотными
-                            махровыми, шерстяными или специализированными термозащитными
-                            носками.
+                      </div>
+                      <div class="product-care__slider care-slider">
+                        <div class="care-slider__wrapper swiper-wrapper">
 
-                            Для этого подбирайте утепленную обувь на один размер больше
-                            фактического размера стопы. Так вы исключите сдавливание
-                            утеплителя и стопы и сбережете тепло.
+                          <div class="care-slider__slide swiper-slide">
+                            <div class="care-slider__slide-num">
+                              Правило № 1
+                            </div>
+                            <div class="care-slider__slide-title">
+                              Выбирайте обувь правильно
+                            </div>
+                            <div class="care-slider__slide-image">
+                              <picture><source srcset="img/product/care/01.webp"type="image/webp"><img src="img/product/care/01.png" alt="img desc"></picture>
+                            </div>
+                            <div class="care-slider__slide-text">
+                              Эксплуатация обуви должна осуществляться в соответствии с ее
+                              сезонным назначением.
 
-                            Зимняя обувь должна эксплуатироваться в комплекте с утепленной
-                            одеждой, головным убором и перчатками, соответствующими погодным
-                            условиям по теплозащитным свойствам.
+                              Обувь должна мспользоваться строго по назначению и быть
+                              подобрана с учетом условий труда, фактического наличия
+                              вредных и
+                              опасных факторов на рабочих местах.
 
-                            После носки утепленную обувь необходимо просушить.
+                              Обувь изготовленная с защитными подносками обеспечивает
+                              защиту
+                              пальцев стопы от ударов с энергией до 200 Дж.
 
-                            Не рекомендуется использовать утепленную обувь в теплых
-                            помещениях, при отсутствии пониженных температур окружающего
-                            воздуха. Это приводит к отсыреванию обуви изнутри из-за
-                            потоотделения, что негативно отражается и на теплозащитных
-                            свойствах и на гигиене носки.
+                              Обувь изготовленная с проколозащитной прокладкой
+                              обеспечивает
+                              защиту от проколов и порезов не менее 1200 Н, что
+                              соответствует
+                              ГОСТ 28507-99.
+
+                              Обувь с подошвой из полиуретана и термопластичного
+                              полиуретана
+                              обладает маслобензостойкими, кислотощелочестойкими,
+                              износостойкими свойствами ГОСТ 12.4.137-2001.
+
+                              Обувь с подошвой из нитрильной резины, кроме того обладает
+                              термостойкими свойствами ГОСТ 12.4.032-95.
+                            </div>
                           </div>
-                        </div>
-                        <div class="care-slider__slide swiper-slide">
-                          <div class="care-slider__slide-num">
-                            Правило № 5
+                          <div class="care-slider__slide swiper-slide">
+                            <div class="care-slider__slide-num">
+                              Правило № 2
+                            </div>
+                            <div class="care-slider__slide-title">
+                              Подбирайте обувь
+                              по размеру
+                            </div>
+                            <div class="care-slider__slide-image">
+                              <picture><source srcset="img/product/care/02.webp"type="image/webp"><img src="img/product/care/02.png" alt="img desc"></picture>
+                            </div>
+                            <div class="care-slider__slide-text">
+                              Обувь должна быть подобрана по размеру стопы. Размер обуви,
+                              указанный в метрической системе, соответствует фактической
+                              длине
+                              стопы носчика, выраженной в миллиметрах.
+                            </div>
                           </div>
-                          <div class="care-slider__slide-title">
-                            Будьте осторожны!
+                          <div class="care-slider__slide swiper-slide">
+                            <div class="care-slider__slide-num">
+                              Правило № 3
+                            </div>
+                            <div class="care-slider__slide-title">
+                              Не торопитесь, надевая обувь
+                            </div>
+                            <div class="care-slider__slide-image">
+                              <picture><source srcset="img/product/care/03.webp"type="image/webp"><img src="img/product/care/03.png" alt="img desc"></picture>
+                            </div>
+                            <div class="care-slider__slide-text">
+                              При надевании обуви необходимо тщательно расшнуровать ее,
+                              расстегнуть молнии, застежки. Расправьте вкладные стельки,
+                              проверьте, нет ли в обуви инородных предметов, повреждений,
+                              излишней влаги. Использовать можно только обувь, внутренняя
+                              поверхность которой находится в исправном и относительно
+                              сухом
+                              состоянии.
+                              При надевании желательно пользоваться рожком для обуви во
+                              избежание залома задника. Тщательно зашнуруйте обувь,
+                              застегните
+                              застежки. Помните, что эксплуатировать обувь в незастегнутом
+                              виде опасно, это может привести к вывихам стопы во время
+                              ходьбы
+                              и другим травмам.
+
+                              Снимая обувь, расшнуруйте ее, расстегните все застежки.
+                              Снимайте
+                              обувь руками, не используйте для этих целей вторую ногу.
+                            </div>
                           </div>
-                          <div class="care-slider__slide-image">
-                            <picture><source srcset="img/product/care/05.webp"type="image/webp"><img src="img/product/care/05.png" alt="img desc"></picture>
+                          <div class="care-slider__slide swiper-slide">
+                            <div class="care-slider__slide-num">
+                              Правило № 4
+                            </div>
+                            <div class="care-slider__slide-title">
+                              Зимнюю обувь выбирайте на размер больше
+                            </div>
+                            <div class="care-slider__slide-image">
+                              <picture><source srcset="img/product/care/04.webp"type="image/webp"><img src="img/product/care/04.png" alt="img desc"></picture>
+                            </div>
+                            <div class="care-slider__slide-text">
+                              Утепленная обувь должна применяться в комплекте с плотными
+                              махровыми, шерстяными или специализированными термозащитными
+                              носками.
+
+                              Для этого подбирайте утепленную обувь на один размер больше
+                              фактического размера стопы. Так вы исключите сдавливание
+                              утеплителя и стопы и сбережете тепло.
+
+                              Зимняя обувь должна эксплуатироваться в комплекте с
+                              утепленной
+                              одеждой, головным убором и перчатками, соответствующими
+                              погодным
+                              условиям по теплозащитным свойствам.
+
+                              После носки утепленную обувь необходимо просушить.
+
+                              Не рекомендуется использовать утепленную обувь в теплых
+                              помещениях, при отсутствии пониженных температур окружающего
+                              воздуха. Это приводит к отсыреванию обуви изнутри из-за
+                              потоотделения, что негативно отражается и на теплозащитных
+                              свойствах и на гигиене носки.
+                            </div>
                           </div>
-                          <div class="care-slider__slide-text">
-                            Избегайте ходьбы по опасным наледям и участкам с гололедом.
-                            Соблюдайте осторожность при подъеме по лестницам, ходьбе по
-                            неровным поверхностям. Не разрешается забираться на высотные
-                            металлоконструкции, если данные виды работ не являются прямыми
-                            обязанностями работника.
+                          <div class="care-slider__slide swiper-slide">
+                            <div class="care-slider__slide-num">
+                              Правило № 5
+                            </div>
+                            <div class="care-slider__slide-title">
+                              Будьте осторожны!
+                            </div>
+                            <div class="care-slider__slide-image">
+                              <picture><source srcset="img/product/care/05.webp"type="image/webp"><img src="img/product/care/05.png" alt="img desc"></picture>
+                            </div>
+                            <div class="care-slider__slide-text">
+                              Избегайте ходьбы по опасным наледям и участкам с гололедом.
+                              Соблюдайте осторожность при подъеме по лестницам, ходьбе по
+                              неровным поверхностям. Не разрешается забираться на высотные
+                              металлоконструкции, если данные виды работ не являются
+                              прямыми
+                              обязанностями работника.
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -1870,6 +2083,17 @@
             <div class="details__container">
               <figure class="details__image">
                 <picture><source srcset="img/product/detail.webp"type="image/webp"><img src="img/product/detail.png" alt="detail"></picture>
+                <div class="details__image-btns">
+                  <button class="details__image-btn" data-details="0">
+                    <img src="img/icons/icon-point.svg" alt="icon">
+                  </button>
+                  <button class="details__image-btn" data-details="1">
+                    <img src="img/icons/icon-point.svg" alt="icon">
+                  </button>
+                  <button class="details__image-btn" data-details="2">
+                    <img src="img/icons/icon-point.svg" alt="icon">
+                  </button>
+                </div>
                 <figcaption class="details__image-caption">
                   <span>Детали в товаре</span>
                 </figcaption>
@@ -2415,13 +2639,23 @@
                                 <div class="sizes__table-info">
                                     Доступно
                                     на складе
-                                    <a href="" class="sizes__table-info-link icon-question"></a>
+                                    <div class="sizes__table-tooltip clue-tooltip">
+                                        <span class="question-btn icon-question"></span>
+                                        <div class="clue-tooltip__body">
+                                            Текст подсказки
+                                        </div>
+                                    </div>
                                 </div>
                             </th>
                             <th>
                                 <div class="sizes__table-info">
                                     Розничная цена
-                                    <a href="" class="sizes__table-info-link icon-question"></a>
+                                    <div class="sizes__table-tooltip clue-tooltip">
+                                        <span class="question-btn icon-question"></span>
+                                        <div class="clue-tooltip__body">
+                                            Текст подсказки
+                                        </div>
+                                    </div>
                                 </div>
                             </th>
                             <th>
@@ -2446,7 +2680,12 @@
                             <div class="sizes__table-info">
                                 Доступно
                                 на складе
-                                <a href="" class="sizes__table-info-link icon-question"></a>
+                                <div class="sizes__table-tooltip clue-tooltip">
+                                    <span class="question-btn icon-question"></span>
+                                    <div class="clue-tooltip__body">
+                                        Текст подсказки
+                                    </div>
+                                </div>
                             </div>
                             <div class="sizes__table-total">
                                 <span>36</span> (+24)
@@ -2455,7 +2694,12 @@
                         <td class="sizes__table-retail">
                             <div class="sizes__table-info">
                                 Розничная цена
-                                <a href="" class="sizes__table-info-link icon-question"></a>
+                                <div class="sizes__table-tooltip clue-tooltip">
+                                    <span class="question-btn icon-question"></span>
+                                    <div class="clue-tooltip__body">
+                                        Текст подсказки
+                                    </div>
+                                </div>
                             </div>
                             4 235.00 ₽
                         </td>
@@ -2483,7 +2727,12 @@
                             <div class="sizes__table-info">
                                 Доступно
                                 на складе
-                                <a href="" class="sizes__table-info-link icon-question"></a>
+                                <div class="sizes__table-tooltip clue-tooltip">
+                                    <span class="question-btn icon-question"></span>
+                                    <div class="clue-tooltip__body">
+                                        Текст подсказки
+                                    </div>
+                                </div>
                             </div>
                             <div class="sizes__table-total">
                                 <span>33</span>
@@ -2492,7 +2741,12 @@
                         <td class="sizes__table-retail">
                             <div class="sizes__table-info">
                                 Розничная цена
-                                <a href="" class="sizes__table-info-link icon-question"></a>
+                                <div class="sizes__table-tooltip clue-tooltip">
+                                    <span class="question-btn icon-question"></span>
+                                    <div class="clue-tooltip__body">
+                                        Текст подсказки
+                                    </div>
+                                </div>
                             </div>
                             4 235.00 ₽
                         </td>
@@ -2514,7 +2768,12 @@
                             <div class="sizes__table-info">
                                 Доступно
                                 на складе
-                                <a href="" class="sizes__table-info-link icon-question"></a>
+                                <div class="sizes__table-tooltip clue-tooltip">
+                                    <span class="question-btn icon-question"></span>
+                                    <div class="clue-tooltip__body">
+                                        Текст подсказки
+                                    </div>
+                                </div>
                             </div>
                             <div class="sizes__table-total">
                                 <span>26</span> (+77)
@@ -2523,7 +2782,12 @@
                         <td class="sizes__table-retail">
                             <div class="sizes__table-info">
                                 Розничная цена
-                                <a href="" class="sizes__table-info-link icon-question"></a>
+                                <div class="sizes__table-tooltip clue-tooltip">
+                                    <span class="question-btn icon-question"></span>
+                                    <div class="clue-tooltip__body">
+                                        Текст подсказки
+                                    </div>
+                                </div>
                             </div>
                             4 235.00 ₽
                         </td>
@@ -2551,7 +2815,12 @@
                             <div class="sizes__table-info">
                                 Доступно
                                 на складе
-                                <a href="" class="sizes__table-info-link icon-question"></a>
+                                <div class="sizes__table-tooltip clue-tooltip">
+                                    <span class="question-btn icon-question"></span>
+                                    <div class="clue-tooltip__body">
+                                        Текст подсказки
+                                    </div>
+                                </div>
                             </div>
                             <div class="sizes__table-total">
                                 <span>53</span> (+24)
@@ -2560,7 +2829,12 @@
                         <td class="sizes__table-retail">
                             <div class="sizes__table-info">
                                 Розничная цена
-                                <a href="" class="sizes__table-info-link icon-question"></a>
+                                <div class="sizes__table-tooltip clue-tooltip">
+                                    <span class="question-btn icon-question"></span>
+                                    <div class="clue-tooltip__body">
+                                        Текст подсказки
+                                    </div>
+                                </div>
                             </div>
                             4 235.00 ₽
                         </td>
@@ -2582,7 +2856,12 @@
                             <div class="sizes__table-info">
                                 Доступно
                                 на складе
-                                <a href="" class="sizes__table-info-link icon-question"></a>
+                                <div class="sizes__table-tooltip clue-tooltip">
+                                    <span class="question-btn icon-question"></span>
+                                    <div class="clue-tooltip__body">
+                                        Текст подсказки
+                                    </div>
+                                </div>
                             </div>
                             <div class="sizes__table-total">
                                 <span>99</span> (+26)
@@ -2591,7 +2870,12 @@
                         <td class="sizes__table-retail">
                             <div class="sizes__table-info">
                                 Розничная цена
-                                <a href="" class="sizes__table-info-link icon-question"></a>
+                                <div class="sizes__table-tooltip clue-tooltip">
+                                    <span class="question-btn icon-question"></span>
+                                    <div class="clue-tooltip__body">
+                                        Текст подсказки
+                                    </div>
+                                </div>
                             </div>
                             4 235.00 ₽
                         </td>
@@ -2619,7 +2903,12 @@
                             <div class="sizes__table-info">
                                 Доступно
                                 на складе
-                                <a href="" class="sizes__table-info-link icon-question"></a>
+                                <div class="sizes__table-tooltip clue-tooltip">
+                                    <span class="question-btn icon-question"></span>
+                                    <div class="clue-tooltip__body">
+                                        Текст подсказки
+                                    </div>
+                                </div>
                             </div>
                             <div class="sizes__table-total">
                                 <span>36</span> (+55)
@@ -2628,7 +2917,12 @@
                         <td class="sizes__table-retail">
                             <div class="sizes__table-info">
                                 Розничная цена
-                                <a href="" class="sizes__table-info-link icon-question"></a>
+                                <div class="sizes__table-tooltip clue-tooltip">
+                                    <span class="question-btn icon-question"></span>
+                                    <div class="clue-tooltip__body">
+                                        Текст подсказки
+                                    </div>
+                                </div>
                             </div>
                             4 235.00 ₽
                         </td>
@@ -2656,7 +2950,12 @@
                             <div class="sizes__table-info">
                                 Доступно
                                 на складе
-                                <a href="" class="sizes__table-info-link icon-question"></a>
+                                <div class="sizes__table-tooltip clue-tooltip">
+                                    <span class="question-btn icon-question"></span>
+                                    <div class="clue-tooltip__body">
+                                        Текст подсказки
+                                    </div>
+                                </div>
                             </div>
                             <div class="sizes__table-total">
                                 <span>19</span> (+24)
@@ -2665,7 +2964,12 @@
                         <td class="sizes__table-retail">
                             <div class="sizes__table-info">
                                 Розничная цена
-                                <a href="" class="sizes__table-info-link icon-question"></a>
+                                <div class="sizes__table-tooltip clue-tooltip">
+                                    <span class="question-btn icon-question"></span>
+                                    <div class="clue-tooltip__body">
+                                        Текст подсказки
+                                    </div>
+                                </div>
                             </div>
                             4 235.00 ₽
                         </td>
@@ -2687,7 +2991,12 @@
                             <div class="sizes__table-info">
                                 Доступно
                                 на складе
-                                <a href="" class="sizes__table-info-link icon-question"></a>
+                                <div class="sizes__table-tooltip clue-tooltip">
+                                    <span class="question-btn icon-question"></span>
+                                    <div class="clue-tooltip__body">
+                                        Текст подсказки
+                                    </div>
+                                </div>
                             </div>
                             <div class="sizes__table-total">
                                 <span>35</span> (+21)
@@ -2696,7 +3005,12 @@
                         <td class="sizes__table-retail">
                             <div class="sizes__table-info">
                                 Розничная цена
-                                <a href="" class="sizes__table-info-link icon-question"></a>
+                                <div class="sizes__table-tooltip clue-tooltip">
+                                    <span class="question-btn icon-question"></span>
+                                    <div class="clue-tooltip__body">
+                                        Текст подсказки
+                                    </div>
+                                </div>
                             </div>
                             4 235.00 ₽
                         </td>
@@ -2724,7 +3038,12 @@
                             <div class="sizes__table-info">
                                 Доступно
                                 на складе
-                                <a href="" class="sizes__table-info-link icon-question"></a>
+                                <div class="sizes__table-tooltip clue-tooltip">
+                                    <span class="question-btn icon-question"></span>
+                                    <div class="clue-tooltip__body">
+                                        Текст подсказки
+                                    </div>
+                                </div>
                             </div>
                             <div class="sizes__table-total">
                                 <span>15</span> (+5)
@@ -2733,7 +3052,12 @@
                         <td class="sizes__table-retail">
                             <div class="sizes__table-info">
                                 Розничная цена
-                                <a href="" class="sizes__table-info-link icon-question"></a>
+                                <div class="sizes__table-tooltip clue-tooltip">
+                                    <span class="question-btn icon-question"></span>
+                                    <div class="clue-tooltip__body">
+                                        Текст подсказки
+                                    </div>
+                                </div>
                             </div>
                             4 235.00 ₽
                         </td>
@@ -2761,7 +3085,12 @@
                             <div class="sizes__table-info">
                                 Доступно
                                 на складе
-                                <a href="" class="sizes__table-info-link icon-question"></a>
+                                <div class="sizes__table-tooltip clue-tooltip">
+                                    <span class="question-btn icon-question"></span>
+                                    <div class="clue-tooltip__body">
+                                        Текст подсказки
+                                    </div>
+                                </div>
                             </div>
                             <div class="sizes__table-total">
                                 <span>23</span> (+4)
@@ -2770,7 +3099,12 @@
                         <td class="sizes__table-retail">
                             <div class="sizes__table-info">
                                 Розничная цена
-                                <a href="" class="sizes__table-info-link icon-question"></a>
+                                <div class="sizes__table-tooltip clue-tooltip">
+                                    <span class="question-btn icon-question"></span>
+                                    <div class="clue-tooltip__body">
+                                        Текст подсказки
+                                    </div>
+                                </div>
                             </div>
                             4 235.00 ₽
                         </td>
@@ -2798,7 +3132,12 @@
                             <div class="sizes__table-info">
                                 Доступно
                                 на складе
-                                <a href="" class="sizes__table-info-link icon-question"></a>
+                                <div class="sizes__table-tooltip clue-tooltip">
+                                    <span class="question-btn icon-question"></span>
+                                    <div class="clue-tooltip__body">
+                                        Текст подсказки
+                                    </div>
+                                </div>
                             </div>
                             <div class="sizes__table-total">
                                 <span>15</span> (+7)
@@ -2807,7 +3146,12 @@
                         <td class="sizes__table-retail">
                             <div class="sizes__table-info">
                                 Розничная цена
-                                <a href="" class="sizes__table-info-link icon-question"></a>
+                                <div class="sizes__table-tooltip clue-tooltip">
+                                    <span class="question-btn icon-question"></span>
+                                    <div class="clue-tooltip__body">
+                                        Текст подсказки
+                                    </div>
+                                </div>
                             </div>
                             4 235.00 ₽
                         </td>
@@ -2835,7 +3179,12 @@
                             <div class="sizes__table-info">
                                 Доступно
                                 на складе
-                                <a href="" class="sizes__table-info-link icon-question"></a>
+                                <div class="sizes__table-tooltip clue-tooltip">
+                                    <span class="question-btn icon-question"></span>
+                                    <div class="clue-tooltip__body">
+                                        Текст подсказки
+                                    </div>
+                                </div>
                             </div>
                             <div class="sizes__table-total">
                                 <span>7 </span>(+10)
@@ -2844,7 +3193,12 @@
                         <td class="sizes__table-retail">
                             <div class="sizes__table-info">
                                 Розничная цена
-                                <a href="" class="sizes__table-info-link icon-question"></a>
+                                <div class="sizes__table-tooltip clue-tooltip">
+                                    <span class="question-btn icon-question"></span>
+                                    <div class="clue-tooltip__body">
+                                        Текст подсказки
+                                    </div>
+                                </div>
                             </div>
                             4 235.00 ₽
                         </td>
@@ -2887,10 +3241,10 @@
         </div>
     </div>
 </div>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js?_v=20230306234144"></script>
-<script src="https://cdn.jsdelivr.net/npm/inputmask@5.0.7/dist/inputmask.min.js?_v=20230306234144"></script>
-<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&_v=20230306234144"></script>
-<script src="js/app.min.js?_v=20230306234144"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js?_v=20230308155040"></script>
+<script src="https://cdn.jsdelivr.net/npm/inputmask@5.0.7/dist/inputmask.min.js?_v=20230308155040"></script>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&_v=20230308155040"></script>
+<script src="js/app.min.js?_v=20230308155040"></script>
 </body>
 
 </html>
